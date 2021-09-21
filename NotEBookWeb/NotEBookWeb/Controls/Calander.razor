@@ -1,0 +1,257 @@
+﻿<h3>ToDo: (@todos.Count(todo => !todo.IsDone))</h3>
+
+
+<label>
+    Task
+    <input placeholder="Insert New Task... " @bind="newTask" />
+</label>
+
+<label>
+    Date
+    <input type="date" @bind-value="@newDate" />
+</label>
+
+<label>
+    Time
+    <input type="time" @bind-value="@newTime" />
+</label>
+
+
+<button class="btn btn-success" @onclick="AddTodo">Add Task</button>
+
+<br />
+
+<h3>Calendar</h3>
+<div class="calander">
+    <div class=" month-year-header">
+
+        <div class="month-header">
+            <select @onchange="@selectMonth" value="@DateTime.Now.Month">
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+        </div>
+
+        <div class="year-header">
+            <select @onchange="@selectYear">
+                @for (int i = DateTime.Today.Year; i < DateTime.Today.Year + 100; i++)
+                {
+                    <option>@i</option>
+                }
+            </select>
+        </div>
+
+    </div>
+
+    <div>
+        <table class="calander-table" style="margin-top: 25px; table-layout:fixed ">
+            <thead>
+                <tr class="table-primary">
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tues</th>
+                    <th>Wed</th>
+                    <th>Thurs</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @for (int i = 0; i < DateTime.DaysInMonth(currentYear, currentMonth); i++)
+                {
+                    <tr>
+                        @foreach (var day in days[currentMonth - 1].Skip(i * 7).Take(7))
+                        {
+                            <td id="cal-day" class="shadow-sm text-center @(day.Events != null && day.Events.Count != 0 ? "calander-event" : "")">@DayTemplate(day)</td>
+
+                        }
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<h2 style="font-family: Gabriola; text-decoration: underline;">Tasks</h2>
+<ul>
+    @foreach (var todo in todos)
+    {
+        <li>
+
+            <p class="event">
+                <input type="checkbox" @bind="todo.IsDone" />
+                <h3 class="d-inline-flex">@todo.Title</h3>
+                <input type="date" @bind="todo.Date" />
+                <input type="time" @bind="todo.Time" />
+            </p>
+
+        </li>
+
+    }
+
+    <button class="btn-secondary" @onclick="updateEvent">Update Calander</button>
+
+</ul>
+
+
+
+@code {
+    int currentYear = DateTime.Today.Year;
+    int currentMonth = DateTime.Today.Month;
+    List<List<CalanderDay>> days;
+    int firstWeekDayNum;
+
+
+    private List<TodoItem> todos = new();
+    private string newTask;
+    private DateTime newDate = DateTime.Today;
+    private DateTime newTime = DateTime.Now;
+
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        days = new List<List<CalanderDay>>(new List<CalanderDay>[12]);
+
+        for (int i = 0; i < 12; i++)
+        {
+            days[i] = new List<CalanderDay>();
+
+            //days[currentMonth] = new List<CalanderDay>();
+
+            var firstDayDate = new DateTime(currentYear, i + 1, 1);
+            firstWeekDayNum = (int)firstDayDate.DayOfWeek;
+            int numEmptyDays = 0;
+            int numWeekRows = 0;
+            int numDaysinMonth = 0;
+
+            if (numEmptyDays == 7)
+            {
+                numEmptyDays = 0;
+            }
+            else
+            {
+                numEmptyDays = firstWeekDayNum;
+            }
+
+            for (int j = 0; j < numEmptyDays; j++)
+            {
+                days[i].Add(new CalanderDay
+                {
+                    DayNum = 0,
+                    isEmpty = true
+                });
+            }
+
+            numDaysinMonth = DateTime.DaysInMonth(currentYear, i + 1);
+
+            @for (int j = 1; j <= numDaysinMonth; j++)
+            {
+                days[i].Add(
+                    new CalanderDay()
+                    {
+                        DayNum = j,
+                        isEmpty = false,
+                        Date = new DateTime(currentYear, i + 1, j),
+                        Events = new List<TodoItem>()
+                    });
+            }
+
+
+            numWeekRows = (int)Math.Ceiling(DateTime.DaysInMonth(currentYear, currentMonth) / 7.0);
+        }
+
+        updateCalander();
+    }
+
+    void selectYear(ChangeEventArgs e)
+    {
+        currentYear = Convert.ToInt32(e.Value.ToString());
+
+        updateCalander();
+    }
+
+    void selectMonth(ChangeEventArgs e)
+    {
+
+        currentMonth = Convert.ToInt32(e.Value.ToString());
+        newDate = new DateTime(currentYear, currentMonth, 1);
+
+
+        updateCalander();
+    }
+
+    public void updateCalander()
+    {
+
+        var firstDayDate = new DateTime(currentYear, currentMonth, 1);
+        firstWeekDayNum = (int)firstDayDate.DayOfWeek;
+        int numEmptyDays = 0;
+        int numWeekRows = 0;
+        int numDaysinMonth = 0;
+
+        if (numEmptyDays == 7)
+        {
+            numEmptyDays = 0;
+        }
+        else
+        {
+            numEmptyDays = firstWeekDayNum;
+        }
+
+
+        numDaysinMonth = DateTime.DaysInMonth(currentYear, currentMonth);
+        numWeekRows = (int)Math.Ceiling(DateTime.DaysInMonth(currentYear, currentMonth) / 7.0);
+
+    }
+
+
+    [Parameter]
+    public RenderFragment<CalanderDay> DayTemplate { get; set; }
+
+
+    public void AddTodo()
+    {
+        if (!string.IsNullOrWhiteSpace(newTask) /*&& newDate.Month == currentMonth*/)
+        {
+            int calanderEventDayIndex = (newDate.Day + firstWeekDayNum) - 1;
+            todos.Add(new TodoItem { Title = newTask, Date = newDate, Time = newTime });
+            days[newDate.Month - 1][calanderEventDayIndex].Events.Add(todos[todos.Count - 1]);
+            newTask = string.Empty;
+            newDate = DateTime.Today;
+            newTime = DateTime.Now;
+
+            //Add event to calander UI
+
+
+        }
+    }
+
+    public void updateEvent()
+    {
+        //updateCalander();
+
+        @foreach (var todo in todos)
+        {
+            int currentIndex1 = (todo.Date.Day + firstWeekDayNum) - 1;
+            int currentIndex2 = (todo.Time.Day + firstWeekDayNum) - 1;
+            todo.Time = todo.Date;
+            days[currentMonth - 1][currentIndex1].Events.Add(todo);
+            days[currentMonth - 1][currentIndex2].Events.Clear();
+
+        }
+    }
+}
