@@ -13,84 +13,84 @@ namespace NotEBookWeb.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "E:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 1 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "E:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 2 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "E:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 3 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "E:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 4 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "E:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 5 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "E:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 6 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "E:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 7 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "E:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 8 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "E:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 9 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using NotEBookWeb;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "E:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 10 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using NotEBookWeb.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "E:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 11 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using NotEBookWeb.Controls;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "E:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 12 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using NotEBookWeb.Models;
 
 #line default
@@ -105,7 +105,7 @@ using NotEBookWeb.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 99 "E:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\Pages\AccountDataComponent.razor"
+#line 99 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\Pages\AccountDataComponent.razor"
       
 
     List<ClientInfoModel> ClientList;

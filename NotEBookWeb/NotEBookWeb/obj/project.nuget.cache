@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bPAE1KYi4UkTLjFClCMdObR5SqBF6s5TFHJ15CwEKQhUy39/SijWeVzyFNy6G6fF1jIsmNHreJFaAQ9S1BB5qA==",
+  "dgSpecHash": "C6uYagtUaLzEaDg7N6zNXNoGG8StkUAGhJF6wxhkIegbaf/1HjcGHLbyZsJNHtRMj0UlBvhSBHF45pTEqqylAw==",
   "success": true,
-  "projectFilePath": "E:\\.NET Projects\\490-NotEBook\\NotEBookWeb\\NotEBookWeb\\NotEBookWeb.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Dudel\\Desktop\\Code\\490\\NoteEBook T2\\490-NotEBook\\NotEBookWeb\\NotEBookWeb\\NotEBookWeb.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dudel\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.9\\microsoft.netcore.app.host.win-x64.5.0.9.nupkg.sha512"
+  ],
   "logs": []
 }
