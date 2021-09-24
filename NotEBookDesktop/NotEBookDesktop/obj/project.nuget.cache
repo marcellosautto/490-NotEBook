@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "1tEobX7HE7ATCJBKHKeE9GqI2LnxUUI9T1e/OzfMu9TULHrEaGe0//z/NwtHqc9S9hj9LVgQ9y3XwZUOuU9vzg==",
+  "dgSpecHash": "MQNZ3wQ/+hcWTcV/rVEIcc4AZpKPOkpaU+TVi/GG0oec+C/VtKERbHspChsu8ztsbM1PTQPeqQs91QEKzgYzZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dudel\\Desktop\\Code\\490\\NoteEBook T2\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
+  "projectFilePath": "D:\\.NET Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Dudel\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.9\\microsoft.netcore.app.host.win-x64.5.0.9.nupkg.sha512"
+    "C:\\Users\\marce\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\marce\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\marce\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512"
   ],
   "logs": []
 }
