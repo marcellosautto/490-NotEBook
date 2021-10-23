@@ -13,85 +13,92 @@ namespace NotEBookWeb.Controls
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 1 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 2 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 3 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 4 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 5 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 6 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 7 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 8 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 9 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using NotEBookWeb;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 10 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using NotEBookWeb.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 11 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using NotEBookWeb.Controls;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+#line 12 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
 using NotEBookWeb.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+using Blazor.Extensions.Canvas;
 
 #line default
 #line hidden
@@ -104,7 +111,7 @@ using NotEBookWeb.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 110 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\Controls\Calander.razor"
+#line 110 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\Controls\Calander.razor"
        
     int currentYear = DateTime.Today.Year;
     int currentMonth = DateTime.Today.Month;
@@ -112,7 +119,7 @@ using NotEBookWeb.Models;
     int firstWeekDayNum;
 
 
-    private List<TodoItem> todos = new();
+    private List<TodoItem> todos = new List<TodoItem>();
     private string newTask;
     private DateTime newDate = DateTime.Today;
     private DateTime newTime = DateTime.Now;
@@ -162,7 +169,7 @@ using NotEBookWeb.Models;
 #line hidden
 #nullable disable
 #nullable restore
-#line 161 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\Controls\Calander.razor"
+#line 161 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\Controls\Calander.razor"
              for (int j = 1; j <= numDaysinMonth; j++)
             {
                 days[i].Add(
@@ -179,7 +186,7 @@ using NotEBookWeb.Models;
 #line hidden
 #nullable disable
 #nullable restore
-#line 171 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\Controls\Calander.razor"
+#line 171 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\Controls\Calander.razor"
              
 
 
@@ -262,7 +269,7 @@ using NotEBookWeb.Models;
 #line hidden
 #nullable disable
 #nullable restore
-#line 247 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\Controls\Calander.razor"
+#line 247 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\Controls\Calander.razor"
          foreach (var todo in todos)
         {
             int currentIndex1 = (todo.Date.Day + firstWeekDayNum) - 1;
@@ -277,7 +284,7 @@ using NotEBookWeb.Models;
 #line hidden
 #nullable disable
 #nullable restore
-#line 255 "C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookWeb\NotEBookWeb\Controls\Calander.razor"
+#line 255 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\Controls\Calander.razor"
          
     }
 

@@ -1,10 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "C6uYagtUaLzEaDg7N6zNXNoGG8StkUAGhJF6wxhkIegbaf/1HjcGHLbyZsJNHtRMj0UlBvhSBHF45pTEqqylAw==",
+  "dgSpecHash": "R3qTnnd3FEJrlLpCuvNEMBuX/wBDxh1tad7enQ0lxXqgLrm+L4adHCaepXgr6wNe//pL6lUit0X5gZT3TU0e0w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dudel\\Desktop\\Code\\490\\NoteEBook T2\\490-NotEBook\\NotEBookWeb\\NotEBookWeb\\NotEBookWeb.csproj",
+  "projectFilePath": "D:\\.NET Projects\\490-NotEBook\\NotEBookWeb\\NotEBookWeb\\NotEBookWeb.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Dudel\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.9\\microsoft.netcore.app.host.win-x64.5.0.9.nupkg.sha512"
+    "C:\\Users\\marce\\.nuget\\packages\\blazor.extensions.canvas\\1.1.1\\blazor.extensions.canvas.1.1.1.nupkg.sha512",
+    "C:\\Users\\marce\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.5\\microsoft.aspnetcore.authorization.3.1.5.nupkg.sha512",
+    "C:\\Users\\marce\\.nuget\\packages\\microsoft.aspnetcore.components\\3.1.5\\microsoft.aspnetcore.components.3.1.5.nupkg.sha512",
+    "C:\\Users\\marce\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\3.1.5\\microsoft.aspnetcore.components.analyzers.3.1.5.nupkg.sha512",
+    "C:\\Users\\marce\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\3.1.5\\microsoft.aspnetcore.components.forms.3.1.5.nupkg.sha512",
+    "C:\\Users\\marce\\.nuget\\packages\\microsoft.aspnetcore.components.web\\3.1.5\\microsoft.aspnetcore.components.web.3.1.5.nupkg.sha512",
+    "C:\\Users\\marce\\.nuget\\packages\\microsoft.aspnetcore.metadata\\3.1.5\\microsoft.aspnetcore.metadata.3.1.5.nupkg.sha512",
+    "C:\\Users\\marce\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.5\\microsoft.extensions.dependencyinjection.3.1.5.nupkg.sha512",
+    "C:\\Users\\marce\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.5\\microsoft.extensions.dependencyinjection.abstractions.3.1.5.nupkg.sha512",
+    "C:\\Users\\marce\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.5\\microsoft.extensions.logging.abstractions.3.1.5.nupkg.sha512",
+    "C:\\Users\\marce\\.nuget\\packages\\microsoft.extensions.options\\3.1.5\\microsoft.extensions.options.3.1.5.nupkg.sha512",
+    "C:\\Users\\marce\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.5\\microsoft.extensions.primitives.3.1.5.nupkg.sha512",
+    "C:\\Users\\marce\\.nuget\\packages\\microsoft.jsinterop\\3.1.5\\microsoft.jsinterop.3.1.5.nupkg.sha512"
   ],
   "logs": []
 }
