@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="NotEBookDB" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\\.NET\ Projects\\490-NotEBook\\NotEBookWeb\\NotEBookWeb\\obj\\Release\\net5\.0\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>

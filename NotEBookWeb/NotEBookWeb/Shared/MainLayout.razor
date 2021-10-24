@@ -9,19 +9,21 @@
 
     <div class="main">
         <div class="top-row px-4">
+            <div class="col-lg-16">
 
-            <div class="col-1">
-                <AuthorizeView>
-                    <Authorized>
-                        <a class="login-header" href="/login" @onclick="()=>Logout()">Logout</a>
-                    </Authorized>
-                    <NotAuthorized>
-                        <a class="login-header" href="/login">Login</a>
-                    </NotAuthorized>
-                </AuthorizeView>
-            </div>
-            <div>
-                <DateComponent></DateComponent>
+                <div class="col-md-1">
+                    <AuthorizeView>
+                        <Authorized>
+                            <a class="login-header" href="/login" @onclick="()=>Logout()">Logout</a>
+                        </Authorized>
+                        <NotAuthorized>
+                            <a class="login-header" href="/login">Login</a>
+                        </NotAuthorized>
+                    </AuthorizeView>
+                </div>
+                <div>
+                    <DateComponent></DateComponent>
+                </div>
             </div>
         </div>
 
