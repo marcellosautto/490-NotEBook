@@ -103,6 +103,20 @@ using Blazor.Extensions.Canvas;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 14 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+using Blazored.SessionStorage;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 1 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\Shared\MainLayout.razor"
+using NotEBookWeb.Data;
+
+#line default
+#line hidden
+#nullable disable
     public partial class MainLayout : LayoutComponentBase
     {
         #pragma warning disable 1998
@@ -110,6 +124,18 @@ using Blazor.Extensions.Canvas;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 35 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\Shared\MainLayout.razor"
+      
+    public void Logout()
+    {
+        ((CustomAuthenticationStateProvider)AuthenticationStateProvider).FlagUserAsLoggedOut();
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AuthenticationStateProvider AuthenticationStateProvider { get; set; }
     }
 }
 #pragma warning restore 1591

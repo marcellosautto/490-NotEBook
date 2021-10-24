@@ -2,6 +2,7 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #E6E6FA;
 }
 
 a, .btn-link {
@@ -109,18 +110,20 @@ a, .btn-link {
     background-color: lightgreen;
 }
 
+
+/*Login Page*/
 .login-header {
-    background-color: azure;
-    text-align:center;
-    font-family:'Goudy Old Style'
+    text-align: left;
+    font-family: 'Goudy Old Style';
+    font-size:24px;
 }
 
 .login-form {
     padding: 10px;
-    background-color: ghostwhite;
     text-align: center;
     font-family: 'Goudy Old Style';
-    font-size: 24px;
+    font-size: 30px;
+    border-left:groove;
 }
 
 

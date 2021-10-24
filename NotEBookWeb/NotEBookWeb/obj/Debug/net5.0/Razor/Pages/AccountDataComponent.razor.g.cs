@@ -100,6 +100,13 @@ using Blazor.Extensions.Canvas;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 14 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+using Blazored.SessionStorage;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/clientele_sheet")]
     public partial class AccountDataComponent : Microsoft.AspNetCore.Components.ComponentBase
     {

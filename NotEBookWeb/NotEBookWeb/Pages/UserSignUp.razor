@@ -1,0 +1,48 @@
+﻿@layout CenteredCardLayout
+@page "/register"
+@using NotEBookWeb.Data
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
+
+<EditForm Model="@user" OnValidSubmit="@ValidateUser">
+ 
+    <div id="username-div">
+        <h3>Email</h3>
+        <input type="text" placeholder="Email" @bind="user.Email" />
+    </div>
+
+    <div id="password-div">
+        <h3>Password</h3>
+        <input type="password" placeholder="Password" @bind="user.Password" />
+    </div>
+
+    <div id="password-div">
+        <h3>Confirm Password</h3>
+        <input type="password" placeholder="Confirm Password" @bind="user.ConfirmPassword" />
+    </div>
+
+    <input type="submit" class="btn-primary rounded" value="Login" />
+    <input type="submit" class="btn-primary rounded" value="Register" />
+</EditForm>
+
+@code {
+
+    private User user;
+
+    protected override Task OnInitializedAsync()
+    {
+        user = new User();
+        return base.OnInitializedAsync();
+    }
+
+    private async Task<bool> ValidateUser()
+    {
+
+        ((CustomAuthenticationStateProvider)AuthenticationStateProvider).FlagUserAsAuthenticated(user.Email); //mark user as authenticated when they log in
+        NavigationManager.NavigateTo("/");
+
+        await sessionStorage.SetItemAsync("Email", user.Email);
+        return await Task.FromResult(true);
+    }
+}

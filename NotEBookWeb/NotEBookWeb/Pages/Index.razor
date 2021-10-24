@@ -1,7 +1,14 @@
 @page "/"
 
-<UserLogin></UserLogin>
 
+<AuthorizeView>
+    <Authorized>
+        <h2>Welcome, @context.User.Identity.Name!</h2>
+    </Authorized>
+    <NotAuthorized>
+        <h2>Signed Out!</h2>
+    </NotAuthorized>
+</AuthorizeView>
 
 
 

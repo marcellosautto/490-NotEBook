@@ -12,15 +12,17 @@ namespace NotEBookWeb.Models
     {
         
         [Required]
-        private string Email { get; set; }
 
-        [Required]
-        [StringLength(15,  ErrorMessage = "Name must be 15 or less characters.")]
-        private string Username { get; set; }
+        public string FirstName { get; set; }
 
-        [Required]
-        [Range(5, 15, ErrorMessage = "Password must be between 5-15 characters.")]
-        private string Password { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+
+        public string Username { get; set; }
+
+        public string Password { get; set; }
+
+        public string ConfirmPassword { get; set; }
 
     }
 }

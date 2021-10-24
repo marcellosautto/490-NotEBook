@@ -103,6 +103,13 @@ using Blazor.Extensions.Canvas;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 14 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\_Imports.razor"
+using Blazored.SessionStorage;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/draw")]
     public partial class Draw : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -126,7 +133,7 @@ using Blazor.Extensions.Canvas;
         await this._context.FillRectAsync(10, 100, 100, 100);
 
         await this._context.SetFontAsync("48px serif");
-        await this._context.StrokeTextAsync("Hello Blazor!!!", 10, 100);
+        await this._context.StrokeTextAsync("Blazor Canvas Extenstion API", 10, 100);
     }
 
 #line default
