@@ -118,7 +118,7 @@ using Blazored.SessionStorage;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\Shared\NavMenu.razor"
+#line 43 "D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

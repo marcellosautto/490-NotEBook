@@ -35,6 +35,8 @@ D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\obj\Release\net5.0\PubTmp\
 D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Identity.UI.dll
 D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Metadata.dll
 D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Razor.Language.dll
+D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.SignalR.Client.dll
+D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.SignalR.Client.Core.dll
 D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\obj\Release\net5.0\PubTmp\Out\Microsoft.Azure.SignalR.Common.dll
 D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\obj\Release\net5.0\PubTmp\Out\Microsoft.Azure.SignalR.dll
 D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\obj\Release\net5.0\PubTmp\Out\Microsoft.Azure.SignalR.Protocols.dll

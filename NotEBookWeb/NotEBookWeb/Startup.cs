@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NotEBookWeb.Data;
+using NotEBookWeb.Models;
 
 namespace NotEBookWeb
 {
@@ -60,6 +61,7 @@ namespace NotEBookWeb
             {
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
+                endpoints.MapHub<NotEBookChat>(NotEBookChat.HubUrl);
             });
         }
 
