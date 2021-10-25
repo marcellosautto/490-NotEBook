@@ -82,19 +82,19 @@
 
                 </StackPanel>
 
-                <TextBlock Text="Because"
+                <TextBlock Text="Personalize"
                        Foreground="Black"
                        FontSize="24"
                        FontWeight="Medium"
                        FontFamily="Fonts/#Dosis"/>
 
-                <TextBlock Text="Fuck"
+                <TextBlock Text="Your"
                        Foreground="Black"
                        FontSize="24"
                        FontWeight="Medium"
                        FontFamily="Fonts/#Dosis"/>
 
-                <TextBlock Text="OneNote"
+                <TextBlock Text="Education"
                        Foreground="Black"
                        FontSize="24"
                        FontWeight="Medium"

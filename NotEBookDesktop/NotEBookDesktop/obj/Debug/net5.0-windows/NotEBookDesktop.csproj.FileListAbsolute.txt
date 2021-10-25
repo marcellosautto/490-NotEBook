@@ -43,7 +43,6 @@ D:\.NET Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-w
 D:\.NET Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.AssemblyInfoInputs.cache
 D:\.NET Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.AssemblyInfo.cs
 D:\.NET Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.csproj.CoreCompileInputs.cache
-D:\.NET Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.csproj.CopyComplete
 D:\.NET Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.genruntimeconfig.cache
 D:\.NET Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.csproj.AssemblyReference.cache
 E:\.NET Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\NotEBookDesktop.exe

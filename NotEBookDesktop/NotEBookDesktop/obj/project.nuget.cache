@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B3QIqOFKZ0L5h44zqosOenOuKHaG0uCfuEVBmCqQLofNy0IqLCc3Uqo/K1wUwsl17CTvihpxCWGT/XL1Ggws5w==",
+  "dgSpecHash": "2tjYMBEpJwUSgNN5dHX0CwC4uxSFXc3d9GgALIvAXrO4xpcD5gmMt7jFDNTmUXU6atc/aVvuQMwKyyo6rLXKLg==",
   "success": true,
-  "projectFilePath": "E:\\.NET Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
+  "projectFilePath": "D:\\.NET Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marce\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\marce\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
