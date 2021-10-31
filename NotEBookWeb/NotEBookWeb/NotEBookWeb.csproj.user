@@ -5,12 +5,12 @@
   </PropertyGroup>
   <PropertyGroup>
     <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
-    <_SelectedScaffolderID>IdentityScaffolder</_SelectedScaffolderID>
-    <_SelectedScaffolderCategoryPath>root/Identity</_SelectedScaffolderCategoryPath>
+    <_SelectedScaffolderID>ModelBasedCrudRazorPageScaffolder</_SelectedScaffolderID>
+    <_SelectedScaffolderCategoryPath>root/Common/RazorPage</_SelectedScaffolderCategoryPath>
     <WebStackScaffolding_ViewDialogWidth>800</WebStackScaffolding_ViewDialogWidth>
     <WebStackScaffolding_DbContextDialogWidth>650</WebStackScaffolding_DbContextDialogWidth>
     <WebStackScaffolding_IdentityDialogWidth>650</WebStackScaffolding_IdentityDialogWidth>
-    <NameOfLastUsedPublishProfile>D:\.NET Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\Properties\PublishProfiles\NotEBookDB - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>D:\.NET_Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\Properties\PublishProfiles\NotEBookWeb - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
     <RazorPage_SelectedScaffolderID>RazorComponentScaffolder</RazorPage_SelectedScaffolderID>
     <RazorPage_SelectedScaffolderCategoryPath>root/Common/RazorComponent</RazorPage_SelectedScaffolderCategoryPath>
   </PropertyGroup>

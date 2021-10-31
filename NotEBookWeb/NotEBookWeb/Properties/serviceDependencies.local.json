@@ -3,6 +3,15 @@
     "mssql1": {
       "type": "mssql.local",
       "connectionId": "ConnectionStrings:NotEBookWebContextConnection"
+    },
+    "secrets1": {
+      "type": "secrets.user"
+    },
+    "signalr1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.SignalRService/SignalR/NotEBookWebSignalR",
+      "type": "signalr.azure",
+      "connectionId": "Azure__SignalR__ConnectionString",
+      "secretStore": "LocalSecretsFile"
     }
   }
 }

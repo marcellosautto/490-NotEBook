@@ -12,9 +12,10 @@ namespace NotEBookWeb.Models
 
         public async Task Broadcast(string username, string message)
         {
+            
             await Clients.All.SendAsync("Broadcast", username, message);
         }
-
+        
         public override Task OnConnectedAsync()
         {
             Console.WriteLine($"{Context.ConnectionId} connected!");

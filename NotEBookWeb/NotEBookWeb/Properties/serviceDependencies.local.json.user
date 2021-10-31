@@ -1,9 +1,28 @@
 {
   "dependencies": {
+    "signalr1": {
+      "restored": true,
+      "restoreTime": "2021-10-30T22:18:06.6140504Z"
+    },
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2021-10-30T22:18:05.5277652Z"
+    },
     "mssql1": {
       "restored": true,
       "restoreTime": "2021-10-24T02:57:20.066028Z"
     }
   },
-  "parameters": {}
+  "parameters": {
+    "signalr1.resourceGroupName": {
+      "Name": "signalr1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "NoteEBookResourceGroup"
+    },
+    "signalr1.subscriptionId": {
+      "Name": "signalr1.subscriptionId",
+      "Type": "subscription",
+      "Value": "8e60167e-08fa-4442-93c8-d6c22116899c"
+    }
+  }
 }

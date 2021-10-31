@@ -13,6 +13,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NotEBookWeb.Data;
 using NotEBookWeb.Models;
+using System.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace NotEBookWeb
 {
@@ -30,12 +32,17 @@ namespace NotEBookWeb
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            //services.AddDbContext<User>(options =>
+            //options.UseSqlServer(Configuration.GetConnectionString("SqlDBConnection")));
+            
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
             services.AddBlazoredSessionStorage();
 
             services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>(); 
             services.AddSingleton<HttpClient>();
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

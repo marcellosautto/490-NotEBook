@@ -1,12 +1,15 @@
 ﻿@layout CenteredCardLayout
 @page "/register"
 @using NotEBookWeb.Data
+@using System.Data.SqlClient
+@using System.Data
+@using Microsoft.Extensions.Configuration
 @inject AuthenticationStateProvider AuthenticationStateProvider
 @inject NavigationManager NavigationManager
 @inject Blazored.SessionStorage.ISessionStorageService sessionStorage
 
 <EditForm Model="@user" OnValidSubmit="@ValidateUser">
- 
+
     <div id="username-div">
         <h3>Email</h3>
         <input type="text" placeholder="Email" @bind="user.Email" />
@@ -19,7 +22,7 @@
 
     <div id="password-div">
         <h3>Confirm Password</h3>
-        <input type="password" placeholder="Confirm Password" @bind="user.ConfirmPassword" />
+        <input type="password" placeholder="Confirm Password" @bind="confirmPassword" />
     </div>
 
     <input type="submit" class="btn-primary rounded" value="Login" />
@@ -29,7 +32,7 @@
 @code {
 
     private User user;
-
+    private string confirmPassword;
     protected override Task OnInitializedAsync()
     {
         user = new User();
@@ -38,11 +41,33 @@
 
     private async Task<bool> ValidateUser()
     {
+        //Temporary until we figure out how to load SQL connection string from appsettings, key vault or secrets
+        SqlConnection sqlConnection = new SqlConnection("Server=tcp:notebookwebdbserver.database.windows.net,1433;Initial Catalog=NotEBookWeb_db;Persist Security Info=False;User ID=NotEBookDBAdmin;Password=CSUNSWETeam490;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
-        ((CustomAuthenticationStateProvider)AuthenticationStateProvider).FlagUserAsAuthenticated(user.Email); //mark user as authenticated when they log in
-        NavigationManager.NavigateTo("/");
+        try
+        {
+            if (sqlConnection.State == ConnectionState.Closed)
+                sqlConnection.Open();
+            String query = "INSERT INTO Users (Username, Email, Password) VALUES (user.Username, user.Email, user.Password)";
+            SqlCommand sqlCmd = new SqlCommand(query, sqlConnection);
+            sqlCmd.CommandType = CommandType.Text;
+            sqlCmd.Parameters.AddWithValue("@Email", user.Email);
+            sqlCmd.Parameters.AddWithValue("@Password", user.Password);
+            int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
 
-        await sessionStorage.SetItemAsync("Email", user.Email);
+            if (count == 1)
+            {
+                ((CustomAuthenticationStateProvider)AuthenticationStateProvider).FlagUserAsAuthenticated(user.Email); //mark user as authenticated when they log in
+                NavigationManager.NavigateTo("/");
+            }
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+
+        await sessionStorage.SetItemAsync("Username", user.Username);
         return await Task.FromResult(true);
     }
 }
