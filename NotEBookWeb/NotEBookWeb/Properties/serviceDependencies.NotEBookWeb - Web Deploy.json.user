@@ -4,9 +4,17 @@
       "restored": true,
       "restoreTime": "2021-10-30T22:12:33.4218372Z"
     },
+    "mssql3": {
+      "restored": true,
+      "restoreTime": "2021-11-03T19:06:20.6488533Z"
+    },
     "mssql2": {
       "restored": true,
       "restoreTime": "2021-10-31T01:01:36.1936673Z"
+    },
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2021-11-03T17:54:54.8620604Z"
     },
     "mssql1": {
       "restored": true,
@@ -14,28 +22,48 @@
     }
   },
   "parameters": {
+    "NotEBookWeb.subscriptionId": {
+      "Name": "NotEBookWeb.subscriptionId",
+      "Type": "subscription",
+      "Value": "8e60167e-08fa-4442-93c8-d6c22116899c"
+    },
     "mssql2.subscriptionId": {
       "Name": "mssql2.subscriptionId",
       "Type": "subscription",
       "Value": "8e60167e-08fa-4442-93c8-d6c22116899c"
-    },
-    "signalr1.resourceGroupName": {
-      "Name": "signalr1.resourceGroupName",
-      "Type": "resourceGroup",
-      "Value": "NoteEBookResourceGroup"
     },
     "mssql2.resourceGroupName": {
       "Name": "mssql2.resourceGroupName",
       "Type": "resourceGroup",
       "Value": "NoteEBookResourceGroup"
     },
-    "mssql1.subscriptionId": {
-      "Name": "mssql1.subscriptionId",
+    "subscriptionId": {
+      "Name": "subscriptionId",
       "Type": "subscription",
       "Value": "8e60167e-08fa-4442-93c8-d6c22116899c"
     },
-    "signalr1.subscriptionId": {
-      "Name": "signalr1.subscriptionId",
+    "NotEBookWeb.resourceGroupLocation": {
+      "Name": "NotEBookWeb.resourceGroupLocation",
+      "Type": null,
+      "Value": "westus"
+    },
+    "mssql3.resourceGroupName": {
+      "Name": "mssql3.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "NoteEBookResourceGroup"
+    },
+    "NotEBookWeb.resourceName": {
+      "Name": "NotEBookWeb.resourceName",
+      "Type": null,
+      "Value": "NotEBookWeb"
+    },
+    "signalr1.resourceGroupName": {
+      "Name": "signalr1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "NoteEBookResourceGroup"
+    },
+    "secrets1.subscriptionId": {
+      "Name": "secrets1.subscriptionId",
       "Type": "subscription",
       "Value": "8e60167e-08fa-4442-93c8-d6c22116899c"
     },
@@ -43,6 +71,31 @@
       "Name": "mssql1.resourceGroupName",
       "Type": "resourceGroup",
       "Value": "NoteEBookResourceGroup"
+    },
+    "mssql3.subscriptionId": {
+      "Name": "mssql3.subscriptionId",
+      "Type": "subscription",
+      "Value": "8e60167e-08fa-4442-93c8-d6c22116899c"
+    },
+    "secrets1.resourceGroupName": {
+      "Name": "secrets1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "NoteEBookResourceGroup"
+    },
+    "NotEBookWeb.resourceGroupName": {
+      "Name": "NotEBookWeb.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "NoteEBookResourceGroup"
+    },
+    "signalr1.subscriptionId": {
+      "Name": "signalr1.subscriptionId",
+      "Type": "subscription",
+      "Value": "8e60167e-08fa-4442-93c8-d6c22116899c"
+    },
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "8e60167e-08fa-4442-93c8-d6c22116899c"
     }
   }
 }

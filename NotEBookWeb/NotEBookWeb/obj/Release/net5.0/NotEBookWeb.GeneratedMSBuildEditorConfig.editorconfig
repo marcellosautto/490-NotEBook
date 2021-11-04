@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = NotEBookWeb
-build_property.ProjectDir = D:\.NET_Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\
+build_property.ProjectDir = E:\.NET_Projects\490-NotEBook\NotEBookWeb\NotEBookWeb\

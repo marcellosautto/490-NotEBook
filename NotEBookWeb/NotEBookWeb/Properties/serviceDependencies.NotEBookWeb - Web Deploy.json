@@ -17,6 +17,18 @@
       "type": "mssql.azure",
       "connectionId": "VaultUri",
       "secretStore": "AzureAppSettings"
+    },
+    "mssql3": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/notebookwebdbserver/databases/NotEBookWeb_db",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:SqlDBConnection",
+      "secretStore": "AzureKeyVault"
+    },
+    "secrets1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.KeyVault/vaults/NotEBookWebvault",
+      "type": "secrets.keyVault",
+      "connectionId": "VaultUri",
+      "secretStore": "AzureAppSettings"
     }
   }
 }

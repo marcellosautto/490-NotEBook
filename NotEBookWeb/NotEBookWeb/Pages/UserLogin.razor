@@ -1,5 +1,8 @@
 ﻿@layout CenteredCardLayout
 @page "/login"
+@using System;
+@using System.Security.Cryptography;
+@using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 @using NotEBookWeb.Data
 @using System.Data.SqlClient
 @using System.Data
@@ -28,8 +31,6 @@
 
     private User user;
 
-
-
     protected override Task OnInitializedAsync()
     {
         user = new User();
@@ -50,6 +51,26 @@
             SqlCommand sqlCmd = new SqlCommand(query, sqlConnection);
             sqlCmd.CommandType = CommandType.Text;
             sqlCmd.Parameters.AddWithValue("@Email", user.Email);
+
+            //Hash Password- Currently does not hash consistently
+            byte[] salt = new byte[128 / 8];
+            using (var rngCsp = new RNGCryptoServiceProvider())
+            {
+                rngCsp.GetNonZeroBytes(salt);
+            }
+            Console.WriteLine($"Salt: {Convert.ToBase64String(salt)}");
+
+            // derive a 256-bit subkey (use HMACSHA256 with 100,000 iterations)
+            string hashed_password = Convert.ToBase64String(KeyDerivation.Pbkdf2(
+                password: user.Password,
+                salt: salt,
+                prf: KeyDerivationPrf.HMACSHA256,
+                iterationCount: 100000,
+                numBytesRequested: 256 / 8));
+
+            user.Password = hashed_password;
+            //Console.WriteLine($"Hashed: {hashed_password}");
+
             sqlCmd.Parameters.AddWithValue("@Password", user.Password);
             int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
 

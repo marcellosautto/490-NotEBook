@@ -3,6 +3,10 @@
     "signalr1": {
       "restored": true,
       "restoreTime": "2021-10-24T07:35:20.071593Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2021-11-02T23:09:04.1087789Z"
     }
   },
   "parameters": {
@@ -10,6 +14,16 @@
       "Name": "signalr1.resourceGroupName",
       "Type": "resourceGroup",
       "Value": "NotEBookWeb20211024001844ResourceGroup"
+    },
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "8e60167e-08fa-4442-93c8-d6c22116899c"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "NoteEBookResourceGroup"
     },
     "signalr1.subscriptionId": {
       "Name": "signalr1.subscriptionId",

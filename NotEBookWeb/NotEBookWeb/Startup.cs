@@ -15,7 +15,7 @@ using NotEBookWeb.Data;
 using NotEBookWeb.Models;
 using System.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.AspNetCore.SignalR;
 namespace NotEBookWeb
 {
     public class Startup
@@ -42,7 +42,12 @@ namespace NotEBookWeb
             services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>(); 
             services.AddSingleton<HttpClient>();
 
-            
+            //services.AddSignalR().AddAzureSignalR(options =>
+            //{
+            //    options.ConnectionString = Configuration["Azure:SignalR:ConnectionString"];
+            //});
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
