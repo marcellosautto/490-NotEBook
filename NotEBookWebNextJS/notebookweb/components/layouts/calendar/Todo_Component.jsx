@@ -10,7 +10,6 @@ export default function Todo_Component({ value, onChangeValue }) {
 
     const [todo, setTodoList] = useState([]);
     const [date, setDate] = useState(moment());
-    const [time, setTime] = useState(moment());
     const [input, setInput] = useState('');
 
     const handleChangeEvent = (e) => {
@@ -32,8 +31,8 @@ export default function Todo_Component({ value, onChangeValue }) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if(date && time && input)
-            setTodoList([[date, time, input, ...todo]]);
+        if(date && input)
+            setTodoList([[date, input, ...todo]]);
 
         //dayStyles(date, value);
 
