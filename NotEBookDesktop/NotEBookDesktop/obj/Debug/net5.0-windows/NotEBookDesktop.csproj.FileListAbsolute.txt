@@ -71,3 +71,31 @@ E:\.NET Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-w
 E:\.NET Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\ref\NotEBookDesktop.dll
 E:\.NET Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.pdb
 E:\.NET Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.genruntimeconfig.cache
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\NotEBookDesktop.exe
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\NotEBookDesktop.deps.json
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\NotEBookDesktop.runtimeconfig.json
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\NotEBookDesktop.runtimeconfig.dev.json
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\NotEBookDesktop.dll
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\ref\NotEBookDesktop.dll
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\NotEBookDesktop.pdb
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\System.Drawing.Common.dll
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.csproj.AssemblyReference.cache
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Login.g.cs
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\MainWindow.g.cs
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\App.g.cs
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop_MarkupCompile.cache
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop_MarkupCompile.lref
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Login.baml
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\MainWindow.baml
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.g.resources
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.GeneratedMSBuildEditorConfig.editorconfig
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.AssemblyInfoInputs.cache
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.AssemblyInfo.cs
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.csproj.CoreCompileInputs.cache
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.csproj.CopyComplete
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.dll
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\ref\NotEBookDesktop.dll
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.pdb
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.genruntimeconfig.cache
