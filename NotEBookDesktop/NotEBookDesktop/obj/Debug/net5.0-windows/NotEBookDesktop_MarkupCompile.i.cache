@@ -4,12 +4,12 @@
 winexe
 C#
 .cs
-D:\.NET Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\
 NotEBookDesktop
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-D:\.NET Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\App.xaml
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\App.xaml
 11407045341
 
 5305521967
