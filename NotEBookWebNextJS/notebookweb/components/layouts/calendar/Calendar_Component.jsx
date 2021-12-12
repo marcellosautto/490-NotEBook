@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import moment from "moment";
 import styles from '../../../styles/Home.module.css'
 import { Button, Container, Row, Col } from 'react-bootstrap';
@@ -8,12 +8,12 @@ import buildCalendarComponent from "./build";
 import dayStyles from "./styles";
 import CalendarHeader from "./header";
 
-export default function Calendar_Component({value, onChange}) {
+export default function Calendar_Component({ value, onChange }) {
     const [calendar, setCalendar] = useState([]);
 
     const days_of_week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-    useEffect(() =>{
+    useEffect(() => {
         setCalendar(buildCalendarComponent(value));
     }, [value])
 
@@ -22,7 +22,7 @@ export default function Calendar_Component({value, onChange}) {
         <div className="App-header">
 
             <Container className={styles.calendar}>
-               <CalendarHeader value={value} setValue={onChange}/>
+                <CalendarHeader value={value} setValue={onChange} />
 
                 <Row className={styles.week}>
                     {

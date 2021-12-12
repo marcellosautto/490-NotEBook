@@ -1,0 +1,37 @@
+.calc_body{
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Padauk', sans-serif;
+    
+}
+
+.calc_screen{
+    font-size: 42px;
+    background-color: #ffffff;
+    color:black;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+
+.calc_button_box{
+    margin:5px;
+    text-align: center;
+}
+
+.calc_button{
+    background-color: rgb(255, 255, 181);
+    text-align: center;
+    margin: 5px;
+    width: 80px;
+    height: 60px;
+    font-size: 22px;
+    border-radius: 10px;
+    
+}
+
+.calc_button:hover{
+    background-color: rgb(247, 247, 206);
+}
+
