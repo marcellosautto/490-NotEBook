@@ -112,6 +112,20 @@ namespace NotEBookDesktop
                 fs.Close();
             }
         }
+        private void Calendar_Click(object sender, RoutedEventArgs e)
+        {
+            //Open Calendar page as new window
+
+            Calendar cal = new Calendar();
+            cal.Show();
+            //string messageBoxText = "NO Calendar fo you";
+            //string caption = "Buy one!";
+            //MessageBoxButton button = MessageBoxButton.YesNoCancel;
+            //MessageBoxImage icon = MessageBoxImage.Warning;
+            //MessageBoxResult result;
+
+            //result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
+        }
     }
  
 }

@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "2tjYMBEpJwUSgNN5dHX0CwC4uxSFXc3d9GgALIvAXrO4xpcD5gmMt7jFDNTmUXU6atc/aVvuQMwKyyo6rLXKLg==",
+  "dgSpecHash": "K27Tft8DsnyTr13rbzCOemYZhKC+zhoJPsDn2W7oNFf26DCa5RmFNIvevOG1i7KfknZIJJSlMV9ByJrOgMXMAA==",
   "success": true,
-  "projectFilePath": "D:\\.NET Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
+  "projectFilePath": "E:\\Group Projects\\Comp 490\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\marce\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
-    "C:\\Users\\marce\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
-    "C:\\Users\\marce\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512"
+    "C:\\Users\\hec12\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\hec12\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\hec12\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512"
   ],
   "logs": []
 }
