@@ -101,7 +101,11 @@ namespace NotEBookDesktop {
                 return;
             }
             _contentLoaded = true;
+<<<<<<< HEAD:NotEBookDesktop/NotEBookDesktop/obj/Debug/net5.0-windows/Calendar.g.i.cs
             System.Uri resourceLocater = new System.Uri("/NotEBookDesktop;V1.0.0.0;component/calendar.xaml", System.UriKind.Relative);
+=======
+            System.Uri resourceLocater = new System.Uri("/NotEBookDesktop;V1.0.0.0;component/login.xaml", System.UriKind.Relative);
+>>>>>>> 998fd9c (desktop build):NotEBookDesktop/NotEBookDesktop/obj/Debug/net5.0-windows/Login.g.i.cs
             
             #line 1 "..\..\..\Calendar.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
