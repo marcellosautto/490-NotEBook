@@ -8,12 +8,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@material-ui/icons": "^4.11.2",
     "axios": "^0.24.0",
     "bootstrap": "^5.1.3",
+    "firebase": "^9.6.6",
     "moment": "^2.29.1",
     "next": "12.0.3",
     "react": "17.0.2",
+<<<<<<< HEAD
     "react-bootstrap": "^2.1.1",
+=======
+    "react-bootstrap": "^2.0.2",
+    "react-country-region-selector": "^3.4.0",
+    "react-datepicker": "^4.6.0",
+>>>>>>> 59785ff5cc42c248558065582ed2b2a43f3ae47e
     "react-dom": "17.0.2"
   },
   "devDependencies": {

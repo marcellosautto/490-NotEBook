@@ -1,0 +1,132 @@
+.signIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.signIn__logo {
+  width: 100px;
+  margin-top: 30px;
+}
+
+.signIn__title {
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 700;
+  font-family: TradeGothicforNike365-BdCn, Helvetica;
+  text-align: center;
+  line-height: 26px;
+}
+
+.signIn__input {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  width: 322px;
+  height: 36px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 14px;
+}
+
+.signIn__input:focus::placeholder {
+  opacity: 0.5;
+}
+
+.signIn__input--red {
+  border: 1px solid red;
+}
+
+.signIn__text-valid {
+  text-align: start;
+  font-family: Helvetica;
+  color: rgb(254, 0, 0);
+  width: 322px;
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+
+.signIn__checkmark-container {
+  display: flex;
+  width: 322px;
+  justify-content: space-between;
+  margin-top: 14px;
+  margin-bottom: 30px;
+}
+
+.signIn__box {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.signIn__box-arrow {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgb(188, 188, 188);
+  border-radius: 3px;
+  width: 18px;
+  height: 18px;
+  margin-right: 14px;
+}
+
+.signIn__arrow {
+  position: absolute;
+  top: 4px;
+  width: 3px;
+  height: 7px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.signIn__text {
+  text-align: center;
+  color: rgb(140, 140, 140);
+  font-size: 12px;
+}
+
+.signIn__text a {
+  color: rgb(140, 140, 140);
+}
+
+.signIn__text--light {
+  cursor: pointer;
+  color: rgb(188, 188, 188);
+}
+
+.signIn__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  width: 322px;
+  height: 40px;
+  border-radius: 4px;
+  font-family: TradeGothicforNike365-BdCn, Helvetica;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.signIn__text span {
+  cursor: pointer;
+  color: black;
+  text-decoration: underline;
+}
+
+.signIn__text--margin {
+  margin-bottom: 30px;
+}
