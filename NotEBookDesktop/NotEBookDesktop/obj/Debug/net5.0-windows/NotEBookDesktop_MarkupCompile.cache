@@ -4,30 +4,17 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
-D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\
-=======
-E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\
->>>>>>> Calender
+E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\
 NotEBookDesktop
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-<<<<<<< HEAD
-D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\App.xaml
-2-1376777318
+E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\App.xaml
+3-1540100988
 
-465254801
+6310434446
 1951866375848
-Login.xaml;MainWindow.xaml;
-=======
-E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\App.xaml
-21243721671
-
-5-987989912
-194-517835203
-Calendar.xaml;MainWindow.xaml;
->>>>>>> Calender
+Calendar.xaml;Login.xaml;MainWindow.xaml;
 
 False
 

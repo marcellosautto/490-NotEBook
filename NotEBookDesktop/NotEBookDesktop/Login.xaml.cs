@@ -38,7 +38,7 @@ namespace NotEBookDesktop
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-            SqlConnection sqlCon = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=NotEBookUserAuthDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            SqlConnection sqlCon = new SqlConnection(@"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = NotEBookUserLoginDB; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
 
             try
             {

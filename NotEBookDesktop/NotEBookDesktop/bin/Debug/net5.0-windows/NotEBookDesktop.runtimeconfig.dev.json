@@ -1,14 +1,10 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-<<<<<<< HEAD
       "C:\\Users\\marce\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\marce\\.nuget\\packages",
-=======
-      "C:\\Users\\hec12\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\hec12\\.nuget\\packages",
->>>>>>> Calender
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+      "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
     ]
   }
 }
