@@ -1,0 +1,189 @@
+.signUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow-y: scroll;
+  max-height: 100vh;
+}
+
+.signUp__logo {
+  width: 100px;
+  margin-top: 30px;
+}
+
+.signUp__title {
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 700;
+  font-family: TradeGothicforNike365-BdCn, Helvetica;
+  text-align: center;
+  line-height: 26px;
+}
+
+.signUp__text {
+  width: 322px;
+  font-family: Helvetica;
+  color: rgb(140, 140, 140);
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.signUp__text--center {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.signUp__text a {
+  color: rgb(140, 140, 140);
+}
+
+.signUp__text--sub-title {
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.signUp__input {
+  outline: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 4px !important;
+  width: 322px !important;
+  min-height: 36px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  margin-bottom: 14px !important;
+}
+
+.signUp__input:focus::placeholder {
+  opacity: 0.5;
+}
+
+.signUp__input--red {
+  border: 1px solid red !important;
+}
+
+.signUp__text-valid {
+  text-align: start;
+  font-family: Helvetica;
+  color: rgb(254, 0, 0);
+  width: 322px;
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+
+.signUp__datePicker::placeholder {
+  color: black;
+}
+
+.signUp__datePicker:focus::placeholder {
+  opacity: 0.5;
+}
+
+.signUp__countryPicker {
+  outline: none !important;
+  color: rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 4px !important;
+  width: 322px !important;
+  min-height: 44px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  margin-top: 14px !important;
+  margin-bottom: 14px !important;
+}
+
+.signUp__gender-container {
+  display: flex;
+  justify-content: space-between;
+  width: 322px;
+  margin-bottom: 14px;
+}
+
+.signUp__gender {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  width: 150px;
+  height: 36px;
+  font-size: 14px;
+}
+
+.signUp__gender--selected {
+  border: 1px solid rgba(0, 0, 0, 1);
+  color: rgba(0, 0, 0, 1);
+}
+
+.signUp__box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 322px;
+}
+
+.signUp__box-arrow {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgb(188, 188, 188);
+  border-radius: 3px;
+  width: 18px;
+  height: 18px;
+  margin-right: 14px;
+}
+
+.signUp__arrow {
+  position: absolute;
+  top: 4px;
+  width: 3px;
+  height: 7px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.signUp__arrow--gender {
+  position: static !important;
+  margin-right: 10px;
+}
+
+.signUp__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  width: 322px;
+  min-height: 40px;
+  border-radius: 4px;
+  font-family: TradeGothicforNike365-BdCn, Helvetica;
+  /* margin-top: 30px; */
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.signUp__text span {
+  cursor: pointer;
+  color: black;
+  text-decoration: underline;
+}
+
+.signUp__text--margin {
+  margin-bottom: 30px;
+}

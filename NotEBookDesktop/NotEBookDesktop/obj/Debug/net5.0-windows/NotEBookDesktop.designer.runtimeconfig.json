@@ -8,7 +8,12 @@
     "additionalProbingPaths": [
       "C:\\Users\\marce\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\marce\\.nuget\\packages",
+<<<<<<< HEAD
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+=======
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+      "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+>>>>>>> 48f85b51954abb312044a2a43f8dfc25850ddac5
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

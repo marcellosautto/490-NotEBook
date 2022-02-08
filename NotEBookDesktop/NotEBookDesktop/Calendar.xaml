@@ -1,0 +1,25 @@
+﻿<Window x:Class="NotEBookDesktop.Calendar"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NotEBookDesktop"
+      mc:Ignorable="d"
+      Title="Calendar" ResizeMode="NoResize" Height="228" Width="648">
+
+    <Grid Background="White">
+        <Calendar x:Name="LeftCalendar" HorizontalAlignment="Left" Margin="26,19,0,0" VerticalAlignment="Top" Height="161" Width="183"/>
+        <DatePicker x:Name="EventDate" HorizontalAlignment="Left" Margin="234,19,0,0" VerticalAlignment="Top" Height="29"/>
+        <ListView x:Name="EventList" Margin="234,53,17,32">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="60" Header="Date" DisplayMemberBinding="{Binding Date}"/>
+                    <GridViewColumn Width="240" Header="Event" DisplayMemberBinding="{Binding Event}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox x:Name="EventTextBox" HorizontalAlignment="Left" Margin="377,19,0,0" Text="Enter an Event" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" Height="29" FontSize="14"/>
+        <Button x:Name="EnterEventButton" Content="Add" HorizontalAlignment="Left" Margin="554,24,0,0" VerticalAlignment="Top" Click="EnterEvent_Click"/>
+        <Button x:Name="RemoveEventButton" Content="Remove" HorizontalAlignment="Left" Margin="585,24,0,0" VerticalAlignment="Top" Click="RemoveEvent_Click" RenderTransformOrigin="0.643,-0.167"/>
+    </Grid>
+</Window>

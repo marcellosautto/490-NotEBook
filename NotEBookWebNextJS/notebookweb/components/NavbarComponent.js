@@ -1,9 +1,21 @@
-import logo from '../assets/images/notebook.png';
-import { Button, Form, Container, Row, Col, Nav, Navbar, NavDropdown } from 'react-bootstrap'
-import Image from 'next/image'
-
+import logo from "../assets/images/notebook.png";
+import React, { useState } from "react";
+import {
+  Button,
+  Form,
+  Container,
+  Row,
+  Col,
+  Nav,
+  Navbar,
+  NavDropdown,
+} from "react-bootstrap";
+import Image from "next/image";
+import Login from "../pages/Authentication/Login";
 
 export default function NavBarComponent() {
+  const [opened, setOpened] = useState(false);
+
   return (
     <Navbar bg="light" expand="lg" className="justify-content-center">
       <Container>
@@ -14,8 +26,9 @@ export default function NavBarComponent() {
             width="30"
             height="30"
             className="d-inline-block align-top"
-          />{' '}
-          NotEBook</Navbar.Brand>
+          />{" "}
+          NotEBook
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -26,16 +39,18 @@ export default function NavBarComponent() {
               <NavDropdown.Item href="/calculator">Calculator</NavDropdown.Item>
               <NavDropdown.Item href="/notes">Draw</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Navbar.Text className="justify-content-end">
+          <button onClick={() => setOpened(true)}>Sign In</button>
+          {/* <Navbar.Text className="justify-content-end">
             Signed in as: <a href="/login">Willy Nobody</a>
-          </Navbar.Text>
+          </Navbar.Text> */}
         </Navbar.Collapse>
       </Container>
+      <Login opened={opened} setOpened={setOpened} />
     </Navbar>
-
   );
 }
-
