@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "nrp+IUMAs5leefunp6Okg/2GrCPZXhlzgh0+ZsWgHd1pnaVd+KN03bk6Cil6AmUL0Rgj4txL4vpKSGQUiZlmHg==",
+  "success": true,
+  "projectFilePath": "D:\\.NET_Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
+=======
   "dgSpecHash": "kNbp+NRNL30j9ukA0uorZkQXpKKFGeDftS3otrzW4HrGGyRfscg8n66VpahwiTU3Hic/G10GvDjgYWdGZd2zFw==",
   "success": true,
   "projectFilePath": "E:\\.NET_Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
+>>>>>>> 48f85b51954abb312044a2a43f8dfc25850ddac5
   "expectedPackageFiles": [
     "C:\\Users\\marce\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\marce\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
