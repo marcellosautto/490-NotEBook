@@ -7,7 +7,7 @@ import styles from "../styles/Home.module.css"
 export default function notes() {
     return (
         <div>
-            <h1>Drawing</h1>
+            <h1 className={styles.canvas_title}>Canvas</h1>
             <DrawingComponent />
         </div>);
 }

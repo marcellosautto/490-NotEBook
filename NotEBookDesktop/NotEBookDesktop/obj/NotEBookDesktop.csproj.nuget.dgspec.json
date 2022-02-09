@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Dudel\\Desktop\\Code\\490\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj": {}
   },
   "projects": {
@@ -12,10 +13,34 @@
         "projectPath": "C:\\Users\\Dudel\\Desktop\\Code\\490\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
         "packagesPath": "C:\\Users\\Dudel\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Dudel\\Desktop\\Code\\490\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\obj\\",
+=======
+    "E:\\.NET_Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj": {}
+  },
+  "projects": {
+    "E:\\.NET_Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\.NET_Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
+        "projectName": "NotEBookDesktop",
+        "projectPath": "E:\\.NET_Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
+        "packagesPath": "C:\\Users\\marce\\.nuget\\packages\\",
+        "outputPath": "E:\\.NET_Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\obj\\",
+>>>>>>> 8afde708932562a8c5a8484a75cf5c52287233d7
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Dudel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
+          "C:\\Users\\marce\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+>>>>>>> 8afde708932562a8c5a8484a75cf5c52287233d7
         ],
         "originalTargetFrameworks": [
           "net5.0-windows7.0"
@@ -40,6 +65,10 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            },
             "System.Drawing.Common": {
               "target": "Package",
               "version": "[5.0.2, )"
@@ -81,7 +110,11 @@
               "privateAssets": "none"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+>>>>>>> 8afde708932562a8c5a8484a75cf5c52287233d7
         }
       }
     }
