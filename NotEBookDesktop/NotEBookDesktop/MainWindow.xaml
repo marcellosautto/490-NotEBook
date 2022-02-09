@@ -363,7 +363,6 @@
                 </Button>
             </StackPanel>
         </StackPanel>
-<<<<<<< HEAD
         <InkCanvas x:Name="theInkCanvas" Margin="210,304,200,-245" Background="Transparent" RenderTransformOrigin="1.232,0.923" Grid.ColumnSpan="2" Grid.Row="1">
             <InkCanvas.RenderTransform>
                 <TransformGroup>
@@ -374,43 +373,6 @@
                 </TransformGroup>
             </InkCanvas.RenderTransform>
         </InkCanvas>
-=======
-        <Button Content="Calendar"
-            Foreground="White"
-            FontSize="16"
-            FontWeight="Medium"
-            x:Name="Calendar"
-            Click="Calendar_Click" Margin="112,366,112,29" Grid.Row="1">
-
-            <Button.Style>
-                <Style TargetType="{x:Type Button}">
-                    <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
-                    <Setter Property="Background" Value="MediumPurple"/>
-                    <Setter Property="Cursor" Value="Hand"/>
-
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#FF865DDC"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-
-            <Button.Template>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Width="175" Height="30"
-                        CornerRadius="12"
-                        Background="{TemplateBinding Background}">
-                        <ContentPresenter VerticalAlignment="Center"
-                            HorizontalAlignment="Center"/>
-
-
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
-
-        </Button>
->>>>>>> 8afde708932562a8c5a8484a75cf5c52287233d7
 
     </Grid>
 </Window>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\NotEBookDesktop.exe
 C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\NotEBookDesktop.deps.json
 C:\Users\Dudel\Desktop\Code\490\NoteEBook T2\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\NotEBookDesktop.runtimeconfig.json
@@ -98,41 +97,3 @@ C:\Users\Dudel\Desktop\Code\490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj
 C:\Users\Dudel\Desktop\Code\490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\ref\NotEBookDesktop.dll
 C:\Users\Dudel\Desktop\Code\490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.pdb
 C:\Users\Dudel\Desktop\Code\490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.genruntimeconfig.cache
-=======
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\NotEBookDesktop.exe
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\NotEBookDesktop.deps.json
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\NotEBookDesktop.runtimeconfig.json
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\NotEBookDesktop.runtimeconfig.dev.json
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\NotEBookDesktop.dll
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\ref\NotEBookDesktop.dll
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\NotEBookDesktop.pdb
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\System.Drawing.Common.dll
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.csproj.AssemblyReference.cache
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Calendar.g.cs
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Login.g.cs
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\MainWindow.g.cs
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\App.g.cs
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop_MarkupCompile.cache
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop_MarkupCompile.lref
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Calendar.baml
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Login.baml
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\MainWindow.baml
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.g.resources
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.GeneratedMSBuildEditorConfig.editorconfig
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.AssemblyInfoInputs.cache
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.AssemblyInfo.cs
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.csproj.CoreCompileInputs.cache
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.csproj.CopyComplete
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.dll
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\ref\NotEBookDesktop.dll
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.pdb
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.genruntimeconfig.cache
->>>>>>> 8afde708932562a8c5a8484a75cf5c52287233d7
