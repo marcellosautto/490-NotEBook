@@ -18,6 +18,7 @@ using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
 using System.Windows.Ink;
+using System.Windows.Markup;
 
 
 namespace NotEBookDesktop
@@ -27,6 +28,7 @@ namespace NotEBookDesktop
     /// </summary>
     public partial class MainWindow : Window
     {
+        System.Windows.Controls.Image image;
         public MainWindow()
         {
             InitializeComponent();
@@ -95,23 +97,56 @@ namespace NotEBookDesktop
                 FileStream fs = new FileStream(saveFileDialog1.FileName,
                                                FileMode.Create);
                 theInkCanvas.Strokes.Save(fs);
+                string save = XamlWriter.Save(image);
+
+                File.WriteAllText("test.Xaml", save);
                 fs.Close();
             }
+
+            
         }
 
         private void Load_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "isf files (*.isf)|*.isf";
+            //OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            //openFileDialog1.Filter = "isf files (*.isf)|*.isf";
 
-            if (openFileDialog1.ShowDialog() == true)
+            //if (openFileDialog1.ShowDialog() == true)
+            //{
+            //    FileStream fs = new FileStream(openFileDialog1.FileName,
+            //                                   FileMode.Open);
+            //    theInkCanvas.Strokes = new StrokeCollection(fs);
+            //    fs.Close();
+            //}
+          //  OpenFileDialog openFileDialog1 = new OpenFileDialog();
+          //  openFileDialog1.Filter = "xaml files (*.xaml)|*.xaml";
+
+          //  FileStream fs = new FileStream(openFileDialog1.FileName, FileMode.Open);
+            var stream = File.OpenRead("test.Xaml");
+            image = XamlReader.Load(stream) as System.Windows.Controls.Image;
+            theInkCanvas.Children.Add(image);
+
+        }
+        private void btnOpen_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            op.Title = "Select a picture";
+            op.Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" +
+              "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" +
+              "Portable Network Graphic (*.png)|*.png";
+            if (op.ShowDialog() == true)
             {
-                FileStream fs = new FileStream(openFileDialog1.FileName,
-                                               FileMode.Open);
-                theInkCanvas.Strokes = new StrokeCollection(fs);
-                fs.Close();
+                // imgPhoto.Source = new BitmapImage(new Uri(op.FileName));
+
+                image = new System.Windows.Controls.Image
+                {
+                    //Width = 100,
+                    Source = new BitmapImage(new Uri(op.FileName))
+
+                };
+                theInkCanvas.Children.Add(image);
             }
         }
     }
- 
+
 }

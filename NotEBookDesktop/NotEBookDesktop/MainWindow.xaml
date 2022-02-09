@@ -106,11 +106,11 @@
                         Foreground="White"
                         FontSize="16"
                         FontWeight="Medium"
-                        Name="Save"
+                        x:Name="Save"
                         Click="Save_Click" HorizontalAlignment="Center">
 
                     <Button.Style>
-                        <Style TargetType="Button">
+                        <Style TargetType="{x:Type Button}">
                             <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
                             <Setter Property="Background" Value="MediumPurple"/>
                             <Setter Property="Cursor" Value="Hand"/>
@@ -124,7 +124,7 @@
                     </Button.Style>
 
                     <Button.Template>
-                        <ControlTemplate TargetType="Button">
+                        <ControlTemplate TargetType="{x:Type Button}">
                             <Border Width="175" Height="30"
                                     CornerRadius="12"
                                     Background="{TemplateBinding Background}">
@@ -142,11 +142,11 @@
                         Foreground="White"
                         FontSize="16"
                         FontWeight="Medium"
-                        Name="Load"
+                        x:Name="Load"
                         Click="Load_Click" Margin="0,5,0,0">
 
                     <Button.Style>
-                        <Style TargetType="Button">
+                        <Style TargetType="{x:Type Button}">
                             <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
                             <Setter Property="Background" Value="MediumPurple"/>
                             <Setter Property="Cursor" Value="Hand"/>
@@ -160,7 +160,7 @@
                     </Button.Style>
 
                     <Button.Template>
-                        <ControlTemplate TargetType="Button">
+                        <ControlTemplate TargetType="{x:Type Button}">
                             <Border Width="175" Height="25"
                                     CornerRadius="12"
                                     Background="{TemplateBinding Background}">
@@ -185,7 +185,7 @@
 
             <StackPanel x:Name="buttonBar"
                        Orientation="Horizontal" 
-                        Width="315"
+                        Width="393"
                         Grid.Row="3">
 
                 <Button Content="Ink"
@@ -327,12 +327,52 @@
                     </Button.Template>
 
                 </Button>
+                <Button Content="Image"
+                    Foreground="White"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Click="btnOpen_Click">
+
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                            <Setter Property="Background" Value="MediumPurple"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF865DDC"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="75"  Height="30"
+                                CornerRadius="12"
+                                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"/>
+
+
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+
+                </Button>
             </StackPanel>
-
-            <InkCanvas x:Name="theInkCanvas" Height="385" Width="400" Margin="0,5,0,0"/>
-
-
         </StackPanel>
+        <InkCanvas x:Name="theInkCanvas" Margin="210,304,200,-245" Background="Transparent" RenderTransformOrigin="1.232,0.923" Grid.ColumnSpan="2" Grid.Row="1">
+            <InkCanvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-245" X="200"/>
+                </TransformGroup>
+            </InkCanvas.RenderTransform>
+        </InkCanvas>
 
     </Grid>
 </Window>
