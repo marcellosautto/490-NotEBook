@@ -52,9 +52,7 @@ function SignIn(props) {
         <Image src={logo} alt="" />
       </div>
       <p className="signIn__title">
-        YOUR ACCOUNT FOR
-        <br />
-        EVERYTHING NOTEBOOK
+        NotEBook Login
       </p>
       <input
         className={

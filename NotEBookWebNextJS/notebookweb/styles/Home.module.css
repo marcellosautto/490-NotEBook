@@ -316,3 +316,17 @@
   font-family: 'Eczar', serif;
   font-size: 4em;
 }
+
+/*Login CSS*/
+
+.login__button{
+  color: #282c34;
+  background-color: #fafafa;
+  border: 2px #282c34 solid;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+
+.login__button:hover{
+  background-color: #ffffff;
+}

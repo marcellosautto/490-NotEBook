@@ -12,6 +12,8 @@ import {
 } from "react-bootstrap";
 import Image from "next/image";
 import Login from "../pages/Authentication/Login";
+import styles from '../styles/Home.module.css'
+
 
 export default function NavBarComponent() {
   const [opened, setOpened] = useState(false);
@@ -44,7 +46,7 @@ export default function NavBarComponent() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <button onClick={() => setOpened(true)}>Sign In</button>
+          <button class={styles.login__button} onClick={() => setOpened(true)}>Sign In</button>
           {/* <Navbar.Text className="justify-content-end">
             Signed in as: <a href="/login">Willy Nobody</a>
           </Navbar.Text> */}
