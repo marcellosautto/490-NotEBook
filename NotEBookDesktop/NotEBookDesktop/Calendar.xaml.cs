@@ -54,22 +54,16 @@ namespace NotEBookDesktop
 
         private void RemoveEvent_Click(object sender, RoutedEventArgs e)
         {
-            //See which Index is slecected to be removed
-            if(EventList.SelectedIndex == -1)
+            //Get a copy of list of selected items, otherwise we are iterating through a modified list and program will throw an error and crash and die and thats bad
+            ListView EventListCopy = new ListView();
+            foreach (EventItem eachItem in EventList.SelectedItems)
             {
-                //do nothing
+                EventListCopy.Items.Add(eachItem);
             }
-            else
+            //Using the copy, remove the selected items
+            foreach (EventItem eachItem in EventListCopy.Items)
             {
-                //EventList.Items.Remove(EventList.SelectedIndex); DOSEN'T WORK
-
-
-
-                //remove selected index THIS CAUSES A CRASH TO DESKTOP
-                //foreach (ListViewItem eachItem in EventList.SelectedItems)
-                //{
-                //    EventList.Items.Remove(eachItem);
-                //}
+                EventList.Items.Remove(eachItem);
             }
         }
     }
