@@ -97,3 +97,7 @@ C:\Users\Dudel\Desktop\Code\490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj
 C:\Users\Dudel\Desktop\Code\490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\ref\NotEBookDesktop.dll
 C:\Users\Dudel\Desktop\Code\490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.pdb
 C:\Users\Dudel\Desktop\Code\490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.genruntimeconfig.cache
+C:\Users\Dudel\Desktop\Code\490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Calendar.g.cs
+C:\Users\Dudel\Desktop\Code\490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Login.g.cs
+C:\Users\Dudel\Desktop\Code\490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Calendar.baml
+C:\Users\Dudel\Desktop\Code\490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Login.baml

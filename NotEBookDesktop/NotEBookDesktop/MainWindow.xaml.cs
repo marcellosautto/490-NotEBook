@@ -1,23 +1,13 @@
-﻿using System;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.Collections.Generic;
-using System.Linq;
-//using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Win32;
+using System;
+//Added
+using System.IO;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-//Added
-using System.IO;
-using Microsoft.Win32;
-using System.Windows.Ink;
 using System.Windows.Markup;
 
 
@@ -84,7 +74,8 @@ namespace NotEBookDesktop
         // Set the EditingMode to selection.
         private void Select(object sender, RoutedEventArgs e)
         {
-            theInkCanvas.EditingMode = InkCanvasEditingMode.Select;
+            // theInkCanvas.EditingMode = InkCanvasEditingMode.Select;
+            theInkCanvas.EditingMode = InkCanvasEditingMode.None;
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
@@ -97,17 +88,19 @@ namespace NotEBookDesktop
                 FileStream fs = new FileStream(saveFileDialog1.FileName,
                                                FileMode.Create);
                 theInkCanvas.Strokes.Save(fs);
+
                 string save = XamlWriter.Save(image);
 
                 File.WriteAllText("test.Xaml", save);
                 fs.Close();
             }
 
-            
+
         }
 
         private void Load_Click(object sender, RoutedEventArgs e)
         {
+            //Outdated Load
             //OpenFileDialog openFileDialog1 = new OpenFileDialog();
             //openFileDialog1.Filter = "isf files (*.isf)|*.isf";
 
@@ -118,15 +111,73 @@ namespace NotEBookDesktop
             //    theInkCanvas.Strokes = new StrokeCollection(fs);
             //    fs.Close();
             //}
-          //  OpenFileDialog openFileDialog1 = new OpenFileDialog();
-          //  openFileDialog1.Filter = "xaml files (*.xaml)|*.xaml";
+            //  OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            //   openFileDialog1.Filter = "xaml files (*.xaml)|*.xaml";
 
-          //  FileStream fs = new FileStream(openFileDialog1.FileName, FileMode.Open);
+            //FileStream fs = new FileStream(openFileDialog1.FileName, FileMode.Open);
+
             var stream = File.OpenRead("test.Xaml");
             image = XamlReader.Load(stream) as System.Windows.Controls.Image;
             theInkCanvas.Children.Add(image);
 
         }
+        private void AddButtonClick(object sender, RoutedEventArgs e)
+        {
+            var dialog = new Microsoft.Win32.OpenFileDialog();
+            dialog.Filter =
+                "Image Files (*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+
+            if ((bool)dialog.ShowDialog())
+            {
+                image = new System.Windows.Controls.Image
+                {
+                Source = new BitmapImage(new Uri(dialog.FileName))
+
+                };
+                InkCanvas.SetLeft(image, 0);
+                InkCanvas.SetTop(image, 0);
+                theInkCanvas.Children.Add(image);
+            }
+        }
+
+        private System.Windows.Controls.Image draggedImage;
+        private Point mousePosition;
+
+        private void CanvasMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var image = e.Source as System.Windows.Controls.Image;
+
+            if (image != null && theInkCanvas.CaptureMouse())
+            {
+                mousePosition = e.GetPosition(theInkCanvas);
+                draggedImage = image;
+                System.Windows.Controls.Panel.SetZIndex(draggedImage, 1); // in case of multiple images
+            }
+        }
+
+        private void CanvasMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (draggedImage != null)
+            {
+                theInkCanvas.ReleaseMouseCapture();
+                System.Windows.Controls.Panel.SetZIndex(draggedImage, 0);
+                draggedImage = null;
+            }
+        }
+
+        private void CanvasMouseMove(object sender, MouseEventArgs e)
+        {
+            if (draggedImage != null)
+            {
+                var position = e.GetPosition(theInkCanvas);
+                position.X = (position.X + 300) * -1;
+                var offset = position - mousePosition;
+                mousePosition = position;
+                InkCanvas.SetLeft(draggedImage, InkCanvas.GetLeft(draggedImage) + offset.X);
+             //   InkCanvas.SetTop(draggedImage, InkCanvas.GetTop(draggedImage) + offset.Y);
+            }
+        }
+
         private void btnOpen_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog op = new OpenFileDialog();
@@ -136,13 +187,11 @@ namespace NotEBookDesktop
               "Portable Network Graphic (*.png)|*.png";
             if (op.ShowDialog() == true)
             {
-                // imgPhoto.Source = new BitmapImage(new Uri(op.FileName));
+               // imgPhoto.Source = new BitmapImage(new Uri(op.FileName));
 
                 image = new System.Windows.Controls.Image
                 {
-                    //Width = 100,
                     Source = new BitmapImage(new Uri(op.FileName))
-
                 };
                 theInkCanvas.Children.Add(image);
             }
