@@ -62,6 +62,7 @@ export default function DrawingComponent() {
         const context = canvas.getContext("2d");
         context.strokeStyle = "white";
         context.lineWidth = 5;
+        context.globalAlpha = 1;
         setCursor("nb__pen");
     }
 
@@ -70,8 +71,9 @@ export default function DrawingComponent() {
         const canvas = canvasRef.current;
         const context = canvas.getContext("2d");
         context.strokeStyle = 'rgb(255,255,0,0.7)';
-        context.filStyle = 'rgb(255,255,0,0.7)';
+        context.fillStyle = 'rgb(255,255,0,0.7)';
         context.lineWidth = 10;
+        context.globalAlpha = 0.025;
         setCursor("nb__highlighter");
     }
 
@@ -80,6 +82,7 @@ export default function DrawingComponent() {
         const context = canvas.getContext("2d");
         context.strokeStyle = "#282c34";
         context.lineWidth = 10;
+        context.globalAlpha = 1;
         setCursor("nb__eraser");
     }
 
