@@ -181,24 +181,32 @@
 /***********Calendar CSS***********/
 
 .calendar_header{
-  text-align: center;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 15px;
+  /* text-align: center;
+  justify-content: space-evenly; */
   font-family: 'Eczar', serif;
-  font-size: 1.2em;
+  font-size: 0.8em;
 }
 
 .calendar{
   font-size: 300%;
   font-family: 'Padauk', sans-serif;
-  justify-content: space-evenly;
   background-color: rgb(20, 13, 37);
   border: 1px solid rgb(20, 13, 37);
   border-radius: 10px;
   text-shadow: 2px 2px 4px #000000;
+  
 }
 
 .week{
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  grid-template-rows: auto;
+
 }
 
 .week_days{
@@ -209,16 +217,17 @@
   font-family: 'Manrope', sans-serif;
   font-style: italic;
   /* margin: 10px; */
-  margin: 10px 10px 10px 10px;
+  /* margin: 0 5px 0 5px; */
   padding: 5px;
 }
 
 .day{
   text-align: center;
   background-color: rgb(118, 111, 145);
-  margin: 10px;
+  margin: 5px 5px 5px 5px;
   transition-timing-function: ease-in-out;
   transition: 0.3s;
+  
 }
 
 .calendar_event{
@@ -233,7 +242,7 @@
 
 .selected_day{
   background-color: rgb(155, 144, 206);
-  margin: 0 -15px 0 -15px;
+  margin: 0 -5px 0 -5px;
 }
 
 .before{
@@ -242,17 +251,12 @@
 
 .today{
   background-color: rgb(117, 45, 87);
-  margin: 0 -15px 0 -15px;
+  margin: 0 -5px 0 -5px;
   color:  rgb(236, 236, 236);
 }
 
-.calendar_header{
-  text-align: center;
-  
-}
-
 .previous_month{
-  text-align: left;
+  grid-column: 1;
 }
 
 .previous_month:hover, .next_month:hover{
@@ -260,14 +264,11 @@
 }
 
 .current_month{
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  flex-wrap: nowrap;
+  grid-column: 2 / 6;
 }
 
 .next_month{
-  text-align: right;
+  grid-column: 7;
 }
 
 /*Todo CSS*/

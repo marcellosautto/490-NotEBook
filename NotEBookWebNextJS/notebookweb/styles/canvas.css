@@ -34,3 +34,7 @@
 .nb__eraser{
     cursor: url('../assets/images/nb_eraser_32x32.png') 8 25, pointer; 
 }
+
+.selected__type{
+    background-color: rgb(13, 110, 253, 0.9);
+  }

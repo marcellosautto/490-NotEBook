@@ -21,29 +21,29 @@ export default function Calendar_Component({ value, onChange }) {
     return (
         <div className="App-header">
 
-            <Container className={styles.calendar}>
+            <div className={styles.calendar}>
                 <CalendarHeader value={value} setValue={onChange} />
 
-                <Row className={styles.week}>
+                <div className={styles.week}>
                     {
                         days_of_week.map(day_name =>
-                            <Col className={styles.week_days}>{day_name}</Col>)
+                            <div className={styles.week_days}>{day_name}</div>)
                     }
-                </Row>
+                </div>
                 {
-                    calendar.map(week => <Row>
+                    calendar.map(week => <div className={styles.week}>
                         {
                             week.map(day =>
-                                <Col className={styles.day} onClick={() => onChange(day)}>
+                                <div className={styles.day} onClick={() => onChange(day)}>
                                     <div className={dayStyles(day, value)}>
                                         {day.format("D")}
                                     </div>
-                                </Col>
+                                </div>
                             )
                         }
-                    </Row>)
+                    </div>)
                 }
-            </Container>
+            </div>
         </div>
 
     );

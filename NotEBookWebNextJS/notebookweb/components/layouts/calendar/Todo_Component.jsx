@@ -41,9 +41,9 @@ export default function Todo_Component({ value, onChangeValue }) {
     return (
         <Container>
             <Row className={styles.todo_title}>
-                <Col md={7} lg={7} >Agenda</Col>
-                <Col md={2} lg={2}><Button variant="primary" onClick={handleSubmit}>Add</Button></Col>
-                <Col md={2} lg={2}><Button variant="secondary" disabled>Remove</Button></Col>
+                <Col sm={7} >Agenda</Col>
+                <Col sm={2}><Button variant="primary" onClick={handleSubmit}>Add</Button></Col>
+                <Col sm={2}><Button variant="secondary" disabled>Remove</Button></Col>
             </Row>
 
 

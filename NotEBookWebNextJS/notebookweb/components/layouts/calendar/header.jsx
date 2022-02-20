@@ -21,11 +21,11 @@ export default function CalendarHeader({value, setValue}) {
     }
 
     return (
-        <Row className={styles.calendar_header}>
-            <Col md={2} className={styles.previous_month} onClick={() => setValue(prevMonth())}>{String.fromCharCode(8249)}</Col>
-            <Col md={7} lassName={styles.current_month}>{currMonthName()} {currYear()}</Col>
-            <Col md={2} className={styles.next_month} onClick={() => setValue(nextMonth())}>{String.fromCharCode(8250)}</Col>
-        </Row>
+        <div className={styles.calendar_header}>
+            <div md={2} className={styles.previous_month} onClick={() => setValue(prevMonth())}>{String.fromCharCode(8249)}</div>
+            <div md={7} lassName={styles.current_month}>{currMonthName()} {currYear()}</div>
+            <div md={2} className={styles.next_month} onClick={() => setValue(nextMonth())}>{String.fromCharCode(8250)}</div>
+        </div>
 
     );
 }
