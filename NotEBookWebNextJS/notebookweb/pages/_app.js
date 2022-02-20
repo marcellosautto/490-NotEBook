@@ -7,6 +7,7 @@ import "../styles/Authentication/SignIn.css";
 import "../styles/Authentication/SignUp.css";
 import "../styles/Authentication/ResetPass.css";
 import "../styles/canvas.css"
+import "../styles/texteditor.css"
 
 function MyApp({ Component, pageProps }) {
   return (

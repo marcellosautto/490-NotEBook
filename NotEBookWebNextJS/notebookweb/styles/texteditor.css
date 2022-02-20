@@ -1,0 +1,14 @@
+.main__title{
+    color: white;
+    text-align: center;
+}
+
+.text__editor{
+    border: 3px white solid;
+    border-radius: 10px;
+    color: white;
+}
+
+.text__editor__toolbar{
+    color: black;
+}
