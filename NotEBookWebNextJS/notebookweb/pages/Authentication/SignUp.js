@@ -96,7 +96,7 @@ function SignUp(props) {
       />
       </div>
       <p className="signUp__title">
-        BECOME A NOTEBOOK <br /> MEMBER
+        Become A NotEBook <br /> Member
       </p>
       <p className="signUp__text signUp__text--sub-title">
         Create your NotEBook Member profile

@@ -1,7 +1,7 @@
+import { SettingsBackupRestoreOutlined } from "@material-ui/icons";
 import React, { useRef, useState, useEffect, nativeEvent } from "react";
-//import context from "react-bootstrap/esm/AccordionContext";
-import { Form, FormControl, Button, ButtonGroup, Row, Col, InputGroup, Container, FormGroup } from "react-bootstrap";
-import styles from "../../../styles/Home.module.css"
+import { Form, FormControl, Button, Row, Col, InputGroup, Container, FormGroup } from "react-bootstrap";
+
 
 
 export default function DrawingComponent() {
@@ -9,6 +9,7 @@ export default function DrawingComponent() {
     const canvasRef = useRef(null);
     const contextRef = useRef(null);
     const [isDrawing, setIsDrawing] = useState(false);
+    const [cursor, setCursor] = useState('');
 
 
     //const [canvasFile, setCanvasUploadFile] = useState([]);
@@ -56,6 +57,32 @@ export default function DrawingComponent() {
         context.fillRect(0, 0, canvas.width, canvas.height)
     }
 
+    const useInk = () => {
+        const canvas = canvasRef.current;
+        const context = canvas.getContext("2d");
+        context.strokeStyle = "white";
+        context.lineWidth = 5;
+        setCursor("nb__pen");
+    }
+
+    /*Need to fix highlighter--not transparent */
+    const useHighlighter = () => {
+        const canvas = canvasRef.current;
+        const context = canvas.getContext("2d");
+        context.strokeStyle = 'rgb(255,255,0,0.7)';
+        context.filStyle = 'rgb(255,255,0,0.7)';
+        context.lineWidth = 10;
+        setCursor("nb__highlighter");
+    }
+
+    const useEraser = () => {
+        const canvas = canvasRef.current;
+        const context = canvas.getContext("2d");
+        context.strokeStyle = "#282c34";
+        context.lineWidth = 10;
+        setCursor("nb__eraser");
+    }
+
     //In Development
    const saveCanvas = () => {
 
@@ -96,7 +123,12 @@ export default function DrawingComponent() {
     };
 
     return (
-        <div>
+        <div className={cursor}>
+            <div className="drawing__functions">
+                <button id="ink" className="draw__btn" onClick={useInk}>Draw</button>
+                <button id="highlight" className="draw__btn" onClick={useHighlighter}>Highlight</button>
+                <button id="erase" className="draw__btn" onClick={useEraser}>Erase</button>
+            </div>
             <canvas
                 onMouseDown={startDrawing}
                 onMouseUp={finishDrawing}

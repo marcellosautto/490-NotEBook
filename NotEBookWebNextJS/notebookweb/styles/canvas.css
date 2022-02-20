@@ -1,0 +1,36 @@
+/*Canvas CSS*/
+
+.canvas_title{
+    text-align: center;
+    font-family: 'Eczar', serif;
+    font-size: 3em;
+    
+  }
+
+  .drawing__functions{
+      text-align: center;
+  }
+
+  .drawing__functions button{
+      margin: 0 10px 10px 10px;
+      border: 0;
+      border-radius: 10px;
+      width: 100px;
+      background-image: linear-gradient(rgb(151, 151, 151), rgb(255, 255, 255)) ;
+  }
+
+  .draw__btn:hover{
+    background-image: linear-gradient(rgb(82, 82, 82), rgb(197, 197, 197));
+  }
+
+  .nb__pen{
+      cursor: url('../assets/images/nb_pen_32x32.png') 8 25, auto !important; 
+  }
+
+  .nb__highlighter{
+    cursor: url('../assets/images/nb_highlighter_32x32.png') 8 25, grab; 
+}
+
+.nb__eraser{
+    cursor: url('../assets/images/nb_eraser_32x32.png') 8 25, pointer; 
+}

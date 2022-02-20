@@ -309,14 +309,6 @@
   border-radius: 5px;
 }
 
-/*Canvas CSS*/
-
-.canvas_title{
-  text-align: center;
-  font-family: 'Eczar', serif;
-  font-size: 4em;
-}
-
 /*Login CSS*/
 
 .login__button{
