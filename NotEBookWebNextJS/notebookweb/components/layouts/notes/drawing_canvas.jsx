@@ -182,7 +182,7 @@ export default function DrawingComponent() {
                         <Button variant="primary" onClick={saveCanvas}>Save</Button>
                     </Col> */}
 
-          <Col md={5}>
+          <Col md={6}>
             <InputGroup>
               <InputGroup.Text>File Name</InputGroup.Text>
               <FormControl
@@ -210,7 +210,7 @@ export default function DrawingComponent() {
             </InputGroup>
           </Col>
 
-          <Col md={5}>
+          <Col md={6}>
             <InputGroup>
               <Form.Control
                 type="file"
