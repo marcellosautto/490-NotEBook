@@ -149,7 +149,7 @@ namespace NotEBookDesktop
 
             if (image != null && theInkCanvas.CaptureMouse())
             {
-                mousePosition = e.GetPosition(theInkCanvas);
+                mousePosition = e.GetPosition(theInkCanvas);//This line does gets the correct position but is the same as line 172
                 draggedImage = image;
                 System.Windows.Controls.Panel.SetZIndex(draggedImage, 1); // in case of multiple images
             }
@@ -169,8 +169,8 @@ namespace NotEBookDesktop
         {
             if (draggedImage != null)
             {
-                var position = e.GetPosition(theInkCanvas);
-                position.X = (position.X + 300) * -1;
+                var position = e.GetPosition(theInkCanvas);//This line does not get the correct position but line 152 does?
+                //position.X = (position.X + 300) * -1;
                 var offset = position - mousePosition;
                 mousePosition = position;
                 InkCanvas.SetLeft(draggedImage, InkCanvas.GetLeft(draggedImage) + offset.X);
