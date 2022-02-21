@@ -87,7 +87,7 @@ export default function DrawingComponent() {
     const context = canvas.getContext("2d");
     context.strokeStyle = "rgb(255,255,0,0.7)";
     context.fillStyle = "rgb(255,255,0,0.7)";
-    context.lineWidth = 10;
+    context.lineWidth = 20;
     context.globalAlpha = 0.05;
     setCursor("nb__highlighter");
   };

@@ -1,6 +1,9 @@
 import Head from "next/head";
 import MainLayout from "../components/layouts/MainLayout";
-import TextEditor from "../components/layouts/texteditor/TextEditor";
+import dynamic from 'next/dynamic';
+
+//MUST HAVE TO LOAD
+const TextEditor = dynamic(import("../components/layouts/texteditor/TextEditor"), { ssr: false });
 
 export default function Home() {
   return (
