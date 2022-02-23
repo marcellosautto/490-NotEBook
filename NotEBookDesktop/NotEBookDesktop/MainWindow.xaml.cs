@@ -74,8 +74,7 @@ namespace NotEBookDesktop
         // Set the EditingMode to selection.
         private void Select(object sender, RoutedEventArgs e)
         {
-            // theInkCanvas.EditingMode = InkCanvasEditingMode.Select;
-            theInkCanvas.EditingMode = InkCanvasEditingMode.None;
+            theInkCanvas.EditingMode = InkCanvasEditingMode.Select;
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
@@ -114,11 +113,16 @@ namespace NotEBookDesktop
             //  OpenFileDialog openFileDialog1 = new OpenFileDialog();
             //   openFileDialog1.Filter = "xaml files (*.xaml)|*.xaml";
 
-            //FileStream fs = new FileStream(openFileDialog1.FileName, FileMode.Open);
+            // FileStream fs = new FileStream(openFileDialog1.FileName, FileMode.Open);
 
-            var stream = File.OpenRead("test.Xaml");
-            image = XamlReader.Load(stream) as System.Windows.Controls.Image;
-            theInkCanvas.Children.Add(image);
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "XAML Files (*.xaml)|*.xaml";
+            if (openFileDialog1.ShowDialog() == true)
+            {
+                var stream = File.OpenRead(openFileDialog1.FileName);
+                image = XamlReader.Load(stream) as System.Windows.Controls.Image;
+                theInkCanvas.Children.Add(image);
+            }
 
         }
         private void AddButtonClick(object sender, RoutedEventArgs e)
@@ -131,68 +135,11 @@ namespace NotEBookDesktop
             {
                 image = new System.Windows.Controls.Image
                 {
-                Source = new BitmapImage(new Uri(dialog.FileName))
-
+                    Source = new BitmapImage(new Uri(dialog.FileName)),
+                    Width = 100
                 };
                 InkCanvas.SetLeft(image, 0);
                 InkCanvas.SetTop(image, 0);
-                theInkCanvas.Children.Add(image);
-            }
-        }
-
-        private System.Windows.Controls.Image draggedImage;
-        private Point mousePosition;
-
-        private void CanvasMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            var image = e.Source as System.Windows.Controls.Image;
-
-            if (image != null && theInkCanvas.CaptureMouse())
-            {
-                mousePosition = e.GetPosition(theInkCanvas);//This line does gets the correct position but is the same as line 172
-                draggedImage = image;
-                System.Windows.Controls.Panel.SetZIndex(draggedImage, 1); // in case of multiple images
-            }
-        }
-
-        private void CanvasMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            if (draggedImage != null)
-            {
-                theInkCanvas.ReleaseMouseCapture();
-                System.Windows.Controls.Panel.SetZIndex(draggedImage, 0);
-                draggedImage = null;
-            }
-        }
-
-        private void CanvasMouseMove(object sender, MouseEventArgs e)
-        {
-            if (draggedImage != null)
-            {
-                var position = e.GetPosition(theInkCanvas);//This line does not get the correct position but line 152 does?
-                //position.X = (position.X + 300) * -1;
-                var offset = position - mousePosition;
-                mousePosition = position;
-                InkCanvas.SetLeft(draggedImage, InkCanvas.GetLeft(draggedImage) + offset.X);
-             //   InkCanvas.SetTop(draggedImage, InkCanvas.GetTop(draggedImage) + offset.Y);
-            }
-        }
-
-        private void btnOpen_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog op = new OpenFileDialog();
-            op.Title = "Select a picture";
-            op.Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" +
-              "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" +
-              "Portable Network Graphic (*.png)|*.png";
-            if (op.ShowDialog() == true)
-            {
-               // imgPhoto.Source = new BitmapImage(new Uri(op.FileName));
-
-                image = new System.Windows.Controls.Image
-                {
-                    Source = new BitmapImage(new Uri(op.FileName))
-                };
                 theInkCanvas.Children.Add(image);
             }
         }

@@ -359,10 +359,7 @@
 
                 </Button>
             </StackPanel>
-            <InkCanvas x:Name="theInkCanvas" Background="Transparent"
-            MouseLeftButtonDown="CanvasMouseLeftButtonDown"
-            MouseLeftButtonUp="CanvasMouseLeftButtonUp"
-            MouseMove="CanvasMouseMove" Height="389" Width="392">
+            <InkCanvas x:Name="theInkCanvas" Background="Transparent" Height="389" Width="392">
                 <InkCanvas.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
