@@ -42,7 +42,6 @@ namespace NotEBookDesktop
                 Close();
         }
 
-
         // Set the EditingMode to ink input.
         private void Ink(object sender, RoutedEventArgs e)
         {
@@ -80,56 +79,41 @@ namespace NotEBookDesktop
         private void Save_Click(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "isf files (*.isf)|*.isf";
+            saveFileDialog1.Filter = "Xaml files (*.Xaml)|*.Xaml";
 
             if (saveFileDialog1.ShowDialog() == true)
             {
-                FileStream fs = new FileStream(saveFileDialog1.FileName,
-                                               FileMode.Create);
-                theInkCanvas.Strokes.Save(fs);
-
-                string save = XamlWriter.Save(image);
-
-                File.WriteAllText("test.Xaml", save);
-                fs.Close();
+                string save = XamlWriter.Save(theInkCanvas);
+                File.WriteAllText(saveFileDialog1.FileName, save);
             }
-
-
         }
 
         private void Load_Click(object sender, RoutedEventArgs e)
         {
-            //Outdated Load
-            //OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            //openFileDialog1.Filter = "isf files (*.isf)|*.isf";
-
-            //if (openFileDialog1.ShowDialog() == true)
-            //{
-            //    FileStream fs = new FileStream(openFileDialog1.FileName,
-            //                                   FileMode.Open);
-            //    theInkCanvas.Strokes = new StrokeCollection(fs);
-            //    fs.Close();
-            //}
-            //  OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            //   openFileDialog1.Filter = "xaml files (*.xaml)|*.xaml";
-
-            // FileStream fs = new FileStream(openFileDialog1.FileName, FileMode.Open);
-
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Filter = "XAML Files (*.xaml)|*.xaml";
             if (openFileDialog1.ShowDialog() == true)
             {
-                var stream = File.OpenRead(openFileDialog1.FileName);
-                image = XamlReader.Load(stream) as System.Windows.Controls.Image;
-                theInkCanvas.Children.Add(image);
-            }
+                theInkCanvas.Children.Clear();
+                theInkCanvas.Strokes.Clear();
 
+                var stream = File.OpenRead(openFileDialog1.FileName);
+                InkCanvas tempCanvas = XamlReader.Load(stream) as InkCanvas;
+                theInkCanvas.Strokes = tempCanvas.Strokes;
+
+                while (tempCanvas.Children.Count > 0)
+                {
+                    UIElement element = tempCanvas.Children[0];
+                    tempCanvas.Children.RemoveAt(0);
+                    theInkCanvas.Children.Add(element);
+                }
+            }
         }
         private void AddButtonClick(object sender, RoutedEventArgs e)
         {
             var dialog = new Microsoft.Win32.OpenFileDialog();
             dialog.Filter =
-                "Image Files (*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+                "Image Files (*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
 
             if ((bool)dialog.ShowDialog())
             {
