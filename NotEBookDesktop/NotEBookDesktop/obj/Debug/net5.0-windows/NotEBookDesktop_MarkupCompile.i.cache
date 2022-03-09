@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\
+E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\
 NotEBookDesktop
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\App.xaml
+E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\App.xaml
 21243721671
 
 7550701612
-1941018267509
+194-517835203
 Calendar.xaml;MainWindow.xaml;
 
-False
+True
 
