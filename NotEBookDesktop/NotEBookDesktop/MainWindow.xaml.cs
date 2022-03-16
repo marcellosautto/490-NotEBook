@@ -126,6 +126,13 @@ namespace NotEBookDesktop
 
             //result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
         }
+
+        private void Calculator_Click(object sender, RoutedEventArgs e)
+        {
+            // CODE HERE 
+            Calculator calc = new Calculator();
+            calc.Show();
+        }
     }
  
 }
