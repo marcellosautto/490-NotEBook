@@ -77,15 +77,19 @@ namespace NotEBookDesktop
             //string docPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             //Save List Locally onto machine, maybe push into DB if needed
             //using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "Events")))
-            using (StreamWriter outputFile = new StreamWriter("Events.ev"))
-            {
-                foreach (EventItem eachItem in EventList.Items)
+
+            if (EventList.Items.Count > 0)// Only save if we have a collection to save
+            { 
+                using (StreamWriter outputFile = new StreamWriter("Events.ev"))
                 {
-                    //write to file
-                    outputFile.WriteLine(eachItem.Date + "\t" + eachItem.Event);
+                    foreach (EventItem eachItem in EventList.Items)
+                    {
+                        //write to file
+                        outputFile.WriteLine(eachItem.Date + "\t" + eachItem.Event);
+                    }
                 }
+                MessageBox.Show("File Saved Successfully", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            MessageBox.Show("File Saved Successfully", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void LoadButton_Click(object sender, RoutedEventArgs e)
@@ -136,7 +140,7 @@ namespace NotEBookDesktop
             }
             catch (IOException ex)
             {
-                MessageBox.Show("Unable to load file: " + ex.Message, "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Unable to load file: " + ex.Message, "Couldn't Find File", MessageBoxButton.OK, MessageBoxImage.Information);
             }
 
         }
