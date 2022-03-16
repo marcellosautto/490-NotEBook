@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace NotEBookDesktop
 {
@@ -256,7 +257,7 @@ namespace NotEBookDesktop
             button.Content = angleUnitSymbols[angleUnit];
         }
 
-=
+
         /// Changes the trigonometric functions mode to Normal, Hyperbolic or Arc
         private void trig_mode_button_Click(object sender, RoutedEventArgs e)
         {
