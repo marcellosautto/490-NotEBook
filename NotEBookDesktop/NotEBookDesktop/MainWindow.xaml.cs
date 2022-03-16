@@ -1,23 +1,14 @@
-﻿using System;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.Collections.Generic;
-using System.Linq;
-//using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Win32;
+using System;
+//Added
+using System.IO;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-//Added
-using System.IO;
-using Microsoft.Win32;
-using System.Windows.Ink;
+using System.Windows.Markup;
 
 
 namespace NotEBookDesktop
@@ -27,6 +18,7 @@ namespace NotEBookDesktop
     /// </summary>
     public partial class MainWindow : Window
     {
+        System.Windows.Controls.Image image;
         public MainWindow()
         {
             InitializeComponent();
@@ -49,7 +41,6 @@ namespace NotEBookDesktop
             if (e.Key == Key.Escape)
                 Close();
         }
-
 
         // Set the EditingMode to ink input.
         private void Ink(object sender, RoutedEventArgs e)
@@ -88,44 +79,54 @@ namespace NotEBookDesktop
         private void Save_Click(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "isf files (*.isf)|*.isf";
+            saveFileDialog1.Filter = "Xaml files (*.Xaml)|*.Xaml";
 
             if (saveFileDialog1.ShowDialog() == true)
             {
-                FileStream fs = new FileStream(saveFileDialog1.FileName,
-                                               FileMode.Create);
-                theInkCanvas.Strokes.Save(fs);
-                fs.Close();
+                string save = XamlWriter.Save(theInkCanvas);
+                File.WriteAllText(saveFileDialog1.FileName, save);
             }
         }
 
         private void Load_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "isf files (*.isf)|*.isf";
-
+            openFileDialog1.Filter = "XAML Files (*.xaml)|*.xaml";
             if (openFileDialog1.ShowDialog() == true)
             {
-                FileStream fs = new FileStream(openFileDialog1.FileName,
-                                               FileMode.Open);
-                theInkCanvas.Strokes = new StrokeCollection(fs);
-                fs.Close();
+                theInkCanvas.Children.Clear();
+                theInkCanvas.Strokes.Clear();
+
+                var stream = File.OpenRead(openFileDialog1.FileName);
+                InkCanvas tempCanvas = XamlReader.Load(stream) as InkCanvas;
+                theInkCanvas.Strokes = tempCanvas.Strokes;
+
+                while (tempCanvas.Children.Count > 0)
+                {
+                    UIElement element = tempCanvas.Children[0];
+                    tempCanvas.Children.RemoveAt(0);
+                    theInkCanvas.Children.Add(element);
+                }
             }
         }
-        private void Calendar_Click(object sender, RoutedEventArgs e)
+        private void AddButtonClick(object sender, RoutedEventArgs e)
         {
-            //Open Calendar page as new window
+            var dialog = new Microsoft.Win32.OpenFileDialog();
+            dialog.Filter =
+                "Image Files (*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
 
-            Calendar cal = new Calendar();
-            cal.Show();
-            //string messageBoxText = "NO Calendar fo you";
-            //string caption = "Buy one!";
-            //MessageBoxButton button = MessageBoxButton.YesNoCancel;
-            //MessageBoxImage icon = MessageBoxImage.Warning;
-            //MessageBoxResult result;
-
-            //result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
+            if ((bool)dialog.ShowDialog())
+            {
+                image = new System.Windows.Controls.Image
+                {
+                    Source = new BitmapImage(new Uri(dialog.FileName)),
+                    Width = 100
+                };
+                InkCanvas.SetLeft(image, 0);
+                InkCanvas.SetTop(image, 0);
+                theInkCanvas.Children.Add(image);
+            }
         }
     }
- 
+
 }
