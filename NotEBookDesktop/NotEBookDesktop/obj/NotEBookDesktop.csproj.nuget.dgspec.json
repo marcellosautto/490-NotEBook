@@ -44,10 +44,6 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "dependencies": {
-            "System.Data.SqlClient": {
-              "target": "Package",
-              "version": "[4.8.3, )"
-            },
             "System.Drawing.Common": {
               "target": "Package",
               "version": "[5.0.2, )"

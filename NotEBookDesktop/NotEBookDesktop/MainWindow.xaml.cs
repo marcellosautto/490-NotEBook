@@ -127,6 +127,12 @@ namespace NotEBookDesktop
                 theInkCanvas.Children.Add(image);
             }
         }
+
+        private void OpenCalendar(object sender, RoutedEventArgs e)
+        {
+            Calendar cal = new Calendar();
+            cal.Show();
+        }
     }
 
 }
