@@ -3,27 +3,31 @@ A digital student note-taking application built to make learning a more convenie
 through the implementation of intuitive and practical learning apparatuses 
 
 # Contributors
-- Marcello: Web Application UI
-- Charleigh: Web Application UI
-- Nikolay: Web/Desktop Application Backend
-- Jude: Desktop Application UI
-- Hector: Desktop Application UI
-- Isaiah: Desktop Application UI
+- [Marcello]: Web Application UI
+- [Charleigh]: Web Application UI
+- [Nikolay]: Web/Desktop Application Backend
+- [Jude]: Desktop Application UI
+- [Hector]: Desktop Application UI
+- [Isaiah]: Desktop Application UI
 
 # About NotEBook
 Throughout our academic careers, we have noticed that technology has increasingly more integral in providing a complete educational experience. Subsequently, we set out to develop a software application which complements the integration of technology into students' academic structure. NotEBook accomplishes this ideology through providing an intuitive user interface accompanied by a convenient set of note-taking tools and apparatuses.
+
+# Concepts Exemplified
+- UI Design
+- State Management
+- Client Authentication
+- Effective use of react components to eliminate code redundency
 
 # Frameworks/Tools
 - .NET Windows Presentation Foundation
 - Next.js
 - Firebase
 - React-Bootstrap
+- CSS
 
 # Demo
 - Link
-
-
-
 
 # Features
 - Desktop/Web Access
