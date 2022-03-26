@@ -1,4 +1,4 @@
-# NotEBook
+# NotEBook <br /> <img src="https://github.com/marcellosautto/490-NotEBook/blob/master/NotEBookWebNextJS/notebookweb/assets/images/notebook.png" width="250"/>
 A digital student note-taking application built to make learning a more convenient and reliable experience 
 through the implementation of intuitive and practical learning apparatuses 
 
@@ -35,3 +35,10 @@ Throughout our academic careers, we have noticed that technology has increasingl
 - Customized Note-Taking Templates
 - Calendar/ Planner
 - Additional Accessories!
+
+# Links
+- <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/CSUNS.svg/1200px-CSUNS.svg.png" width="25"/>[California State University, Northridge](https://www.csun.edu/)
+- [Facebook](https://www.facebook.com/calstatenorthridge)
+- [Twitter](https://twitter.com/csunorthridge?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)
+- [LinkedIn](https://www.linkedin.com/school/california-state-university-northridge/)
+- [Instagram](https://www.instagram.com/csun_edu/?hl=en)
