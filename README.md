@@ -42,3 +42,4 @@ Throughout our academic careers, we have noticed that technology has increasingl
 - [Twitter](https://twitter.com/csunorthridge?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)
 - [LinkedIn](https://www.linkedin.com/school/california-state-university-northridge/)
 - [Instagram](https://www.instagram.com/csun_edu/?hl=en)
+- [<-- Back To Course Page](https://www.csun.edu/~xjiang/SeniorDesign/)
