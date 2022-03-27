@@ -333,12 +333,13 @@
 
 
         </StackPanel>
+
         <Button Content="Calendar"
             Foreground="White"
             FontSize="16"
             FontWeight="Medium"
             x:Name="Calendar"
-            Click="Calendar_Click" Margin="112,366,112,29" Grid.Row="1">
+            Click="Calendar_Click" Margin="112,336,112,59" Grid.Row="1">
 
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
@@ -369,5 +370,41 @@
 
         </Button>
 
+        <!-- Calculator Button -->
+        <Button Content="Calculator"
+            Foreground="White"
+            FontSize="16"
+            FontWeight="Medium"
+            x:Name="Calculator"
+            Click="Calculator_Click" Margin="112,371,112,24" Grid.Row="1">
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                    <Setter Property="Background" Value="MediumPurple"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF865DDC"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Width="175" Height="30"
+                        CornerRadius="12"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+
+
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
     </Grid>
 </Window>
