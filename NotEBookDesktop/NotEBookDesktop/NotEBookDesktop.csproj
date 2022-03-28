@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <None Remove="Images\notebook.png" />
-    <None Remove="x-mark-2-64 white.png" />
     <None Remove="x-mark-2-64-white.png" />
   </ItemGroup>
 
@@ -20,7 +19,6 @@
     <Resource Include="Images\notebook.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="x-mark-2-64 white.png" />
     <Resource Include="x-mark-2-64-white.png" />
   </ItemGroup>
 
