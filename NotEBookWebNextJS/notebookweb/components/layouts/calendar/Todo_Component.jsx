@@ -35,7 +35,7 @@ export default function Todo_Component({ value, onChangeValue }) {
         if(date && input){
             let formattedDate = moment(date).calendar();  
             let event = input + "--->" + formattedDate;
-            setTodoList([[event,...todo]]);
+            setTodoList([event,...todo]);
         }
             
 
