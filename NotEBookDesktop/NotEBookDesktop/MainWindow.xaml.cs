@@ -133,6 +133,12 @@ namespace NotEBookDesktop
             Calendar cal = new Calendar();
             cal.Show();
         }
+
+        private void OpenCalculator(object sender, RoutedEventArgs e)
+        {
+            Calculator Calc = new Calculator();
+            Calc.Show();
+        }
     }
 
 }

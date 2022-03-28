@@ -44,7 +44,6 @@ E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debu
 E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\System.Drawing.Common.dll
 E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
 E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.csproj.AssemblyReference.cache
 E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Calendar.g.cs
 E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Login.g.cs
 E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\MainWindow.g.cs
@@ -64,3 +63,5 @@ E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debu
 E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\ref\NotEBookDesktop.dll
 E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.pdb
 E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.genruntimeconfig.cache
+E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Calculator.g.cs
+E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Calculator.baml
