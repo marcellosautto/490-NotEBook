@@ -2,11 +2,14 @@
 
 body{
     font-family: 'Varela Round', sans-serif;
+    background-image: linear-gradient(to bottom left,#2a1b3d, #7f6bcf);
+    
 }
 
 .title{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(77, 22, 77);
+  
+    color: #e3e8e9;
 }
 
 h5{
@@ -22,8 +25,11 @@ p, li{
     padding: 10px;
     margin-bottom: 10px;
     text-align: justify;
-    background-color: rgb(226, 226, 226);
     font-size: larger;
+}
+
+.features-div >ul{
+    background-color: #d83f87;
 }
 
 
@@ -47,4 +53,10 @@ p, li{
   .bi {
     vertical-align: -.125em;
     fill: currentColor;
+  }
+
+  .carousel {
+    width:40%;
+    height:40%;
+    margin: auto;
   }
