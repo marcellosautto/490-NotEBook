@@ -566,6 +566,7 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\marce\\.nuget\\packages\\": {},
 <<<<<<< HEAD
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
@@ -573,10 +574,15 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
 >>>>>>> 48f85b51954abb312044a2a43f8dfc25850ddac5
+=======
+    "C:\\Users\\Isaac\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+>>>>>>> 5965e4e72fbc4a24468690c3f0ad23c19c8bb9fb
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "projectUniqueName": "D:\\.NET_Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
       "projectName": "NotEBookDesktop",
@@ -588,25 +594,36 @@
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
 =======
       "projectUniqueName": "E:\\.NET_Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
+=======
+      "projectUniqueName": "C:\\Users\\Isaac\\Desktop\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
+>>>>>>> 5965e4e72fbc4a24468690c3f0ad23c19c8bb9fb
       "projectName": "NotEBookDesktop",
-      "projectPath": "E:\\.NET_Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
-      "packagesPath": "C:\\Users\\marce\\.nuget\\packages\\",
-      "outputPath": "E:\\.NET_Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\obj\\",
+      "projectPath": "C:\\Users\\Isaac\\Desktop\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
+      "packagesPath": "C:\\Users\\Isaac\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Isaac\\Desktop\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+<<<<<<< HEAD
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
 >>>>>>> 48f85b51954abb312044a2a43f8dfc25850ddac5
+=======
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+>>>>>>> 5965e4e72fbc4a24468690c3f0ad23c19c8bb9fb
       ],
       "configFilePaths": [
-        "C:\\Users\\marce\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Isaac\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+<<<<<<< HEAD
 <<<<<<< HEAD
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
 =======
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
 >>>>>>> 48f85b51954abb312044a2a43f8dfc25850ddac5
+=======
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> 5965e4e72fbc4a24468690c3f0ad23c19c8bb9fb
       ],
       "originalTargetFrameworks": [
         "net5.0-windows7.0"
@@ -659,10 +676,14 @@
           }
         },
 <<<<<<< HEAD
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
 =======
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
 >>>>>>> 48f85b51954abb312044a2a43f8dfc25850ddac5
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+>>>>>>> 5965e4e72fbc4a24468690c3f0ad23c19c8bb9fb
       }
     }
   }

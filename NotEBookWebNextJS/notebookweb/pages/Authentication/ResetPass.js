@@ -1,4 +1,3 @@
-// import "./ResetPass.css";
 import React, { useState } from "react";
 import logo from "../../assets/images/notebook.png";
 import Image from "next/image";
@@ -30,9 +29,8 @@ function ResetPass(props) {
 
   return (
     <div className="resetPass" onClick={(e) => handleValid(e, null)}>
-        
       <div className="resetPass__logo">
-      <Image src={logo} alt="" />
+        <Image src={logo} alt="" />
       </div>
 
       <p className="resetPass__title">RESET PASSWORD</p>

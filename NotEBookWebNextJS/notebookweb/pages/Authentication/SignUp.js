@@ -1,4 +1,3 @@
-// import "./SignUp.css";
 import React, { useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 import moment from "moment";
@@ -7,7 +6,11 @@ import { CountryDropdown } from "react-country-region-selector";
 import logo from "../../assets/images/notebook.png";
 import Image from "next/image";
 
-function SignUp(props) {
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase/firebase-config";
+import { getDatabase, ref, set } from "firebase/database";
+
+function SignUp({ setOpened, setPageOpened }) {
   const [email, setEmail] = useState("");
   const [emailValid, setEmailValid] = useState(true);
   const [password, setPassword] = useState("");
@@ -19,12 +22,33 @@ function SignUp(props) {
   const [date, setDate] = useState(null);
   const [dateValid, setDateValid] = useState(true);
   const [country, setCountry] = useState("United States");
-  const [gender, setGender] = useState("");
+  const [gender, setGender] = useState("male");
   const [checkMark, setCheckMark] = useState(false);
   const [focus, setFocus] = useState("");
 
-  function handleSignUp(e) {
-    handleValid(e, "all");
+  async function handleSignUp(e) {
+    if (handleValid(e, "all")) {
+      try {
+        const user = await createUserWithEmailAndPassword(
+          auth,
+          email,
+          password
+        );
+
+        set(ref(getDatabase(), "users/" + user.user.uid), {
+          fname: fName,
+          lname: lName,
+          date: date,
+          country: country,
+          gender: gender,
+          notification: checkMark,
+        });
+
+        setOpened(false);
+      } catch (error) {
+        console.log(error);
+      }
+    }
   }
 
   function handleCheckMark() {
@@ -40,17 +64,20 @@ function SignUp(props) {
   }
 
   function handleValid(e, input) {
+    var valid = true;
     if ((input !== focus && e.currentTarget === e.target) || input === "all") {
       if (focus === "email" || input === "all") {
         if (email.includes("@") && email.includes("mail.") && email !== "") {
           setEmailValid(true);
         } else {
           setEmailValid(false);
+          valid = false;
         }
       }
       if (focus === "password" || input === "all") {
-        if (password === "") {
+        if (password === "" || password.length < 6) {
           setPassValid(false);
+          valid = false;
         } else {
           setPassValid(true);
         }
@@ -58,6 +85,7 @@ function SignUp(props) {
       if (focus === "fName" || input === "all") {
         if (fName === "") {
           setFNameValid(false);
+          valid = false;
         } else {
           setFNameValid(true);
         }
@@ -65,6 +93,7 @@ function SignUp(props) {
       if (focus === "lName" || input === "all") {
         if (lName === "") {
           setLNameValid(false);
+          valid = false;
         } else {
           setLNameValid(true);
         }
@@ -74,15 +103,19 @@ function SignUp(props) {
           setDateValid(true);
         } else {
           setDateValid(false);
+          valid = false;
         }
       }
       if (gender === "" && input === "all") {
         setGender(null);
       }
+
       if (input !== null) {
         setFocus(input);
       }
     }
+
+    return valid;
   }
 
   function isValidDate(d) {
@@ -92,8 +125,7 @@ function SignUp(props) {
   return (
     <div className="signUp" onClick={(e) => handleValid(e, null)}>
       <div className="signUp__logo">
-      <Image src={logo} alt=""
-      />
+        <Image src={logo} alt="" />
       </div>
       <p className="signUp__title">
         Become A NotEBook <br /> Member
@@ -237,7 +269,7 @@ function SignUp(props) {
       <p className="signUp__text signUp__text--center">
         By creating an account, you agree to
         <br />
-        NotEBook's <a href="">Privacy Policy</a> and <a href="">Terms of Use</a>
+        {/* NotEBook's <a href="">Privacy Policy</a> and <a href="">Terms of Use</a> */}
         .
       </p>
 
@@ -246,8 +278,8 @@ function SignUp(props) {
       </div>
 
       <div className="signUp__text signUp__text--margin signUp__text--center">
-        Already a member?&nbsp;
-        <span onClick={() => props.setPageOpened("SignIn")}>Sign In.</span>
+        {/* Already a member?&nbsp; */}
+        <span onClick={() => setPageOpened("SignIn")}>Sign In.</span>
       </div>
     </div>
   );
