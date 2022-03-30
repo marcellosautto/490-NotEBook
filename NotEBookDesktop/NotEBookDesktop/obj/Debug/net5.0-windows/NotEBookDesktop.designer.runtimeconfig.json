@@ -6,20 +6,8 @@
       "version": "5.0.0"
     },
     "additionalProbingPaths": [
-<<<<<<< HEAD
-      "C:\\Users\\marce\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\marce\\.nuget\\packages",
-<<<<<<< HEAD
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-=======
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-      "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
->>>>>>> 48f85b51954abb312044a2a43f8dfc25850ddac5
-=======
-      "C:\\Users\\Isaac\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Isaac\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
->>>>>>> 5965e4e72fbc4a24468690c3f0ad23c19c8bb9fb
+      "C:\\Users\\Dudel\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Dudel\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

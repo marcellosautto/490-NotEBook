@@ -4,34 +4,16 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
-<<<<<<< HEAD
-D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\
-=======
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\
->>>>>>> 48f85b51954abb312044a2a43f8dfc25850ddac5
-=======
-C:\Users\Isaac\Desktop\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\
->>>>>>> 5965e4e72fbc4a24468690c3f0ad23c19c8bb9fb
+C:\Users\Dudel\Desktop\Code\490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\
 NotEBookDesktop
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-<<<<<<< HEAD
-<<<<<<< HEAD
-D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\App.xaml
-11407045341
-=======
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\App.xaml
-3-1540100988
->>>>>>> 48f85b51954abb312044a2a43f8dfc25850ddac5
-=======
-C:\Users\Isaac\Desktop\490-NotEBook\NotEBookDesktop\NotEBookDesktop\App.xaml
+C:\Users\Dudel\Desktop\Code\490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\App.xaml
 4-1415943654
->>>>>>> 5965e4e72fbc4a24468690c3f0ad23c19c8bb9fb
 
 102072536812
-1952127508285
+195-437859350
 Calculator.xaml;Calendar.xaml;Login.xaml;MainWindow.xaml;
 
 True
