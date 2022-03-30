@@ -7,9 +7,18 @@ body{
     
 }
 
+.hero{
+    height: 100vh;
+}
+
 .hero > div >h2{
     color: #e3e8e9;
+    font-size: 2em;
     font-family: 'Libre Baskerville', serif;
+}
+
+.hero >h1{
+    font-size: 3.7em;
 }
 
 
@@ -75,7 +84,7 @@ p, li{
   }
 
   .carousel {
-    width:40%;
-    height:40%;
+    width:35%;
+    height:35%;
     margin: auto;
   }
