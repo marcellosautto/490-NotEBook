@@ -41,15 +41,14 @@ namespace NotEBookDesktop
             //    int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
             //    if(count == 1)
             //    {
-<<<<<<< HEAD
+
                     MainWindow mainWindow = new MainWindow();
                     mainWindow.Show();
                    this.Close();
-=======
+
             //        MainWindow mainWindow = new MainWindow();
             //        mainWindow.Show();
             //        this.Close();
->>>>>>> Desktop
             //    }
             //    else
             //    {

@@ -6,19 +6,8 @@
       "version": "5.0.0"
     },
     "additionalProbingPaths": [
-<<<<<<< HEAD
-<<<<<<< HEAD
       "C:\\Users\\marce\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\marce\\.nuget\\packages"
-=======
-      "C:\\Users\\Dudel\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Dudel\\.nuget\\packages"
->>>>>>> 81d3aa4c14b118eb966bbdcde758289c816ee0f2
-=======
-      "C:\\Users\\hec12\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\hec12\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
->>>>>>> Desktop
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

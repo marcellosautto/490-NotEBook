@@ -1,8 +1,5 @@
-<<<<<<< HEAD
+
 ﻿using System;
-=======
-using System;
->>>>>>> Desktop
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -50,8 +47,4 @@ namespace NotEBookDesktop
 
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> Desktop

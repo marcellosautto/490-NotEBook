@@ -3,16 +3,8 @@ build_property.TargetFramework = net5.0-windows
 build_property.TargetPlatformMinVersion = 7.0
 build_property.UsingMicrosoftNETSdkWeb = 
 build_property.ProjectTypeGuids = 
-build_property.InvariantGlobalization = 
-build_property.PlatformNeutralAssembly = 
-build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.PublishSingleFile = 
+build_property.IncludeAllContentForSelfExtract = 
+build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = NotEBookDesktop
-<<<<<<< HEAD
-<<<<<<< HEAD
 build_property.ProjectDir = D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\
-=======
-build_property.ProjectDir = C:\Users\Dudel\Desktop\Code\490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\
->>>>>>> 81d3aa4c14b118eb966bbdcde758289c816ee0f2
-=======
-build_property.ProjectDir = E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\
->>>>>>> Desktop

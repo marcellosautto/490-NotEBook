@@ -375,9 +375,6 @@
             FontSize="16"
             FontWeight="Medium"
             x:Name="Calendar"
-<<<<<<< HEAD
-            Click="Calendar_Click" Margin="112,336,112,59" Grid.Row="1">
-=======
             Click="OpenCalendar" Margin="112,355,112,45" Grid.Row="1">
 
             <Button.Style>
@@ -414,7 +411,7 @@
             FontWeight="Medium"
             x:Name="Calculator"
             Click="OpenCalculator" Margin="112,385,112,15" Grid.Row="1">
->>>>>>> Desktop
+            <!-->>>>>>> Desktop-->
 
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
@@ -446,7 +443,7 @@
         </Button>
 
         <!-- Calculator Button -->
-        <Button Content="Calculator"
+        <!--<Button Content="Calculator"
             Foreground="White"
             FontSize="16"
             FontWeight="Medium"
@@ -480,6 +477,6 @@
                 </ControlTemplate>
             </Button.Template>
 
-        </Button>
+        </Button>-->
     </Grid>
 </Window>
