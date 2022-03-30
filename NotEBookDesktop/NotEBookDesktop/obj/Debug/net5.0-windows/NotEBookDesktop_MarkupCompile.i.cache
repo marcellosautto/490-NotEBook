@@ -4,16 +4,28 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\
+=======
+C:\Users\Dudel\Desktop\Code\490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\
+>>>>>>> 81d3aa4c14b118eb966bbdcde758289c816ee0f2
 NotEBookDesktop
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
+<<<<<<< HEAD
 D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\App.xaml
 4-1415943654
 
 102072536812
 1951866375848
+=======
+C:\Users\Dudel\Desktop\Code\490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\App.xaml
+4-1415943654
+
+102072536812
+195-437859350
+>>>>>>> 81d3aa4c14b118eb966bbdcde758289c816ee0f2
 Calculator.xaml;Calendar.xaml;Login.xaml;MainWindow.xaml;
 
 False

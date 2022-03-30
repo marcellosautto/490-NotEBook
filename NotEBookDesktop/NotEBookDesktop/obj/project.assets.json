@@ -566,19 +566,31 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\marce\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\Dudel\\.nuget\\packages\\": {}
+>>>>>>> 81d3aa4c14b118eb966bbdcde758289c816ee0f2
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\.NET_Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
+=======
+      "projectUniqueName": "C:\\Users\\Dudel\\Desktop\\Code\\490\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
+>>>>>>> 81d3aa4c14b118eb966bbdcde758289c816ee0f2
       "projectName": "NotEBookDesktop",
-      "projectPath": "D:\\.NET_Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
-      "packagesPath": "C:\\Users\\marce\\.nuget\\packages\\",
-      "outputPath": "D:\\.NET_Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\obj\\",
+      "projectPath": "C:\\Users\\Dudel\\Desktop\\Code\\490\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
+      "packagesPath": "C:\\Users\\Dudel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dudel\\Desktop\\Code\\490\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\marce\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\Dudel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 81d3aa4c14b118eb966bbdcde758289c816ee0f2
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -623,6 +635,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.13, 5.0.13]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -631,7 +661,11 @@
             "privateAssets": "none"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+>>>>>>> 81d3aa4c14b118eb966bbdcde758289c816ee0f2
       }
     }
   },
@@ -640,7 +674,11 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
+<<<<<<< HEAD
       "message": "Problem reading the cache file D:\\.NET_Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+=======
+      "message": "Problem reading the cache file C:\\Users\\Dudel\\Desktop\\Code\\490\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+>>>>>>> 81d3aa4c14b118eb966bbdcde758289c816ee0f2
     }
   ]
 }
