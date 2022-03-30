@@ -13,7 +13,7 @@ function SignIn(props) {
 
   function handleSignIn(e) {
     handleValid(e, "all");
-    console.log("Sign In!");
+    console.log("Sign IIIn!");
   }
 
   function handleValid(e, input) {
