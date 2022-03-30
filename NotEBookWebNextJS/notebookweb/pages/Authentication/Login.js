@@ -1,5 +1,3 @@
-// import "./Login.css";
-// import "../../styles/Login.css";
 import React, { useState } from "react";
 import ClearIcon from "@material-ui/icons/Clear";
 import SignIn from "./SignIn.js";
@@ -11,9 +9,9 @@ function Login({ opened, setOpened }) {
   function pages() {
     switch (pageOpened) {
       case "SignIn":
-        return <SignIn setPageOpened={setPageOpened} />;
+        return <SignIn setPageOpened={setPageOpened} setOpened={setOpened} />;
       case "SignUp":
-        return <SignUp setPageOpened={setPageOpened} />;
+        return <SignUp setPageOpened={setPageOpened} setOpened={setOpened} />;
       default:
         return <ResetPass setPageOpened={setPageOpened} />;
     }

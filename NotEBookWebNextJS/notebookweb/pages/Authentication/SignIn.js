@@ -1,19 +1,37 @@
-// import "./SignIn.css";
 import React, { useState } from "react";
 import logo from "../../assets/images/notebook.png";
 import Image from "next/image";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase/firebase-config";
 
-function SignIn(props) {
+function SignIn({ setOpened, setPageOpened }) {
   const [email, setEmail] = useState("");
   const [emailValid, setEmailValid] = useState(true);
   const [password, setPassword] = useState("");
   const [passValid, setPassValid] = useState(true);
   const [checkMark, setCheckMark] = useState(false);
   const [focus, setFocus] = useState("");
+  const [error, setError] = useState(false);
 
-  function handleSignIn(e) {
-    handleValid(e, "all");
-    console.log("Sign In!");
+  async function handleSignIn() {
+    try {
+      const response = await signInWithEmailAndPassword(auth, email, password);
+
+      try {
+        localStorage.setItem(
+          "authToken",
+          JSON.stringify(response._tokenResponse)
+        );
+        console.log("SUCCESS");
+      } catch (error) {
+        console.log(error);
+      }
+
+      setOpened(false);
+    } catch (error) {
+      setError(true);
+      console.log(error);
+    }
   }
 
   function handleValid(e, input) {
@@ -82,6 +100,10 @@ function SignIn(props) {
       {!passValid && (
         <p className="signIn__text-valid">Please enter a password.</p>
       )}
+
+      {error && (
+        <p className="signIn__text-valid">Email or password is not correct.</p>
+      )}
       <div className="signIn__checkmark-container">
         <div className="signIn__box" onClick={handleCheckMark}>
           <div className="signIn__box-arrow">
@@ -91,15 +113,15 @@ function SignIn(props) {
         </div>
         <div
           className="signIn__text signIn__text--light"
-          onClick={() => props.setPageOpened("")}
+          onClick={() => setPageOpened("")}
         >
           Forgot password?
         </div>
       </div>
       <p className="signIn__text">
-        By logging in, you agree to NotEBook's&nbsp;
+        {/* By logging in, you agree to NotEBook's&nbsp; */}
         <a href="">Privacy Policy</a>
-        &nbsp;and
+        {/* &nbsp;and */}
         <br />
         <a href="">Terms of Use</a>.
       </p>
@@ -107,8 +129,8 @@ function SignIn(props) {
         SIGN IN
       </div>
       <p className="signIn__text signIn__text--margin">
-        Not a member?&nbsp;
-        <span onClick={() => props.setPageOpened("SignUp")}>Join Us.</span>
+        {/* Not a member?&nbsp; */}
+        <span onClick={() => setPageOpened("SignUp")}>Join Us.</span>
       </p>
     </div>
   );
