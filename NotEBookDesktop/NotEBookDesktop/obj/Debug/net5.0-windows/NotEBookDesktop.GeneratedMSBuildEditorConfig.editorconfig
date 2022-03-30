@@ -7,12 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = NotEBookDesktop
-<<<<<<< HEAD
-<<<<<<< HEAD
 build_property.ProjectDir = D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\
-=======
-build_property.ProjectDir = E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\
->>>>>>> 48f85b51954abb312044a2a43f8dfc25850ddac5
-=======
-build_property.ProjectDir = C:\Users\Isaac\Desktop\490-NotEBook\NotEBookDesktop\NotEBookDesktop\
->>>>>>> 5965e4e72fbc4a24468690c3f0ad23c19c8bb9fb
