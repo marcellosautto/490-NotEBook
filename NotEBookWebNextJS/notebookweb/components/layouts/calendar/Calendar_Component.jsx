@@ -9,46 +9,6 @@ import dayStyles from "./styles";
 import CalendarHeader from "./header";
 
 export default function Calendar_Component({ value, onChange }) {
-<<<<<<< HEAD
-    const [calendar, setCalendar] = useState([]);
-
-    const days_of_week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
-    useEffect(() => {
-        setCalendar(buildCalendarComponent(value));
-    }, [value])
-
-
-    return (
-        <div className="App-header">
-
-            <div className={styles.calendar}>
-                <CalendarHeader value={value} setValue={onChange} />
-
-                <div className={styles.week}>
-                    {
-                        days_of_week.map(day_name =>
-                            <div className={styles.week_days}>{day_name}</div>)
-                    }
-                </div>
-                {
-                    calendar.map(week => <div className={styles.week}>
-                        {
-                            week.map(day =>
-                                <div className={styles.day} onClick={() => onChange(day)}>
-                                    <div className={dayStyles(day, value)}>
-                                        {day.format("D")}
-                                    </div>
-                                </div>
-                            )
-                        }
-                    </div>)
-                }
-            </div>
-        </div>
-
-    );
-=======
   const [calendar, setCalendar] = useState([]);
 
   const days_of_week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -85,5 +45,4 @@ export default function Calendar_Component({ value, onChange }) {
       </Container>
     </div>
   );
->>>>>>> 5965e4e72fbc4a24468690c3f0ad23c19c8bb9fb
 }
