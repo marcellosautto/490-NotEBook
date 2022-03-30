@@ -85,6 +85,14 @@ p, li{
 
   .carousel {
     width:35%;
-    height:35%;
     margin: auto;
   }
+
+  .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    line-height: 1;
+    margin:auto;
+    width: 100%;
+    }
