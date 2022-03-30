@@ -8,10 +8,10 @@
 
   <ItemGroup>
     <None Remove="Images\notebook.png" />
+    <None Remove="x-mark-2-64-white.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
     <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
   </ItemGroup>
 
@@ -19,6 +19,7 @@
     <Resource Include="Images\notebook.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="x-mark-2-64-white.png" />
   </ItemGroup>
 
 </Project>

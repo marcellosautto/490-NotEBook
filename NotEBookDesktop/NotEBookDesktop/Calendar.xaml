@@ -5,21 +5,47 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:NotEBookDesktop"
       mc:Ignorable="d"
-      Title="Calendar" ResizeMode="NoResize" Height="228" Width="648">
+      Title="Calendar" WindowStyle="None" ResizeMode="NoResize" Height="302" Width="718" Background="#FF221C32">
 
     <Grid Background="White">
-        <Calendar x:Name="LeftCalendar" HorizontalAlignment="Left" Margin="26,19,0,0" VerticalAlignment="Top" Height="161" Width="183"/>
-        <DatePicker x:Name="EventDate" HorizontalAlignment="Left" Margin="234,19,0,0" VerticalAlignment="Top" Height="29"/>
-        <ListView x:Name="EventList" Margin="234,53,17,32">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="73*"/>
+        </Grid.ColumnDefinitions>
+        <Calendar x:Name="LeftCalendar" HorizontalAlignment="Center" Margin="0,62,0,0" VerticalAlignment="Top" Height="161" Width="182" SelectedDatesChanged="LeftCalendar_SelectedDatesChanged" Background="White" FontFamily="Dosis" BorderBrush="{x:Null}" FontSize="14" Foreground="{x:Null}" FontWeight="Normal"/>
+        <DatePicker x:Name="EventDate" HorizontalAlignment="Left"  Margin="24,28,0,0" VerticalAlignment="Top" Height="29" Grid.Column="1" FontFamily="Dosis" Background="White" FontSize="14" FontWeight="Normal"/>
+        <ListView x:Name="EventList" Margin="24,62,17,41" Foreground="Black" BorderBrush="{x:Null}" Grid.Column="1" Background="White" FontFamily="Dosis" FontWeight="Normal">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="60" Header="Date" DisplayMemberBinding="{Binding Date}"/>
-                    <GridViewColumn Width="240" Header="Event" DisplayMemberBinding="{Binding Event}" />
+                    <GridViewColumn x:Name="DateColumn" Width="80" Header="Date" DisplayMemberBinding="{Binding Date}"/>
+                    <GridViewColumn Width="359" Header="Event" DisplayMemberBinding="{Binding Event}" />
                 </GridView>
             </ListView.View>
         </ListView>
-        <TextBox x:Name="EventTextBox" HorizontalAlignment="Left" Margin="377,19,0,0" Text="Enter an Event" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" Height="29" FontSize="14"/>
-        <Button x:Name="EnterEventButton" Content="Add" HorizontalAlignment="Left" Margin="554,24,0,0" VerticalAlignment="Top" Click="EnterEvent_Click"/>
-        <Button x:Name="RemoveEventButton" Content="Remove" HorizontalAlignment="Left" Margin="585,24,0,0" VerticalAlignment="Top" Click="RemoveEvent_Click" RenderTransformOrigin="0.643,-0.167"/>
+        <TextBox x:Name="EventTextBox" HorizontalAlignment="Left" Margin="167,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" Height="29" FontSize="14" Grid.Column="1" FontFamily="Dosis" AutomationProperties.HelpText="Add event details to this box" Background="White" FontWeight="Normal" Text="Enter an Event"/>
+        <Button x:Name="EnterEventButton" Content="Add" HorizontalAlignment="Left" Margin="344,31,0,0" VerticalAlignment="Top" Click="EnterEvent_Click" Grid.Column="1" FontFamily="Dosis" BorderBrush="{x:Null}" Background="MediumPurple" Foreground="White" FontWeight="Bold" Height="24" Width="32">
+            <Button.Style>
+                <Style/>
+            </Button.Style>
+        </Button>
+        <Button x:Name="RemoveEventButton" Content="Remove" HorizontalAlignment="Left" Margin="385,31,0,0" VerticalAlignment="Top" Click="RemoveEvent_Click" RenderTransformOrigin="0.643,-0.167" Grid.Column="1" FontFamily="Dosis" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold" Height="24" Width="59">
+            <Button.Style>
+                <Style>
+                </Style>
+            </Button.Style>
+            <Button.Background>
+                <SolidColorBrush Color="MediumPurple"/>
+            </Button.Background>
+        </Button>
+        <Button Content="Save" Grid.Column="1" HorizontalAlignment="Left" Margin="36,266,0,0" VerticalAlignment="Top" Click="SaveButton_Click" BorderBrush="{x:Null}" FontFamily="Dosis" Background="MediumPurple" Foreground="White" FontWeight="Bold" Height="26" Width="44"/>
+        <Button Content="Load" Grid.Column="1" HorizontalAlignment="Left" Margin="385,266,0,0" VerticalAlignment="Top" Click="LoadButton_Click" BorderBrush="{x:Null}" FontFamily="Dosis" Background="MediumPurple" Foreground="White" FontWeight="Bold" Height="26" Width="37"/>
+        <Grid Grid.ColumnSpan="2" Margin="0,0,0,279" Background="MediumPurple">
+            <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="{x:Null}" Height="14" Width="15" Click="Calendar_Close" Foreground="{x:Null}">
+                <Button.Background>
+                    <ImageBrush ImageSource="/x-mark-2-64-white.png"/>
+                </Button.Background>
+            </Button>
+            <TextBlock HorizontalAlignment="Left" Margin="27,0,0,0" Text="Calendar" TextWrapping="Wrap" VerticalAlignment="Center" Height="16" Width="70" Foreground="White" FontFamily="Dosis" FontSize="14" FontWeight="Bold"/>
+        </Grid>
     </Grid>
 </Window>

@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <ShowAllFiles>true</ShowAllFiles>
-  </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <ApplicationDefinition Update="App.xaml">
       <SubType>Designer</SubType>
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Update="Calculator.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -24,10 +23,9 @@
     <Page Update="Login.xaml">
       <SubType>Designer</SubType>
     </Page>
+=======
+>>>>>>> Desktop
     <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Calendar.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

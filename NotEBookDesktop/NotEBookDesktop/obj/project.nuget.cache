@@ -1,6 +1,7 @@
 {
   "version": 2,
 <<<<<<< HEAD
+<<<<<<< HEAD
   "dgSpecHash": "c6AU5De7EiymYmrgkM1WQqRTGkEQSOXcrAdD/L4jYvQaqK07WrXctb2u/XMX0W64N5Cq5fUOX6ggKikh3MQPVQ==",
   "success": true,
   "projectFilePath": "D:\\.NET_Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
@@ -37,6 +38,15 @@
     "C:\\Users\\Dudel\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
     "C:\\Users\\Dudel\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
 >>>>>>> 81d3aa4c14b118eb966bbdcde758289c816ee0f2
+=======
+  "dgSpecHash": "K27Tft8DsnyTr13rbzCOemYZhKC+zhoJPsDn2W7oNFf26DCa5RmFNIvevOG1i7KfknZIJJSlMV9ByJrOgMXMAA==",
+  "success": true,
+  "projectFilePath": "E:\\Group Projects\\Comp 490\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hec12\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\hec12\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\hec12\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512"
+>>>>>>> Desktop
   ],
   "logs": [
     {
