@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Runtime.InteropServices;
+using Aspose;
 //using Path = System.IO.Path;
 using System.ComponentModel;
 
@@ -52,48 +53,48 @@ namespace NotEBookDesktop
         }
         private void EnterEvent_Click(object sender, RoutedEventArgs e)
         {
-            //Check if EventDate and EventTextBox is empty, if so throw an error to user
-            if (EventDate.SelectedDate == null)
-            {
-                MessageBox.Show("No date has been picked", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-            else if (String.IsNullOrEmpty(EventTextBox.Text))
-            {
-                MessageBox.Show("No Event added in Textbox", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-            //If both have entrys then push to EventView and clear entrys
-            else
-            {
-                //add events
-                EventItem E = new EventItem();
-                E.Date = EventDate.SelectedDate.Value.ToString("MM/dd/yyyy");
-                E.Event = EventTextBox.Text.ToString();
+            ////Check if EventDate and EventTextBox is empty, if so throw an error to user
+            //if (EventDate.SelectedDate == null)
+            //{
+            //    MessageBox.Show("No date has been picked", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
+            //}
+            //else if (String.IsNullOrEmpty(EventTextBox.Text))
+            //{
+            //    MessageBox.Show("No Event added in Textbox", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
+            //}
+            ////If both have entrys then push to EventView and clear entrys
+            //else
+            //{
+            //    //add events
+            //    EventItem E = new EventItem();
+            //    E.Date = EventDate.SelectedDate.Value.ToString("MM/dd/yyyy");
+            //    E.Event = EventTextBox.Text.ToString();
 
-                //push event to listview
-                EventList.Items.Add(E);
-                //clear entrys form EventDate and EventTextBox
-                EventDate.SelectedDate = null;
-                EventTextBox.Text = String.Empty;
-            }
-            CollectionView EventView = (CollectionView)CollectionViewSource.GetDefaultView(EventList.Items);
-            EventView.Refresh();
+            //    //push event to listview
+            //    EventList.Items.Add(E);
+            //    //clear entrys form EventDate and EventTextBox
+            //    EventDate.SelectedDate = null;
+            //    EventTextBox.Text = String.Empty;
+            //}
+            //CollectionView EventView = (CollectionView)CollectionViewSource.GetDefaultView(EventList.Items);
+            //EventView.Refresh();
         }
 
         private void RemoveEvent_Click(object sender, RoutedEventArgs e)
         {
-            //Get a copy of list of selected items, otherwise we are iterating through a modified list and program will throw an error and crash and die and thats bad
-            ListView EventListCopy = new ListView();
-            foreach (EventItem eachItem in EventList.SelectedItems)
-            {
-                EventListCopy.Items.Add(eachItem);
-            }
-            //Using the copy, remove the selected items
-            foreach (EventItem eachItem in EventListCopy.Items)
-            {
-                EventList.Items.Remove(eachItem);
-            }
-            CollectionView EventView = (CollectionView)CollectionViewSource.GetDefaultView(EventList.Items);
-            EventView.Refresh();
+            ////Get a copy of list of selected items, otherwise we are iterating through a modified list and program will throw an error and crash and die and thats bad
+            //ListView EventListCopy = new ListView();
+            //foreach (EventItem eachItem in EventList.SelectedItems)
+            //{
+            //    EventListCopy.Items.Add(eachItem);
+            //}
+            ////Using the copy, remove the selected items
+            //foreach (EventItem eachItem in EventListCopy.Items)
+            //{
+            //    EventList.Items.Remove(eachItem);
+            //}
+            //CollectionView EventView = (CollectionView)CollectionViewSource.GetDefaultView(EventList.Items);
+            //EventView.Refresh();
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
@@ -103,23 +104,23 @@ namespace NotEBookDesktop
             //Save List Locally onto machine, maybe push into DB if needed
             //using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "Events")))
 
-            if (EventList.Items.Count > 0)// Only save if we have a collection to save
-            {
-                SaveFileDialog sf = new SaveFileDialog();
-                sf.Filter= "NotEBook Events (*.ev)|*.ev";
-                if (sf.ShowDialog() == true)
-                {
-                    using (StreamWriter outputFile = new StreamWriter(sf.FileName))
-                    {
-                        foreach (EventItem eachItem in EventList.Items)
-                        {
-                            //write to file
-                            outputFile.WriteLine(eachItem.Date + "\t" + eachItem.Event);
-                        }
-                    }
-                    MessageBox.Show("File Saved Successfully", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-            }
+            //if (EventList.Items.Count > 0)// Only save if we have a collection to save
+            //{
+            //    SaveFileDialog sf = new SaveFileDialog();
+            //    sf.Filter= "NotEBook Events (*.ev)|*.ev";
+            //    if (sf.ShowDialog() == true)
+            //    {
+            //        using (StreamWriter outputFile = new StreamWriter(sf.FileName))
+            //        {
+            //            foreach (EventItem eachItem in EventList.Items)
+            //            {
+            //                //write to file
+            //                outputFile.WriteLine(eachItem.Date + "\t" + eachItem.Event);
+            //            }
+            //        }
+            //        MessageBox.Show("File Saved Successfully", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+            //    }
+            //}
         }
 
         private void LoadButton_Click(object sender, RoutedEventArgs e)
@@ -161,13 +162,13 @@ namespace NotEBookDesktop
                             }
                             if (c == '\n' && !isDate)//Reset everything to prepare for the next line
                             {
-                                EventItem E = new EventItem();
-                                E.Date = Date.ToString();
-                                E.Event = Event.ToString();
-                                EventList.Items.Add(E);
-                                isDate = true;
-                                Date.Clear();
-                                Event.Clear();
+                                //EventItem E = new EventItem();
+                                //E.Date = Date.ToString();
+                                //E.Event = Event.ToString();
+                                //EventList.Items.Add(E);
+                                //isDate = true;
+                                //Date.Clear();
+                                //Event.Clear();
 
                             }
                         }
@@ -196,12 +197,12 @@ namespace NotEBookDesktop
         }
         private bool DateFilter(object item)
         {
-            if (LeftCalendar.SelectedDate == null) // no items selected
-            {
+            //if (LeftCalendar.SelectedDate == null) // no items selected
+            //{
                 return true;
-            }
-            else
-                return (item as EventItem).Date.Equals(LeftCalendar.SelectedDate.Value.ToString("MM/dd/yyyy"));
+            //}
+            //else
+            //    return (item as EventItem).Date.Equals(LeftCalendar.SelectedDate.Value.ToString("MM/dd/yyyy"));
             
         }
     }

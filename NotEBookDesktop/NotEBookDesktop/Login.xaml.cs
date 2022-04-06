@@ -10,7 +10,12 @@ namespace NotEBookDesktop
     {
         public Login()
         {
+            //  InitializeInitializeComponent();Component();
             InitializeComponent();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+
         }
 
         private void updateUsernameInput(object sender, TextChangedEventArgs e)
