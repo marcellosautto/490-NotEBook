@@ -4,25 +4,16 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
 D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\
-=======
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\
->>>>>>> 48f85b51954abb312044a2a43f8dfc25850ddac5
 NotEBookDesktop
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-<<<<<<< HEAD
 D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\App.xaml
-11407045341
-=======
-E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\App.xaml
 3-1540100988
->>>>>>> 48f85b51954abb312044a2a43f8dfc25850ddac5
 
 81849125970
-1951866375848
+193-1891726104
 Calendar.xaml;Login.xaml;MainWindow.xaml;
 
 True
