@@ -27,6 +27,7 @@ namespace NotEBookDesktop
 
         IFirebaseClient client;
         List<User> users;
+        Register register;
         public Login()
         {
             InitializeComponent();
@@ -35,6 +36,7 @@ namespace NotEBookDesktop
         private void Login_Load(object sender, EventArgs e)
         {
             client = new FirebaseClient(config);
+            register = new Register();
 
             if (client != null)
             {
@@ -65,6 +67,7 @@ namespace NotEBookDesktop
                     isLoggedIn = true;
                     MainWindow mainWindow = new MainWindow();
                     mainWindow.Show();
+                    Close();
                     break;
                 }
             }
@@ -80,25 +83,28 @@ namespace NotEBookDesktop
 
         private async void RegisterBtn_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                client = new FirebaseClient(config);
-                User user = new User
-                {
-                    ID = Guid.NewGuid().ToString(),
-                    fname = UsernameInput.Text,
-                    lname = "",
-                    password = getEncryption(PasswordInput.Password),
-                    country = "United States",
-                    gender = "Male"
-                };
-                await client.SetAsync("users/" + user.ID, user);
-                MessageBox.Show("Registration Successful!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //try
+            //{
+            //    client = new FirebaseClient(config);
+            //    User user = new User
+            //    {
+            //        ID = Guid.NewGuid().ToString(),
+            //        fname = UsernameInput.Text,
+            //        lname = "",
+            //        password = getEncryption(PasswordInput.Password),
+            //        country = "United States",
+            //        gender = "Male"
+            //    };
+            //    await client.SetAsync("users/" + user.ID, user);
+            //    MessageBox.Show("Registration Successful!");
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+
+            register.Show();
+            Close();
 
         }
 

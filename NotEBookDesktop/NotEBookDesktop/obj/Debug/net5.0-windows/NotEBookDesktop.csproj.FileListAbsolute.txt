@@ -118,3 +118,13 @@ E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debu
 E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\TextEditor.g.cs
 E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
 E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\TextEditor.baml
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\Microsoft.Threading.Tasks.Extensions.dll
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\Microsoft.Threading.Tasks.dll
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\System.Net.Http.Extensions.dll
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\System.Net.Http.Primitives.dll
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\TextEditor.g.cs
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\TextEditor.baml
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Register.g.cs
+D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Register.baml
