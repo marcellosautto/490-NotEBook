@@ -10,15 +10,15 @@ export default function DrawingComponent() {
 
     useEffect(() => {
         const canvas = canvasRef.current;
-        canvas.width = window.innerWidth * 2;
-        canvas.height = window.innerHeight * 2;
-        canvas.style.width = `${window.innerWidth*0.8}px`;
-        canvas.style.height = `${window.innerHeight*0.8}px`;
+        canvas.width = window.innerWidth*1.5;
+        canvas.height = window.innerHeight*1.5;
+        canvas.style.width = `${window.innerWidth*0.75}px`;
+        canvas.style.height = `${window.innerHeight*0.75}px`;
 
         const context = canvas.getContext("2d");
         context.scale(2, 2);
         context.lineCap = "round";
-        context.strokeStyle = "black"
+        context.strokeStyle = "white"
         context.lineWidth = 5;
         contextRef.current = context;
     }, [])

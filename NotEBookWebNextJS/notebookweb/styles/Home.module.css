@@ -276,3 +276,43 @@
   font-family: 'Eczar', serif;
   font-size: 3em;
 }
+
+/*Calculator CSS*/
+
+.calculator_title{
+  text-align: center;
+  font-family: 'Eczar', serif;
+  font-size: 4em;
+}
+
+.calculator_body{
+  text-align: center;
+  font-size: 200%;
+  padding: 30px;
+  background-color: #17338f;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.calculator_row{
+  margin: 5px;
+  
+}
+
+.calculator_btn{
+  
+}
+
+.answer_box{
+  padding: 0 10px 0 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+/*Canvas CSS*/
+
+.canvas_title{
+  text-align: center;
+  font-family: 'Eczar', serif;
+  font-size: 4em;
+}

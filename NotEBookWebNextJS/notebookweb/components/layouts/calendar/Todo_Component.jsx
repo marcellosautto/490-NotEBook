@@ -6,10 +6,11 @@ import moment from "moment";
 //helper functions
 import dayStyles from "./styles";
 
-export default function Todo_Component({value, onChangeValue}) {
+export default function Todo_Component({ value, onChangeValue }) {
 
     const [todo, setTodoList] = useState([]);
     const [date, setDate] = useState(moment());
+    const [time, setTime] = useState(moment());
     const [input, setInput] = useState('');
 
     const handleChangeEvent = (e) => {
@@ -23,10 +24,16 @@ export default function Todo_Component({value, onChangeValue}) {
         setDate(e.target.value);
     }
 
+    const handleChangeTime = (e) => {
+        e.preventDefault();
+        setTime(e.target.value);
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        setTodoList([[date, input,...todo]]);
+        if(date && time && input)
+            setTodoList([[date, time, input, ...todo]]);
 
         //dayStyles(date, value);
 
@@ -40,16 +47,21 @@ export default function Todo_Component({value, onChangeValue}) {
                 <Col md={2} lg={2}><Button variant="secondary" disabled>Remove</Button></Col>
             </Row>
 
-            
+
             <InputGroup>
-                <InputGroup.Text>
-                    <FormControl type="date" name='Event_Date' placeholder={value.format("MM/DD/YYYY")} onChange={handleChangeDate}/>
-                </InputGroup.Text>
+                <InputGroup.Text>Date/Time</InputGroup.Text>
+                <FormControl type="datetime-local" name='Event_Date' placeholder={value.format("MM/DD/YYYY")} onChange={handleChangeDate} />
+            </InputGroup>
+
+            <br />
+        
+            <InputGroup>
                 <FormControl placeholder="Enter an event..." onChange={handleChangeEvent} />
             </InputGroup>
-            
+
             <br />
 
+            <h1 className={styles.todo_title}>Upcoming...</h1>
             <ListGroup>
                 {
                     todo.map(item => <ListGroup.Item>{item}</ListGroup.Item>)

@@ -139,6 +139,12 @@ namespace NotEBookDesktop
             Calculator Calc = new Calculator();
             Calc.Show();
         }
+
+        private void OpenTextEditor(object sender, RoutedEventArgs e)
+        {
+            TextEditor TextE = new TextEditor();
+            TextE.Show();
+        }
     }
 
 }
