@@ -1,7 +1,6 @@
 import logo from "../assets/images/notebook.png";
 import React, { useState, useEffect } from "react";
 import {
-  Button,
   Form,
   Container,
   Row,
@@ -13,40 +12,43 @@ import {
 import Image from "next/image";
 import Login from "../pages/Authentication/Login";
 import { getDatabase, ref, child, get } from "firebase/database";
+import { useAppSelector, useAppDispatch } from "../redux/Hooks";
+import { setUser } from "../redux/slices/UserSlice";
+import { setToken } from "../redux/slices/TokenSlice";
+import Button from "@mui/material/Button";
 
 export default function NavBarComponent() {
   const [opened, setOpened] = useState(false);
-  const [token, setToken] = useState(null);
-  const [user, setUser] = useState(null);
+
+  const token = useAppSelector((state) => state.tokenSlice.token);
+  const user = useAppSelector((state) => state.userSlice.user);
+  const dispatch = useAppDispatch();
 
   function handleLogout() {
     localStorage.removeItem("authToken");
-    setToken(null);
-    setUser(null);
+    dispatch(setToken(null));
+    dispatch(setUser({}));
   }
 
   async function getUser() {
-    try {
-      let authToken = JSON.parse(localStorage.getItem("authToken"));
+    let authToken = JSON.parse(localStorage.getItem("authToken"));
 
-      if (authToken) {
-        const dbRef = ref(getDatabase());
-        try {
-          const user = await get(child(dbRef, `users/${authToken.localId}`));
-          setUser(user.val());
-          setToken(authToken.refreshToken);
-        } catch (error) {
-          console.log(error);
-        }
+    if (authToken) {
+      dispatch(setToken(authToken));
+      try {
+        const user = await get(
+          child(ref(getDatabase()), `users/${authToken.localId}`)
+        );
+        dispatch(setUser(user.val()));
+      } catch (error) {
+        console.log(error);
       }
-    } catch (err) {
-      console.log("Error: ", err.message);
     }
   }
 
   useEffect(() => {
     getUser();
-  }, [opened]);
+  }, []);
 
   return (
     <Navbar bg="light" expand="lg" className="justify-content-center">
@@ -88,10 +90,14 @@ export default function NavBarComponent() {
               <div style={{ marginRight: "15px" }}>
                 {user.fname} {user.lname}
               </div>
-              <button onClick={handleLogout}>Logout</button>
+              <Button variant="contained" onClick={handleLogout}>
+                Logout
+              </Button>
             </div>
           ) : (
-            <button onClick={() => setOpened(true)}>Sign In</button>
+            <Button variant="contained" onClick={() => setOpened(true)}>
+              Sign In
+            </Button>
           )}
           {/* <Navbar.Text className="justify-content-end">
             Signed in as: <a href="/login">Willy Nobody</a>

@@ -45,6 +45,7 @@ function SignUp({ setOpened, setPageOpened }) {
         });
 
         setOpened(false);
+        setPageOpened("SignIn");
       } catch (error) {
         console.log(error);
       }

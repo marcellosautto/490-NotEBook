@@ -6,14 +6,19 @@ import "../styles/Authentication/Login.css";
 import "../styles/Authentication/SignIn.css";
 import "../styles/Authentication/SignUp.css";
 import "../styles/Authentication/ResetPass.css";
-import "../styles/canvas.css"
-import "../styles/texteditor.css"
+import "../styles/canvas.css";
+import "../styles/texteditor.css";
+
+import { Provider } from "react-redux";
+import { store } from "../redux/Store";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <MainLayout>
-      <Component {...pageProps} />
-    </MainLayout>
+    <Provider store={store}>
+      <MainLayout>
+        <Component {...pageProps} />
+      </MainLayout>
+    </Provider>
   );
 }
 

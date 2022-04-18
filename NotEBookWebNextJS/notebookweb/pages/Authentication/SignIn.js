@@ -3,6 +3,10 @@ import logo from "../../assets/images/notebook.png";
 import Image from "next/image";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase/firebase-config";
+import { useAppDispatch } from "../../redux/Hooks";
+import { getDatabase, ref, child, get } from "firebase/database";
+import { setUser } from "../../redux/slices/UserSlice";
+import { setToken } from "../../redux/slices/TokenSlice";
 
 function SignIn({ setOpened, setPageOpened }) {
   const [email, setEmail] = useState("");
@@ -13,20 +17,20 @@ function SignIn({ setOpened, setPageOpened }) {
   const [focus, setFocus] = useState("");
   const [error, setError] = useState(false);
 
+  const dispatch = useAppDispatch();
+
   async function handleSignIn() {
     try {
       const response = await signInWithEmailAndPassword(auth, email, password);
-
-      try {
-        localStorage.setItem(
-          "authToken",
-          JSON.stringify(response._tokenResponse)
-        );
-        console.log("SUCCESS");
-      } catch (error) {
-        console.log(error);
-      }
-
+      localStorage.setItem(
+        "authToken",
+        JSON.stringify(response._tokenResponse)
+      );
+      const user = await get(
+        child(ref(getDatabase()), `users/${response._tokenResponse.localId}`)
+      );
+      dispatch(setUser(user.val()));
+      dispatch(setToken(response._tokenResponse));
       setOpened(false);
     } catch (error) {
       setError(true);
@@ -69,9 +73,7 @@ function SignIn({ setOpened, setPageOpened }) {
       <div className="signIn__logo">
         <Image src={logo} alt="" />
       </div>
-      <p className="signIn__title">
-        NotEBook Login
-      </p>
+      <p className="signIn__title">NotEBook Login</p>
       <input
         className={
           emailValid ? "signIn__input" : "signIn__input signIn__input--red"
