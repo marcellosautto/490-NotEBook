@@ -140,18 +140,10 @@ namespace NotEBookDesktop
             Calc.Show();
         }
 
-<<<<<<< HEAD
-        private void Calculator_Click(object sender, RoutedEventArgs e)
-        {
-            // CODE HERE 
-            Calculator calc = new Calculator();
-            calc.Show();
-=======
         private void OpenTextEditor(object sender, RoutedEventArgs e)
         {
             TextEditor TextE = new TextEditor();
             TextE.Show();
->>>>>>> Desktop
         }
     }
 

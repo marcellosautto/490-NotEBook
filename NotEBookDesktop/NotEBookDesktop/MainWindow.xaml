@@ -409,10 +409,7 @@
             FontSize="16"
             FontWeight="Medium"
             x:Name="Calculator"
-<<<<<<< HEAD
-            Click="OpenCalculator" Margin="112,385,112,15" Grid.Row="1">
-            <!-->>>>>>> Desktop-->
-=======
+
             Click="OpenCalculator" Margin="25,315,199,85" Grid.Row="1">
 
             <Button.Style>
@@ -449,7 +446,6 @@
             FontWeight="Medium"
             x:Name="TextEditor"
             Click="OpenTextEditor" Margin="25,350,199,50" Grid.Row="1">
->>>>>>> Desktop
 
             <Button.Style>
                 <Style TargetType="{x:Type Button}">

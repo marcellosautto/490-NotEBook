@@ -38,10 +38,10 @@ namespace NotEBookDesktop
             client = new FirebaseClient(config);
             register = new Register();
 
-            if (client != null)
-            {
-                MessageBox.Show("Connection Established");
-            }
+            //if (client != null)
+            //{
+            //    MessageBox.Show("Connection Established");
+            //}
         }
 
         private void updateUsernameInput(object sender, TextChangedEventArgs e)
