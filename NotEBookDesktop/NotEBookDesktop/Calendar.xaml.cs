@@ -39,8 +39,8 @@ namespace NotEBookDesktop
 
 
             //Calendar Date Filtering
-            CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(EventList.Items);
-            view.Filter = DateFilter;
+            //CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(EventList.Items);
+            //view.Filter = DateFilter;
             //EventList.Items.SortDescriptions.Add(new SortDescription("Date", ListSortDirection.Ascending));
         }
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
@@ -53,9 +53,9 @@ namespace NotEBookDesktop
         private void EnterEvent_Click(object sender, RoutedEventArgs e)
         {
             //Check if EventDate and EventTextBox is empty, if so throw an error to user
-            if (EventDate.SelectedDate == null)
+            if (EventDate.SelectedDate == null || HourList.SelectedItem == null || HourList.SelectedItem == null|| TimeOfDayList.SelectedItem == null)
             {
-                MessageBox.Show("No date has been picked", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("No date and time has been picked", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else if (String.IsNullOrEmpty(EventTextBox.Text))
             {
@@ -67,12 +67,15 @@ namespace NotEBookDesktop
                 //add events
                 EventItem E = new EventItem();
                 E.Date = EventDate.SelectedDate.Value.ToString("MM/dd/yyyy");
-                E.Event = EventTextBox.Text.ToString();
+                E.Event = EventTextBox.Text.ToString() + " at " + HourList.SelectedItem.ToString()+ ":" + MinuteList.SelectedItem.ToString() + TimeOfDayList.SelectedItem.ToString();
 
                 //push event to listview
                 EventList.Items.Add(E);
                 //clear entrys form EventDate and EventTextBox
                 EventDate.SelectedDate = null;
+                HourList.SelectedItem = null;
+                MinuteList.SelectedItem = null;
+                TimeOfDayList.SelectedItem = null;
                 EventTextBox.Text = String.Empty;
             }
             CollectionView EventView = (CollectionView)CollectionViewSource.GetDefaultView(EventList.Items);
@@ -187,7 +190,7 @@ namespace NotEBookDesktop
         {
             //Filters events that have the selected dates
             //LeftCalendar.SelectedDates.Add();
-            CollectionViewSource.GetDefaultView(EventList.Items).Refresh();
+            //CollectionViewSource.GetDefaultView(EventList.Items).Refresh();
         }
 
         private void Calendar_Close(object sender, RoutedEventArgs e)

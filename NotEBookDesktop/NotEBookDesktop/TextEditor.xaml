@@ -1,0 +1,135 @@
+﻿<Window x:Class="NotEBookDesktop.TextEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NotEBookDesktop"
+        mc:Ignorable="d"
+        Title="TExtEditor" Height="600" Width="1000
+        ">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="{x:Type Button}" x:Key="formatTextStyle">
+                <Setter Property="FontFamily" Value="Palatino Linotype"></Setter>
+                <Setter Property="Width" Value="30"></Setter>
+                <Setter Property="FontSize" Value ="14"></Setter>
+                <Setter Property="CommandTarget" Value="{Binding ElementName=mainRTB}"></Setter>
+            </Style>
+
+            <Style TargetType="{x:Type Button}" x:Key="formatImageStyle">
+                <Setter Property="Width" Value="30"></Setter>
+                <Setter Property="CommandTarget" Value="{Binding ElementName=mainRTB}"></Setter>
+            </Style>
+        </Grid.Resources>
+
+        <DockPanel Name="mainPanel">
+
+            <!-- This tool bar contains all the editing buttons. -->
+            <ToolBar Name="mainToolBar" Height="29" DockPanel.Dock="Top">
+
+                <Button x:Name="Open_Btn" Style="{StaticResource formatImageStyle}" ToolTip="Open Document" Click="Open_Btm_Click">
+                    <Image Source="/Images/Open.png"/>
+                </Button>
+                <Button x:Name="Save_Btn" Style="{StaticResource formatImageStyle}" ToolTip="Save Document" Click="Save_Btn_Click">
+                    <Image Source="/Images/SaveIcon.png"/>
+                </Button>
+
+                <Button x:Name="Cut_Btn" Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Cut" ToolTip="Cut (Ctrl+X)">
+                    <Image Source="Images\Cut.png"/>
+                </Button>
+                <Button x:Name="Copy_Btn" Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Copy" ToolTip="Copy (Ctrl+C)">
+                    <Image Source="Images\Copy.png"/>
+                </Button>
+                <Button x:Name="Paste_Btn" Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Paste" ToolTip="Paste(Ctrl+V)">
+                    <Image Source="Images\Paste.png"/>
+                </Button>
+                <Button x:Name="Undo_Btn" Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Undo" ToolTip="Undo (Ctrl+Z)">
+                    <Image Source="Images\Undo.png"/>
+                </Button>
+                <Button x:Name="Redo_Btn_" Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Redo" ToolTip="Redo(Ctrl+Y)">
+                    <Image Source="Images\Redo.png"/>
+                </Button>
+                <ComboBox x:Name="FontType" Width="120" SelectionChanged="FontType_SelectionChanged">
+                    <ComboBox.ItemsSource>
+                        <local:FontList/>
+                    </ComboBox.ItemsSource>
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" FontFamily="{Binding}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <ComboBox x:Name="FontHeight" Width="39" RenderTransformOrigin="0.5,0.5" Height="21" SelectionChanged="FontHeight_SelectionChanged">
+                    <ComboBox.ItemsSource>
+                        <local:FontHeight/>
+                    </ComboBox.ItemsSource>
+                    <ComboBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ComboBox.RenderTransform>
+                </ComboBox>
+
+                <Button x:Name="Bold_Btn" Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleBold" ToolTip="Bold">
+                    <TextBlock FontWeight="Bold"><Run Text="B"/></TextBlock>
+                </Button>
+                <Button x:Name="Italics_Btn" Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleItalic" ToolTip="Italic">
+                    <TextBlock FontStyle="Italic" FontWeight="Bold"><Run Text="I"/></TextBlock>
+                </Button>
+                <Button x:Name="Underline_Btn" Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleUnderline" ToolTip="Underline">
+                    <TextBlock TextDecorations = "Underline"><Run Text="U"/></TextBlock>
+                </Button>
+                <Button x:Name="Strikethough_Btn" Style="{StaticResource formatTextStyle}"  ToolTip="Strikethrough" Click="Strikethrough" VerticalAlignment="Top">
+                    <TextBlock TextDecorations="Strikethrough"><Run Text="S"/></TextBlock>
+                </Button>
+                <Button x:Name="IncreaseFontSize_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.IncreaseFontSize" ToolTip="Grow Font">
+                    <Image Source="Images\CharacterGrowFont.png"/>
+                </Button>
+                <Button x:Name="ShrinkFontSize_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.DecreaseFontSize" ToolTip="Shrink Font">
+                    <Image Source="Images\CharacterShrinkFont.png" Height="24" Width="30"/>
+                </Button>
+
+                <Button x:Name="Bullet_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.ToggleBullets" ToolTip="Bullets">
+                    <Image Source="Images\BulletList.png"/>
+                </Button>
+                <Button x:Name="Numbering_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.ToggleNumbering" ToolTip="Numbering">
+                    <Image Source="Images/NumbersList.png"/>
+                </Button>
+                <Button x:Name="AlignLeft_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignLeft" ToolTip="Align Left">
+                    <Image Source="Images\AlignLeft.png"/>
+                </Button>
+                <Button x:Name="AlignCenter_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignCenter" ToolTip="Align Center">
+                    <Image Source="Images\AlignCenter.png"/>
+                </Button>
+                <Button x:Name="AlignRight_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignRight" ToolTip="Align Right">
+                    <Image Source="Images\AlignRight.png"/>
+                </Button>
+                <Button x:Name="AlignJustify_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignJustify" ToolTip="Align Justify">
+                    <Image Source="Images\AlignJustify.png"/>
+                </Button>
+                <Button x:Name="IncreaseIndent_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.IncreaseIndentation" ToolTip="Increase Indent">
+                    <Image Source="Images\Indent.png"/>
+                </Button>
+                <Button x:Name="DecreaseIndent_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.DecreaseIndentation" ToolTip="Decrease Indent">
+                    <Image Source="Images\IndentRemove.png"/>
+                </Button>
+
+            </ToolBar>
+
+            <!-- By default pressing tab moves focus to the next control. Setting AcceptsTab to true allows the 
+           RichTextBox to accept tab characters. -->
+            <RichTextBox Name="mainRTB" AcceptsTab="True">
+                <FlowDocument>
+                    <Paragraph>
+                        <InlineUIContainer>
+                            <Border BorderThickness="1" BorderBrush="Black"/>
+                        </InlineUIContainer>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+        </DockPanel>
+    </Grid>
+</Window>

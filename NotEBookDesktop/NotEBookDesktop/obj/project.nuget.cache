@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jqFhknroSX3p5+p3whu4t35OUYORsBhUCVsjRo9TwzAkop0PCjvdhC40xsZSQTaYfpQmL9NnDPkIooNwfocPPA==",
+  "dgSpecHash": "fRDXjgsuj0hx5hxeHUpLoOcqljn+yrYUrjMbQy84ypk/aI/x8G2229ISJKQ71wj2tJ2Aw/WZjiUFn4ZVvDSJ1g==",
   "success": true,
-  "projectFilePath": "E:\\.NET_Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
+  "projectFilePath": "D:\\.NET_Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marce\\.nuget\\packages\\firesharp\\2.0.4\\firesharp.2.0.4.nupkg.sha512",
     "C:\\Users\\marce\\.nuget\\packages\\firesharp.serialization.jsonnet\\1.1.0\\firesharp.serialization.jsonnet.1.1.0.nupkg.sha512",
