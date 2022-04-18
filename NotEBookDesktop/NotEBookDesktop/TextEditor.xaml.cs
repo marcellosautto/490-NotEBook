@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace NotEBookDesktop
 {
@@ -36,7 +37,7 @@ namespace NotEBookDesktop
 
                 TextDecorationCollection newTextDecoration;
 
-                if (currentTextDecoration != DependencyProperty.UnsetValue) // not all values have strikethrough/
+                if (currentTextDecoration != DependencyProperty.UnsetValue) // not all values have strikethrough
                 {
                     newTextDecoration = ((TextDecorationCollection)currentTextDecoration == TextDecorations.Strikethrough) ? new TextDecorationCollection() : TextDecorations.Strikethrough;
                 }
@@ -44,7 +45,6 @@ namespace NotEBookDesktop
                 {
                     newTextDecoration = new TextDecorationCollection();
                 }
-
                 else
                 {
                     newTextDecoration = TextDecorations.Strikethrough;
@@ -55,6 +55,42 @@ namespace NotEBookDesktop
 
 
         }
-        
+
+        private void FontHeight_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            mainRTB.Selection.ApplyPropertyValue(FontSizeProperty, FontHeight.SelectedItem);
+           
+        }
+
+        private void FontType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            mainRTB.Selection.ApplyPropertyValue(FontFamilyProperty, FontType.SelectedItem);
+        }
+
+        private void Save_Btn_Click(object sender, RoutedEventArgs e)
+        {
+            //Save contents of mainRTB to file
+            SaveFileDialog sf = new SaveFileDialog();
+            sf.Filter = "RichText File(*.rtf)| *.rtf";
+            if (sf.ShowDialog() == true)
+            {
+                System.IO.FileStream FileStream= (System.IO.FileStream)sf.OpenFile();
+                TextRange FileContents = new TextRange(mainRTB.Document.ContentStart,mainRTB.Document.ContentEnd);
+                FileContents.Save(FileStream, System.Windows.DataFormats.Rtf);
+            }
+        }
+
+        private void Open_Btm_Click(object sender, RoutedEventArgs e)
+        {
+            //Open from file to mainRTB
+            OpenFileDialog of = new OpenFileDialog();
+            of.Filter = "RichText File(*.rtf)| *.rtf";
+            if (of.ShowDialog() == true)
+            {
+                System.IO.FileStream FileStream = (System.IO.FileStream)of.OpenFile();
+                TextRange FileContents = new TextRange(mainRTB.Document.ContentStart, mainRTB.Document.ContentEnd);
+                FileContents.Load(FileStream, System.Windows.DataFormats.Rtf);
+            }
+        }
     }
 }

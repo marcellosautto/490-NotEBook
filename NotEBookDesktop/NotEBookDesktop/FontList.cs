@@ -3,17 +3,19 @@ using System.Collections.ObjectModel;
 using System.Windows.Media;
 
 
+
+//Gets the lists of Fonts installed on user's computer
 namespace NotEBookDesktop
 {
-    //Gets the lists of Fonts installed on user's computer
-    class FontList : ObservableCollection<string> 
-    { 
-        public FontList() 
+    class FontList : ObservableCollection<string>
+    {
+        public FontList()
         {
             foreach (FontFamily f in Fonts.SystemFontFamilies)
-            {                
-                this.Add(f.ToString());                
-            }  
-        }   
+            {
+                this.Add(f.ToString());
+            }
+        }
     }
 }
+

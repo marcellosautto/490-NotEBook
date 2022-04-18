@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Remove="Images\AlignCenter.png" />
+    <None Remove="Images\AlignJustify.png" />
     <None Remove="Images\AlignLeft.png" />
     <None Remove="Images\AlignRight.png" />
     <None Remove="Images\Backcolor.png" />
@@ -27,6 +28,7 @@
     <None Remove="Images\Paste.png" />
     <None Remove="Images\Print.png" />
     <None Remove="Images\Redo.png" />
+    <None Remove="Images\SaveIcon.png" />
     <None Remove="Images\Strikeout.png" />
     <None Remove="Images\Subscript.png" />
     <None Remove="Images\Superscript.png" />
@@ -42,6 +44,9 @@
 
   <ItemGroup>
     <Resource Include="Images\AlignCenter.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\AlignJustify.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\AlignLeft.png">
@@ -97,6 +102,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Redo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\SaveIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Strikeout.png">

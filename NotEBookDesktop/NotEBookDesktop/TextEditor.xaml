@@ -27,26 +27,45 @@
             <!-- This tool bar contains all the editing buttons. -->
             <ToolBar Name="mainToolBar" Height="29" DockPanel.Dock="Top">
 
+                <Button x:Name="Open_Btn" Style="{StaticResource formatImageStyle}" ToolTip="Open Document" Click="Open_Btm_Click">
+                    <Image Source="/Images/Open.png"/>
+                </Button>
+                <Button x:Name="Save_Btn" Style="{StaticResource formatImageStyle}" ToolTip="Save Document" Click="Save_Btn_Click">
+                    <Image Source="/Images/SaveIcon.png"/>
+                </Button>
+
                 <Button x:Name="Cut_Btn" Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Cut" ToolTip="Cut (Ctrl+X)">
-                    <Image Source="Images\Cut.png"></Image>
+                    <Image Source="Images\Cut.png"/>
                 </Button>
                 <Button x:Name="Copy_Btn" Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Copy" ToolTip="Copy (Ctrl+C)">
-                    <Image Source="Images\Copy.png"></Image>
+                    <Image Source="Images\Copy.png"/>
                 </Button>
                 <Button x:Name="Paste_Btn" Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Paste" ToolTip="Paste(Ctrl+V)">
-                    <Image Source="Images\Paste.png"></Image>
+                    <Image Source="Images\Paste.png"/>
                 </Button>
                 <Button x:Name="Undo_Btn" Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Undo" ToolTip="Undo (Ctrl+Z)">
-                    <Image Source="Images\Undo.png"></Image>
+                    <Image Source="Images\Undo.png"/>
                 </Button>
-                <Button x:Name="Redo_Btn_" Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Redo" ToolTip="Redo(Ctrl)">
-                    <Image Source="Images\Redo.png"></Image>
+                <Button x:Name="Redo_Btn_" Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Redo" ToolTip="Redo(Ctrl+Y)">
+                    <Image Source="Images\Redo.png"/>
                 </Button>
-                <ComboBox x:Name="FontType" Width="120"/>
-                <ComboBox x:Name="FontHeight" Width="37" RenderTransformOrigin="0.5,0.5">
+                <ComboBox x:Name="FontType" Width="120" SelectionChanged="FontType_SelectionChanged">
+                    <ComboBox.ItemsSource>
+                        <local:FontList/>
+                    </ComboBox.ItemsSource>
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" FontFamily="{Binding}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <ComboBox x:Name="FontHeight" Width="39" RenderTransformOrigin="0.5,0.5" Height="21" SelectionChanged="FontHeight_SelectionChanged">
+                    <ComboBox.ItemsSource>
+                        <local:FontHeight/>
+                    </ComboBox.ItemsSource>
                     <ComboBox.RenderTransform>
                         <TransformGroup>
-                            <ScaleTransform ScaleX="-1"/>
+                            <ScaleTransform ScaleX="1"/>
                             <SkewTransform/>
                             <RotateTransform/>
                             <TranslateTransform/>
@@ -55,47 +74,47 @@
                 </ComboBox>
 
                 <Button x:Name="Bold_Btn" Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleBold" ToolTip="Bold">
-                    <TextBlock FontWeight="Bold">B</TextBlock>
+                    <TextBlock FontWeight="Bold"><Run Text="B"/></TextBlock>
                 </Button>
                 <Button x:Name="Italics_Btn" Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleItalic" ToolTip="Italic">
-                    <TextBlock FontStyle="Italic" FontWeight="Bold">I</TextBlock>
+                    <TextBlock FontStyle="Italic" FontWeight="Bold"><Run Text="I"/></TextBlock>
                 </Button>
                 <Button x:Name="Underline_Btn" Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleUnderline" ToolTip="Underline">
-                    <TextBlock TextDecorations = "Underline"> <Run Text="U"></Run></TextBlock>
+                    <TextBlock TextDecorations = "Underline"><Run Text="U"/></TextBlock>
                 </Button>
                 <Button x:Name="Strikethough_Btn" Style="{StaticResource formatTextStyle}"  ToolTip="Strikethrough" Click="Strikethrough" VerticalAlignment="Top">
                     <TextBlock TextDecorations="Strikethrough"><Run Text="S"/></TextBlock>
                 </Button>
                 <Button x:Name="IncreaseFontSize_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.IncreaseFontSize" ToolTip="Grow Font">
-                    <Image Source="Images\CharacterGrowFont.png"></Image>
+                    <Image Source="Images\CharacterGrowFont.png"/>
                 </Button>
                 <Button x:Name="ShrinkFontSize_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.DecreaseFontSize" ToolTip="Shrink Font">
-                    <Image Source="Images\CharacterShrinkFont.png"></Image>
+                    <Image Source="Images\CharacterShrinkFont.png" Height="24" Width="30"/>
                 </Button>
 
                 <Button x:Name="Bullet_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.ToggleBullets" ToolTip="Bullets">
-                    <Image Source="Images\BulletList.png"></Image>
+                    <Image Source="Images\BulletList.png"/>
                 </Button>
                 <Button x:Name="Numbering_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.ToggleNumbering" ToolTip="Numbering">
-                    <Image Source="Images/NumbersList.png"></Image>
+                    <Image Source="Images/NumbersList.png"/>
                 </Button>
                 <Button x:Name="AlignLeft_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignLeft" ToolTip="Align Left">
-                    <Image Source="Images\AlignLeft.png"></Image>
+                    <Image Source="Images\AlignLeft.png"/>
                 </Button>
                 <Button x:Name="AlignCenter_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignCenter" ToolTip="Align Center">
-                    <Image Source="Images\AlignCenter.png"></Image>
+                    <Image Source="Images\AlignCenter.png"/>
                 </Button>
                 <Button x:Name="AlignRight_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignRight" ToolTip="Align Right">
-                    <Image Source="Images\AlignRight.png"></Image>
+                    <Image Source="Images\AlignRight.png"/>
                 </Button>
                 <Button x:Name="AlignJustify_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignJustify" ToolTip="Align Justify">
-                    <Image Source="Images\ParagraphFullJustify.png"></Image>
+                    <Image Source="Images\AlignJustify.png"/>
                 </Button>
                 <Button x:Name="IncreaseIndent_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.IncreaseIndentation" ToolTip="Increase Indent">
-                    <Image Source="Images\Indent.png"></Image>
+                    <Image Source="Images\Indent.png"/>
                 </Button>
                 <Button x:Name="DecreaseIndent_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.DecreaseIndentation" ToolTip="Decrease Indent">
-                    <Image Source="Images\IndentRemove.png"></Image>
+                    <Image Source="Images\IndentRemove.png"/>
                 </Button>
 
             </ToolBar>
