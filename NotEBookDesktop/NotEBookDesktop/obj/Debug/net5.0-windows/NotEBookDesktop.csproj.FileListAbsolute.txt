@@ -105,3 +105,16 @@ E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-w
 E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\RestSharp.dll
 E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Calculator.g.cs
 E:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Calculator.baml
+E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\FireSharp.dll
+E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\FireSharp.Serialization.JsonNet.dll
+E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\Microsoft.Threading.Tasks.Extensions.dll
+E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\Microsoft.Threading.Tasks.dll
+E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\System.Net.Http.Extensions.dll
+E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\System.Net.Http.Primitives.dll
+E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\bin\Debug\net5.0-windows\RestSharp.dll
+E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.csproj.AssemblyReference.cache
+E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\TextEditor.g.cs
+E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\TextEditor.baml
