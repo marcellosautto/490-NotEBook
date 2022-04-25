@@ -12,12 +12,7 @@ import {
 } from "react-bootstrap";
 import Image from "next/image";
 import Login from "../pages/Authentication/Login";
-<<<<<<< HEAD
-import styles from '../styles/Home.module.css'
-
-=======
 import { getDatabase, ref, child, get } from "firebase/database";
->>>>>>> 5965e4e72fbc4a24468690c3f0ad23c19c8bb9fb
 
 export default function NavBarComponent() {
   const [opened, setOpened] = useState(false);
@@ -81,9 +76,6 @@ export default function NavBarComponent() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-<<<<<<< HEAD
-          <button class={styles.login__button} onClick={() => setOpened(true)}>Sign In</button>
-=======
 
           {token ? (
             <div
@@ -101,7 +93,6 @@ export default function NavBarComponent() {
           ) : (
             <button onClick={() => setOpened(true)}>Sign In</button>
           )}
->>>>>>> 5965e4e72fbc4a24468690c3f0ad23c19c8bb9fb
           {/* <Navbar.Text className="justify-content-end">
             Signed in as: <a href="/login">Willy Nobody</a>
           </Navbar.Text> */}

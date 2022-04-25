@@ -1,5 +1,15 @@
-﻿using System.Windows;
+﻿using System;
+using System.Collections.Generic;
+using System.Security.Cryptography;
+using System.Text;
+using System.Windows;
 using System.Windows.Controls;
+using FireSharp;
+using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace NotEBookDesktop
 {
@@ -8,14 +18,30 @@ namespace NotEBookDesktop
     /// </summary>
     public partial class Login : Window
     {
+
+        IFirebaseConfig config = new FirebaseConfig
+        {
+            AuthSecret = "zhYUtdlwipetkOsYdwzoHSWudnZArQh2Ce1tlzhV",
+            BasePath = "https://notebook-c7e67-default-rtdb.firebaseio.com/"
+        };
+
+        IFirebaseClient client;
+        List<User> users;
+        Register register;
         public Login()
         {
-            //  InitializeInitializeComponent();Component();
             InitializeComponent();
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
-            this.Close();
+        }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+            client = new FirebaseClient(config);
+            register = new Register();
+
+            //if (client != null)
+            //{
+            //    MessageBox.Show("Connection Established");
+            //}
         }
 
         private void updateUsernameInput(object sender, TextChangedEventArgs e)
@@ -28,47 +54,82 @@ namespace NotEBookDesktop
 
         }
 
-        private void LoginBtn_Click(object sender, RoutedEventArgs e)
+        private async void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-            //SqlConnection sqlCon = new SqlConnection(@"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = NotEBookUserLoginDB; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
 
-            //try
-            //{
-            //    if (sqlCon.State == ConnectionState.Closed)
-            //        sqlCon.Open();
+            FirebaseResponse response = await client.GetAsync("users");
 
-            //    String query = "SELECT COUNT(1) FROM [Table] WHERE Username=@Username AND Password=@Password";
-
-            //    SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
-            //    sqlCmd.CommandType = CommandType.Text;
-            //    sqlCmd.Parameters.AddWithValue("@Username", UsernameInput.Text);
-            //    sqlCmd.Parameters.AddWithValue("@Password", PasswordInput.Password);
-            //    int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
-            //    if(count == 1)
-            //    {
-
+            List<User> users = getUserData(response);
+            bool isLoggedIn = false;
+            foreach (var user in users)
+            {
+                if (user.fname == UsernameInput.Text && user.password == getEncryption(PasswordInput.Password))
+                {
+                    isLoggedIn = true;
                     MainWindow mainWindow = new MainWindow();
                     mainWindow.Show();
-                   this.Close();
+                    Close();
+                    break;
+                }
+            }
 
-            //        MainWindow mainWindow = new MainWindow();
-            //        mainWindow.Show();
-            //        this.Close();
-            //    }
-            //    else
+            if (!isLoggedIn)
+            {
+                MessageBox.Show("Incorrect Username or Password");
+            }
+
+        }
+
+
+        private async void RegisterBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //try
+            //{
+            //    client = new FirebaseClient(config);
+            //    User user = new User
             //    {
-            //        MessageBox.Show("Username or Password is Incorrect");
-            //    }
-
+            //        ID = Guid.NewGuid().ToString(),
+            //        fname = UsernameInput.Text,
+            //        lname = "",
+            //        password = getEncryption(PasswordInput.Password),
+            //        country = "United States",
+            //        gender = "Male"
+            //    };
+            //    await client.SetAsync("users/" + user.ID, user);
+            //    MessageBox.Show("Registration Successful!");
             //}
             //catch (Exception ex)
             //{
             //    MessageBox.Show(ex.Message);
             //}
-            //finally
-            //{
-            //    sqlCon.Close();
-            //}
+
+            register.Show();
+            Close();
+
         }
+
+        private List<User> getUserData(FirebaseResponse response)
+        {
+            dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
+            var list = new List<User>();
+
+            foreach (var user in data)
+            {
+                list.Add(JsonConvert.DeserializeObject<User>(((JProperty)user).Value.ToString()));
+            }
+
+            return list;
+        }
+
+        private String getEncryption(String password)
+        {
+            byte[] password_buffer = Encoding.ASCII.GetBytes(password);
+            byte[] result;
+            SHA256 shaM = new SHA256Managed();
+            result = shaM.ComputeHash(password_buffer);
+
+            return Encoding.ASCII.GetString(result);
+        }
+
     }
 }

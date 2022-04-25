@@ -1,11 +1,11 @@
-<Window x:Class="NotEBookDesktop.Login"
+﻿<Window x:Class="NotEBookDesktop.Login"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NotEBookDesktop"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="800" Background="#FF221C32">
+        Title="Login" Height="450" Width="800" Background="#FF221C32" Loaded="Login_Load">
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
         <Label x:Name="MainTitle" Content="NotEBook Desktop&#xD;&#xA;" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" Foreground="White" FontFamily="Global User Interface" FontSize="48" Height="86" />
         <StackPanel x:Name="LoginStack" HorizontalAlignment="Center" Orientation="Horizontal" VerticalAlignment="Center">
@@ -20,9 +20,9 @@
                 <Label Content="Password" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontFamily="Sitka Banner" Foreground="White"/>
                 <PasswordBox x:Name="PasswordInput"  Width="160" HorizontalAlignment="Center" Height="30"></PasswordBox>
 
-                <StackPanel x:Name="LoginScreenButtons" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <StackPanel x:Name="LoginScreenButtons" Orientation="Horizontal" HorizontalAlignment="Center">
                     <Button x:Name="LoginBtn" Content="Login" Click="LoginBtn_Click" Width="120" Margin="0,15,10,0" FontFamily="Sitka Heading" Background="White" FontSize="24" HorizontalAlignment="Center" FontWeight="Normal" BorderBrush="{x:Null}"/>
-                    <Button x:Name="RegisterBtn" Content="Register" Click="LoginBtn_Click" Width="120" FontFamily="Sitka Heading" Background="White" FontSize="24" FontWeight="Normal" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                    <Button x:Name="RegisterBtn" Content="Register" Click="RegisterBtn_Click" Width="120" FontFamily="Sitka Heading" Background="White" FontSize="24" FontWeight="Normal" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
                 </StackPanel>
 
             </StackPanel>
