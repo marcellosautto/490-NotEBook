@@ -24,6 +24,9 @@ namespace NotEBookDesktop
         public TextEditor()
         {
             InitializeComponent();
+            //Sets the comboboxes to the defaults of mainRTB
+            FontHeight.SelectedItem = mainRTB.FontSize.ToString();
+            FontType.SelectedItem = mainRTB.FontFamily.ToString();
         }
 
         private void Strikethrough(object sender, RoutedEventArgs e)
@@ -58,13 +61,104 @@ namespace NotEBookDesktop
 
         private void FontHeight_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            mainRTB.Selection.ApplyPropertyValue(FontSizeProperty, FontHeight.SelectedItem);
-           
+            if (mainRTB == null)
+                return;
+
+            // Make sure we have a selection. Should have one even if there is no text selected.
+            if (mainRTB.Selection != null)
+            {
+                // Check whether there is text selected or just sitting at cursor
+                if (mainRTB.Selection.IsEmpty)
+                {
+                    // Check to see if we are at the start of the textbox and nothing has been added yet
+                    if (mainRTB.Selection.Start.Paragraph == null)
+                    {
+                        // Add a new paragraph object to the richtextbox with the fontsize
+                        Paragraph p = new Paragraph();
+                        p.FontSize = Convert.ToDouble(FontHeight.SelectedItem);
+                        mainRTB.Document.Blocks.Add(p);
+                    }
+                    else
+                    {
+                        // Get current position of cursor
+                        TextPointer curCaret = mainRTB.CaretPosition;
+                        // Get the current block object that the cursor is in
+                        Block curBlock = mainRTB.Document.Blocks.Where
+                            (x => x.ContentStart.CompareTo(curCaret) == -1 && x.ContentEnd.CompareTo(curCaret) == 1).FirstOrDefault();
+                        if (curBlock != null)
+                        {
+                            Paragraph curParagraph = curBlock as Paragraph;
+                            // Create a new run object with the fontsize, and add it to the current block
+                            Run newRun = new Run();
+                            newRun.FontSize = Convert.ToDouble(FontHeight.SelectedItem);
+                            newRun.FontFamily = curParagraph.FontFamily;
+                            curParagraph.Inlines.Add(newRun);
+                            // Reset the cursor into the new block. 
+                            // If we don't do this, the font size will default again when you start typing.
+                            mainRTB.CaretPosition = newRun.ElementStart;
+                        }
+                    }
+                }
+                else // There is selected text, so change the fontsize of the selection
+                {
+                    TextRange selectionTextRange = new TextRange(mainRTB.Selection.Start, mainRTB.Selection.End);
+                    selectionTextRange.ApplyPropertyValue(TextElement.FontSizeProperty, FontHeight.SelectedItem);
+                }
+            }
+            // Reset the focus onto the richtextbox after selecting the font in a toolbar etc
+            mainRTB.Focus();
+
         }
 
         private void FontType_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            mainRTB.Selection.ApplyPropertyValue(FontFamilyProperty, FontType.SelectedItem);
+            // Make sure we have a richtextbox.
+            if (mainRTB== null)
+                return;
+
+            // Make sure we have a selection. Should have one even if there is no text selected.
+            if (mainRTB.Selection != null)
+            {
+                // Check whether there is text selected or just sitting at cursor
+                if (mainRTB.Selection.IsEmpty)
+                {
+                    // Check to see if we are at the start of the textbox and nothing has been added yet
+                    if (mainRTB.Selection.Start.Paragraph == null)
+                    {
+                        // Add a new paragraph object to the richtextbox with the fontfamily
+                        Paragraph p = new Paragraph();
+                        p.FontFamily = new System.Windows.Media.FontFamily(FontType.SelectedItem.ToString());
+                        mainRTB.Document.Blocks.Add(p);
+                    }
+                    else
+                    {
+                        // Get current position of cursor
+                        TextPointer curCaret = mainRTB.CaretPosition;
+                        // Get the current block object that the cursor is in
+                        Block curBlock = mainRTB.Document.Blocks.Where
+                            (x => x.ContentStart.CompareTo(curCaret) == -1 && x.ContentEnd.CompareTo(curCaret) == 1).FirstOrDefault();
+                        if (curBlock != null)
+                        {
+                            Paragraph curParagraph = curBlock as Paragraph;
+                            // Create a new run object with the fontfamily, and add it to the current block
+                            Run newRun = new Run();
+                            newRun.FontSize = curParagraph.FontSize;
+                            newRun.FontFamily = new System.Windows.Media.FontFamily(FontType.SelectedItem.ToString());
+                            curParagraph.Inlines.Add(newRun);
+                            // Reset the cursor into the new block. 
+                            // If we don't do this, the font size will default again when you start typing.
+                            mainRTB.CaretPosition = newRun.ElementStart;
+                        }
+                    }
+                }
+                else // There is selected text, so change the fontType of the selection
+                {
+                    TextRange selectionTextRange = new TextRange(mainRTB.Selection.Start, mainRTB.Selection.End);
+                    selectionTextRange.ApplyPropertyValue(TextElement.FontFamilyProperty, FontType.SelectedItem);
+                }
+            }
+            // Reset the focus onto the richtextbox after selecting the font in a toolbar etc
+            mainRTB.Focus();
         }
 
         private void Save_Btn_Click(object sender, RoutedEventArgs e)
@@ -72,6 +166,7 @@ namespace NotEBookDesktop
             //Save contents of mainRTB to file
             SaveFileDialog sf = new SaveFileDialog();
             sf.Filter = "RichText File(*.rtf)| *.rtf";
+            //sf.Filter = "XAML files| *.xaml";
             if (sf.ShowDialog() == true)
             {
                 System.IO.FileStream FileStream= (System.IO.FileStream)sf.OpenFile();
@@ -85,12 +180,36 @@ namespace NotEBookDesktop
             //Open from file to mainRTB
             OpenFileDialog of = new OpenFileDialog();
             of.Filter = "RichText File(*.rtf)| *.rtf";
+            //of.Filter = "XAML files| *.xaml";
             if (of.ShowDialog() == true)
             {
                 System.IO.FileStream FileStream = (System.IO.FileStream)of.OpenFile();
                 TextRange FileContents = new TextRange(mainRTB.Document.ContentStart, mainRTB.Document.ContentEnd);
                 FileContents.Load(FileStream, System.Windows.DataFormats.Rtf);
             }
+        }
+
+        private void IncreaseFontSize_Click(object sender, RoutedEventArgs e)
+        {
+            //Adds extra functionality to button, increment fontsize in combobox, max is 1638 THIS SHIT DONT WORK
+            double result = mainRTB.FontSize + 1;
+            if (result > 1638)
+            {
+                result = 1638;
+            }
+
+            FontHeight.SelectedItem = result.ToString();
+        }
+
+        private void ShrinkFontSize_Btn_Click(object sender, RoutedEventArgs e)
+        {
+            //Adds extra functionality to button, increment fontsize in combobox min is 1
+            double result = mainRTB.FontSize - 1;
+            if (result < 1)
+            {
+                result = 1;
+            }
+            FontHeight.SelectedItem = result.ToString();
         }
     }
 }

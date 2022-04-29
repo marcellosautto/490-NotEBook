@@ -85,10 +85,10 @@
                 <Button x:Name="Strikethough_Btn" Style="{StaticResource formatTextStyle}"  ToolTip="Strikethrough" Click="Strikethrough" VerticalAlignment="Top">
                     <TextBlock TextDecorations="Strikethrough"><Run Text="S"/></TextBlock>
                 </Button>
-                <Button x:Name="IncreaseFontSize_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.IncreaseFontSize" ToolTip="Grow Font">
+                <Button x:Name="IncreaseFontSize_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.IncreaseFontSize" ToolTip="Grow Font" Click="IncreaseFontSize_Click">
                     <Image Source="Images\CharacterGrowFont.png"/>
                 </Button>
-                <Button x:Name="ShrinkFontSize_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.DecreaseFontSize" ToolTip="Shrink Font">
+                <Button x:Name="ShrinkFontSize_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.DecreaseFontSize" ToolTip="Shrink Font" Click="ShrinkFontSize_Btn_Click">
                     <Image Source="Images\CharacterShrinkFont.png" Height="24" Width="30"/>
                 </Button>
 
@@ -121,7 +121,7 @@
 
             <!-- By default pressing tab moves focus to the next control. Setting AcceptsTab to true allows the 
            RichTextBox to accept tab characters. -->
-            <RichTextBox Name="mainRTB" AcceptsTab="True">
+            <RichTextBox Name="mainRTB" SpellCheck.IsEnabled="True" AcceptsTab="True">
                 <FlowDocument>
                     <Paragraph>
                         <InlineUIContainer>
