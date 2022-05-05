@@ -43,6 +43,10 @@ export default function NavBarComponent() {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
+            <NavDropdown title="Background Styles" id="basic-nav-dropdown">
+                <NavDropdown.Item>Day Mode</NavDropdown.Item>
+                <NavDropdown.Item>Night Mode</NavDropdown.Item>
+             </NavDropdown>
           </Nav>
           <button onClick={() => setOpened(true)}>Sign In</button>
           {/* <Navbar.Text className="justify-content-end">
