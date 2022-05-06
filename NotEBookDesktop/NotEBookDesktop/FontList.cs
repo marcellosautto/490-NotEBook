@@ -7,13 +7,13 @@ using System.Windows.Media;
 //Gets the lists of Fonts installed on user's computer
 namespace NotEBookDesktop
 {
-    class FontList : ObservableCollection<string>
+    class FontList : ObservableCollection<FontFamily>
     {
         public FontList()
         {
             foreach (FontFamily f in Fonts.SystemFontFamilies)
             {
-                this.Add(f.ToString());
+                this.Add(f);
             }
         }
     }

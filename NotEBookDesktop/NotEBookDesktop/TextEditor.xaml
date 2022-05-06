@@ -73,18 +73,18 @@
                     </ComboBox.RenderTransform>
                 </ComboBox>
 
-                <Button x:Name="Bold_Btn" Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleBold" ToolTip="Bold">
+                <ToggleButton x:Name="Bold_Btn" Command="EditingCommands.ToggleBold" ToolTip="Bold" Height="30" Width="28">
                     <TextBlock FontWeight="Bold"><Run Text="B"/></TextBlock>
-                </Button>
-                <Button x:Name="Italics_Btn" Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleItalic" ToolTip="Italic">
+                </ToggleButton>
+                <ToggleButton x:Name="Italics_Btn"  Command="EditingCommands.ToggleItalic" ToolTip="Italic" Height="30" Width="28">
                     <TextBlock FontStyle="Italic" FontWeight="Bold"><Run Text="I"/></TextBlock>
-                </Button>
-                <Button x:Name="Underline_Btn" Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleUnderline" ToolTip="Underline">
-                    <TextBlock TextDecorations = "Underline"><Run Text="U"/></TextBlock>
-                </Button>
-                <Button x:Name="Strikethough_Btn" Style="{StaticResource formatTextStyle}"  ToolTip="Strikethrough" Click="Strikethrough" VerticalAlignment="Top">
+                </ToggleButton>
+                <ToggleButton x:Name="Underline_Btn" Command="EditingCommands.ToggleUnderline" ToolTip="Underline">
+                    <TextBlock TextDecorations = "Underline" Height="30" Width="28"><Run Text="U"/></TextBlock>
+                </ToggleButton>
+                <ToggleButton x:Name="Strikethough_Btn" ToolTip="Strikethrough" Click="Strikethrough"  Height="30" Width="28">
                     <TextBlock TextDecorations="Strikethrough"><Run Text="S"/></TextBlock>
-                </Button>
+                </ToggleButton>
                 <Button x:Name="IncreaseFontSize_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.IncreaseFontSize" ToolTip="Grow Font" Click="IncreaseFontSize_Click">
                     <Image Source="Images\CharacterGrowFont.png"/>
                 </Button>
@@ -92,24 +92,24 @@
                     <Image Source="Images\CharacterShrinkFont.png" Height="24" Width="30"/>
                 </Button>
 
-                <Button x:Name="Bullet_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.ToggleBullets" ToolTip="Bullets">
+                <ToggleButton x:Name="Bullet_Btn" Command="EditingCommands.ToggleBullets" ToolTip="Bullets">
                     <Image Source="Images\BulletList.png"/>
-                </Button>
-                <Button x:Name="Numbering_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.ToggleNumbering" ToolTip="Numbering">
+                </ToggleButton>
+                <ToggleButton x:Name="Numbering_Btn" Command="EditingCommands.ToggleNumbering" ToolTip="Numbering">
                     <Image Source="Images/NumbersList.png"/>
-                </Button>
-                <Button x:Name="AlignLeft_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignLeft" ToolTip="Align Left">
+                </ToggleButton>
+                <ToggleButton x:Name="AlignLeft_Btn" Command="EditingCommands.AlignLeft" ToolTip="Align Left">
                     <Image Source="Images\AlignLeft.png"/>
-                </Button>
-                <Button x:Name="AlignCenter_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignCenter" ToolTip="Align Center">
+                </ToggleButton>
+                <ToggleButton x:Name="AlignCenter_Btn"  Command="EditingCommands.AlignCenter" ToolTip="Align Center">
                     <Image Source="Images\AlignCenter.png"/>
-                </Button>
-                <Button x:Name="AlignRight_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignRight" ToolTip="Align Right">
+                </ToggleButton>
+                <ToggleButton x:Name="AlignRight_Btn"  Command="EditingCommands.AlignRight" ToolTip="Align Right">
                     <Image Source="Images\AlignRight.png"/>
-                </Button>
-                <Button x:Name="AlignJustify_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignJustify" ToolTip="Align Justify">
+                </ToggleButton>
+                <ToggleButton x:Name="AlignJustify_Btn"  Command="EditingCommands.AlignJustify" ToolTip="Align Justify">
                     <Image Source="Images\AlignJustify.png"/>
-                </Button>
+                </ToggleButton>
                 <Button x:Name="IncreaseIndent_Btn" Style="{StaticResource formatImageStyle}" Command="EditingCommands.IncreaseIndentation" ToolTip="Increase Indent">
                     <Image Source="Images\Indent.png"/>
                 </Button>
@@ -121,13 +121,9 @@
 
             <!-- By default pressing tab moves focus to the next control. Setting AcceptsTab to true allows the 
            RichTextBox to accept tab characters. -->
-            <RichTextBox Name="mainRTB" SpellCheck.IsEnabled="True" AcceptsTab="True">
+            <RichTextBox Name="mainRTB" SpellCheck.IsEnabled="True" AcceptsTab="True" HorizontalScrollBarVisibility="Auto" SelectionChanged="mainRTB_SelectionChanged">
                 <FlowDocument>
-                    <Paragraph>
-                        <InlineUIContainer>
-                            <Border BorderThickness="1" BorderBrush="Black"/>
-                        </InlineUIContainer>
-                    </Paragraph>
+                    <Paragraph></Paragraph>
                 </FlowDocument>
             </RichTextBox>
         </DockPanel>
