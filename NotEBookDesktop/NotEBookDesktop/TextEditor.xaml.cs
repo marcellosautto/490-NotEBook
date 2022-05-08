@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using Microsoft.Win32;
 using FontFamily = System.Windows.Media.FontFamily;
 using System.Windows.Controls.Primitives;
+using Image = System.Drawing.Image;
 
 namespace NotEBookDesktop
 {
@@ -23,6 +24,7 @@ namespace NotEBookDesktop
     /// </summary>
     public partial class TextEditor : Window
     {
+        System.Windows.Controls.Image image;
         public TextEditor()
         {
             InitializeComponent();
@@ -31,15 +33,23 @@ namespace NotEBookDesktop
             FontType.SelectedItem = mainRTB.FontFamily;
             
         }
+        protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+        {
+            base.OnMouseLeftButtonDown(e);
+
+            // Begin dragging the window
+            this.DragMove();
+        }
 
         private void Strikethrough(object sender, RoutedEventArgs e)
         {
             //Needed to add this function manually, as there is not EditingProperty for strikethrough as there is for Bold, Italics, and Underline
-            if (mainRTB != null && mainRTB.Selection != null)
-            {
+            //if (mainRTB != null && mainRTB.Selection != null)
+            //{
 
-                TextRange textRange = new TextRange(mainRTB.Selection.Start, mainRTB.Selection.End);
-                var currentTextDecoration = textRange.GetPropertyValue(Inline.TextDecorationsProperty);
+            //TextRange textRange = new TextRange(mainRTB.Selection.Start, mainRTB.Selection.End);
+            //var currentTextDecoration = textRange.GetPropertyValue(Inline.TextDecorationsProperty);
+            var currentTextDecoration = mainRTB.Selection.GetPropertyValue(Inline.TextDecorationsProperty);
 
                 TextDecorationCollection newTextDecoration;
 
@@ -62,16 +72,24 @@ namespace NotEBookDesktop
                     newTextDecoration = TextDecorations.Strikethrough;
                 }
 
-                textRange.ApplyPropertyValue(Inline.TextDecorationsProperty, newTextDecoration);
-            }
+            //textRange.ApplyPropertyValue(Inline.TextDecorationsProperty, newTextDecoration);
+            mainRTB.Selection.ApplyPropertyValue(Inline.TextDecorationsProperty, newTextDecoration);
+            //}
 
 
         }
 
         private void FontHeight_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ApplyPropertyValueToSelectedText(TextElement.FontSizeProperty, e.AddedItems[0]);
-            mainRTB.Focus();
+            try
+            {
+                ApplyPropertyValueToSelectedText(TextElement.FontSizeProperty, e.AddedItems[0]);
+                mainRTB.Focus();
+            }
+            catch(IndexOutOfRangeException ex) 
+            {
+                //Do nothing, this try catch block is need to prevent an out of range exception when selecting text with diffrent fonts
+            }
             //ChangeFontProperties(false);
             //mainRTB.Selection.ApplyPropertyValue(FontSizeProperty, FontHeight.SelectedItem);
 
@@ -249,6 +267,13 @@ namespace NotEBookDesktop
             UpdateSelectedFontFamily();
             UpdateSelectedFontSize();
 
+            var inline = this.mainRTB.CaretPosition.GetAdjacentElement(LogicalDirection.Forward) as Inline;
+            if (inline != null)
+            {
+                this.AddAdorner(inline.NextInline as InlineUIContainer);
+                this.AddAdorner(inline.PreviousInline as InlineUIContainer);
+            }
+
         }
        private void ApplyPropertyValueToSelectedText(DependencyProperty formattingProperty, object value)
         {
@@ -262,11 +287,15 @@ namespace NotEBookDesktop
             UpdateItemCheckedState(Bold_Btn, TextElement.FontWeightProperty, FontWeights.Bold);
             UpdateItemCheckedState(Italics_Btn, TextElement.FontStyleProperty, FontStyles.Italic);
             UpdateItemCheckedState(Underline_Btn, Inline.TextDecorationsProperty, TextDecorations.Underline);
+            UpdateItemCheckedState(Strikethough_Btn, Inline.TextDecorationsProperty, TextDecorations.Strikethrough);
 
-            UpdateItemCheckedState(AlignLeft_Btn, Paragraph.TextAlignmentProperty, TextAlignment.Left);
-            UpdateItemCheckedState(AlignCenter_Btn, Paragraph.TextAlignmentProperty, TextAlignment.Center);
-            UpdateItemCheckedState(AlignRight_Btn, Paragraph.TextAlignmentProperty, TextAlignment.Right);
-            UpdateItemCheckedState(AlignJustify_Btn, Paragraph.TextAlignmentProperty, TextAlignment.Right);
+            UpdateItemCheckedState(Superscript_Btn, Inline.BaselineAlignmentProperty, BaselineAlignment.Superscript);
+            UpdateItemCheckedState(Subscript_Btn, Inline.BaselineAlignmentProperty, BaselineAlignment.Subscript);
+
+            //UpdateItemCheckedState(AlignLeft_Btn, Paragraph.TextAlignmentProperty, TextAlignment.Left);
+            //UpdateItemCheckedState(AlignCenter_Btn, Paragraph.TextAlignmentProperty, TextAlignment.Center);
+            //UpdateItemCheckedState(AlignRight_Btn, Paragraph.TextAlignmentProperty, TextAlignment.Right);
+            //UpdateItemCheckedState(AlignJustify_Btn, Paragraph.TextAlignmentProperty, TextAlignment.Right);
         }
         private void UpdateSelectionListType()
         {
@@ -316,5 +345,85 @@ namespace NotEBookDesktop
                 FontHeight.SelectedValue = (value == DependencyProperty.UnsetValue) ? null : value;
             //}
         }
+
+        private void OpenImage_Btn_Click(object sender, RoutedEventArgs e)
+        {
+            //Depricated, any resizeing isnt saved, requires rewrite to saving function
+            object orgClipboardItem = Clipboard.GetDataObject();
+            OpenFileDialog of = new OpenFileDialog();
+            of.Filter = "All Graphics Types|*.bmp;*.jpg;*.jpeg;*.png;*.tif;*.tiff";
+
+            if (of.ShowDialog() == true)
+            {
+                image = new System.Windows.Controls.Image
+                {
+                    Source = new BitmapImage(new Uri(of.FileName)),
+                    Width = 100
+                };
+                image.Stretch = Stretch.Fill;
+
+                BlockUIContainer container = new BlockUIContainer(image);
+                mainRTB.Document.Blocks.Add(container);
+                image.Loaded += delegate
+                {
+                    AdornerLayer al = AdornerLayer.GetAdornerLayer(image);
+                    if (al != null)
+                    {
+                        al.Add(new ResizingAdorner(image));
+                    }
+                };
+                //Clipboard.SetDataObject(image);
+                //mainRTB.Paste();
+                //Image Img = Image.FromFile(of.FileName);
+                //Clipboard.SetDataObject(Img);
+
+                //mainRTB.Paste();
+
+            }
+            Clipboard.SetDataObject(orgClipboardItem);
+            mainRTB.Focus();
+
+
+        }
+        private void AddAdorner(InlineUIContainer container)
+        {
+            if (container != null)
+            {
+                var image = container.Child;
+                if (image != null)
+                {
+                    var al = AdornerLayer.GetAdornerLayer(image);
+                    if (al != null)
+                    {
+                        var currentAdorners = al.GetAdorners(image);
+                        if (currentAdorners != null)
+                        {
+                            foreach (var adorner in currentAdorners)
+                            {
+                                al.Remove(adorner);
+                            }
+                        }
+
+                        al.Add(new ResizingAdorner(image));
+                    }
+                }
+            }
+        }
+
+        private void SuperScript_Btn_Click(object sender, RoutedEventArgs e)
+        {
+            var currentAlignment = mainRTB.Selection.GetPropertyValue(Inline.BaselineAlignmentProperty);
+            BaselineAlignment newAlignment = ((BaselineAlignment)currentAlignment == BaselineAlignment.Superscript) ? BaselineAlignment.Baseline : BaselineAlignment.Superscript;
+            mainRTB.Selection.ApplyPropertyValue(Inline.BaselineAlignmentProperty, newAlignment);
+        }
+
+        private void Subscipt_Btn_Click(object sender, RoutedEventArgs e)
+        {
+            var currentAlignment = mainRTB.Selection.GetPropertyValue(Inline.BaselineAlignmentProperty);
+
+            BaselineAlignment newAlignment = ((BaselineAlignment)currentAlignment == BaselineAlignment.Subscript) ? BaselineAlignment.Baseline : BaselineAlignment.Subscript;
+            mainRTB.Selection.ApplyPropertyValue(Inline.BaselineAlignmentProperty, newAlignment);
+        }
     }
+
 }
