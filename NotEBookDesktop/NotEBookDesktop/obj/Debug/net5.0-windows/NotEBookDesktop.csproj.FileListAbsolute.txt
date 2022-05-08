@@ -118,3 +118,5 @@ E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debu
 E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.pdb
 E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.genruntimeconfig.cache
 E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\NotEBookDesktop.csproj.AssemblyReference.cache
+E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Register.g.cs
+E:\Group Projects\Comp 490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\obj\Debug\net5.0-windows\Register.baml
