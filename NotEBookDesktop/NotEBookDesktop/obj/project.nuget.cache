@@ -1,20 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "fRDXjgsuj0hx5hxeHUpLoOcqljn+yrYUrjMbQy84ypk/aI/x8G2229ISJKQ71wj2tJ2Aw/WZjiUFn4ZVvDSJ1g==",
+  "dgSpecHash": "bFDAfqwLO9C4WMVagBTg2yibMKBKNxIt7pm1z7iVzW03cSMPr8APPz3pE3fxbW6QiZMh817zwQDljfTbfhBsTg==",
   "success": true,
-  "projectFilePath": "D:\\.NET_Projects\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
+  "projectFilePath": "E:\\Group Projects\\Comp 490\\490-NotEBook\\NotEBookDesktop\\NotEBookDesktop\\NotEBookDesktop.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\marce\\.nuget\\packages\\firesharp\\2.0.4\\firesharp.2.0.4.nupkg.sha512",
-    "C:\\Users\\marce\\.nuget\\packages\\firesharp.serialization.jsonnet\\1.1.0\\firesharp.serialization.jsonnet.1.1.0.nupkg.sha512",
-    "C:\\Users\\marce\\.nuget\\packages\\microsoft.bcl\\1.1.9\\microsoft.bcl.1.1.9.nupkg.sha512",
-    "C:\\Users\\marce\\.nuget\\packages\\microsoft.bcl.async\\1.0.168\\microsoft.bcl.async.1.0.168.nupkg.sha512",
-    "C:\\Users\\marce\\.nuget\\packages\\microsoft.bcl.build\\1.0.14\\microsoft.bcl.build.1.0.14.nupkg.sha512",
-    "C:\\Users\\marce\\.nuget\\packages\\microsoft.net.http\\2.2.28\\microsoft.net.http.2.2.28.nupkg.sha512",
-    "C:\\Users\\marce\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
-    "C:\\Users\\marce\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
-    "C:\\Users\\marce\\.nuget\\packages\\newtonsoft.json\\6.0.4\\newtonsoft.json.6.0.4.nupkg.sha512",
-    "C:\\Users\\marce\\.nuget\\packages\\restsharp\\104.4.0\\restsharp.104.4.0.nupkg.sha512",
-    "C:\\Users\\marce\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512"
+    "C:\\Users\\hec12\\.nuget\\packages\\firesharp\\2.0.4\\firesharp.2.0.4.nupkg.sha512",
+    "C:\\Users\\hec12\\.nuget\\packages\\firesharp.serialization.jsonnet\\1.1.0\\firesharp.serialization.jsonnet.1.1.0.nupkg.sha512",
+    "C:\\Users\\hec12\\.nuget\\packages\\microsoft.bcl\\1.1.9\\microsoft.bcl.1.1.9.nupkg.sha512",
+    "C:\\Users\\hec12\\.nuget\\packages\\microsoft.bcl.async\\1.0.168\\microsoft.bcl.async.1.0.168.nupkg.sha512",
+    "C:\\Users\\hec12\\.nuget\\packages\\microsoft.bcl.build\\1.0.14\\microsoft.bcl.build.1.0.14.nupkg.sha512",
+    "C:\\Users\\hec12\\.nuget\\packages\\microsoft.net.http\\2.2.28\\microsoft.net.http.2.2.28.nupkg.sha512",
+    "C:\\Users\\hec12\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\hec12\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\hec12\\.nuget\\packages\\newtonsoft.json\\6.0.4\\newtonsoft.json.6.0.4.nupkg.sha512",
+    "C:\\Users\\hec12\\.nuget\\packages\\restsharp\\104.4.0\\restsharp.104.4.0.nupkg.sha512",
+    "C:\\Users\\hec12\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512"
   ],
   "logs": [
     {
