@@ -7,4 +7,8 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NotEBookDesktop
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\Dudel\Desktop\Code\490\490-NotEBook\NotEBookDesktop\NotEBookDesktop\
+=======
+build_property.ProjectDir = D:\.NET_Projects\490-NotEBook\NotEBookDesktop\NotEBookDesktop\
+>>>>>>> 7a9cdab4aac49f21e39ef568e97431eff93189ab

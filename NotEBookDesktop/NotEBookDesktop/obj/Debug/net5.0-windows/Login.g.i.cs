@@ -127,13 +127,17 @@ namespace NotEBookDesktop {
         /// InitializeComponent
         /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+<<<<<<< HEAD
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "6.0.1.0")]
+=======
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.11.0")]
+>>>>>>> 7a9cdab4aac49f21e39ef568e97431eff93189ab
         public void InitializeComponent() {
             if (_contentLoaded) {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/NotEBookDesktop;component/login.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/NotEBookDesktop;V1.0.0.0;component/login.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Login.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
@@ -143,7 +147,11 @@ namespace NotEBookDesktop {
         }
         
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+<<<<<<< HEAD
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "6.0.1.0")]
+=======
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.11.0")]
+>>>>>>> 7a9cdab4aac49f21e39ef568e97431eff93189ab
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]

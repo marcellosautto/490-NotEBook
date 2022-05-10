@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Varela+Round&display=swap');
+
+
+body{
+    font-family: 'Varela Round', sans-serif;
+    background-image: linear-gradient(to bottom left,#2a1b3d, #7f6bcf);
+    
+}
+
+.hero{
+    height: 100vh;
+}
+
+.hero > div >h2{
+    color: #e3e8e9;
+    font-size: 2em;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.hero >h1{
+    font-size: 3.7em;
+}
+
+
+.title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+    color: #e3e8e9;
+}
+
+h5{
+    font-weight: bold;
+}
+
+p, li{
+    font-family: 'Libre Baskerville', serif;
+}
+
+.content{
+    height: 100vh;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: justify;
+    font-size: larger;
+}
+
+.features-div >ul{
+    background-color: #d83f87;
+}
+
+
+.navbar{
+    background-color: gray;
+    color: antiquewhite;
+}
+
+.route-div{
+    color: white;
+}
+
+.b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+  
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+  
+  @media (min-width: 992px) {
+    .rounded-lg-3 { border-radius: .3rem; }
+  }
+
+  .carousel {
+    width:35%;
+    margin: auto;
+  }
+
+  .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    line-height: 1;
+    margin:auto;
+    width: 100%;
+    }
